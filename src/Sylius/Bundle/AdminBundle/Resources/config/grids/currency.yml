@@ -1,0 +1,29 @@
+sylius_grid:
+    grids:
+        sylius_admin_currency:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%sylius.model.currency.class%"
+            sorting:
+                code: asc
+            fields:
+                code:
+                    type: twig
+                    label: sylius.ui.code
+                    sortable: ~
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/code.html.twig"
+                        vars:
+                            th_class: "w-1 text-center"
+                name:
+                    type: string
+                    label: sylius.ui.name
+            filters:
+                code:
+                    type: string
+                    label: sylius.ui.code
+            actions:
+                main:
+                    create:
+                        type: create

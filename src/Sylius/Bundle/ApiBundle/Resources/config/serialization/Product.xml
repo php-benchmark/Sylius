@@ -1,0 +1,153 @@
+<?xml version="1.0" ?>
+
+<!--
+
+ This file is part of the Sylius package.
+
+ (c) Sylius Sp. z o.o.
+
+ For the full copyright and license information, please view the LICENSE
+ file that was distributed with this source code.
+
+-->
+
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="Sylius\Component\Core\Model\Product">
+        <attribute name="id">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+        <attribute name="code">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:admin:product:create</group>
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+        <attribute name="variantSelectionMethod">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:admin:product:create</group>
+        </attribute>
+        <attribute name="enabled">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:admin:product:create</group>
+            <group>sylius:admin:product:update</group>
+        </attribute>
+        <attribute name="name">
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+        <attribute name="description">
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+        <attribute name="slug">
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+        <attribute name="shortDescription">
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+        <attribute name="translations">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:admin:product:create</group>
+            <group>sylius:admin:product:update</group>
+        </attribute>
+        <attribute name="mainTaxon">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:admin:product:create</group>
+            <group>sylius:admin:product:update</group>
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+        <attribute name="productTaxons">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+        <attribute name="options">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:admin:product:create</group>
+            <group>sylius:admin:product:update</group>
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+        <attribute name="variants">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+        <attribute name="images">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:admin:product:create</group>
+            <group>sylius:admin:product:update</group>
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+        <attribute name="reviews">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+        </attribute>
+        <attribute name="acceptedReviews" serialized-name="reviews">
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+            <normalization_context>
+                <entry name="collection_values">true</entry>
+            </normalization_context>
+        </attribute>
+        <attribute name="averageRating">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+        <attribute name="associations">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+        <attribute name="attributes">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:admin:product:create</group>
+            <group>sylius:admin:product:update</group>
+        </attribute>
+        <attribute name="channels">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:admin:product:create</group>
+            <group>sylius:admin:product:update</group>
+        </attribute>
+        <attribute name="createdAt">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+        <attribute name="updatedAt">
+            <group>sylius:admin:product:index</group>
+            <group>sylius:admin:product:show</group>
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+        <attribute name="defaultVariantData">
+            <group>sylius:shop:product:index</group>
+            <group>sylius:shop:product:show</group>
+        </attribute>
+    </class>
+</serializer>

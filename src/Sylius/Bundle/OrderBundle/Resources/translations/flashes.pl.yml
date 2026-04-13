@@ -1,0 +1,10 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    cart:
+        add_item: 'Element został dodany do koszyka'
+        cannot_modify: 'Zamówienie, które próbowano edytować zostało już przesłane.'
+        not_recalculated: 'Z powodu nieprawidłowych wartości w koszyku nie został on przeliczony ponownie.'
+        remove_item: 'Element został usunięty z koszyka'
+        save: 'Koszyk został pomyślnie zaktualizowany'

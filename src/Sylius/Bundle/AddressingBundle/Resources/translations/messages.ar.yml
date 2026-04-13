@@ -1,0 +1,43 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        address:
+            city: المدينة
+            company: الشركة
+            country: الدولة
+            first_name: الاسم الأول
+            last_name: اسم العائلة
+            phone_number: رقم الهاتف
+            postcode: الرمز البريدي
+            street: عنوان الشارع
+            province: المقاطعة
+            zone: المنطقة
+        country:
+            add_province: إضافة مقاطعة
+            name: الاسم
+            provinces: المقاطعات
+            select: اختر
+            enabled: مفعّل
+        province:
+            name: الاسم
+            abbreviation: الاختصار
+            select: اختر
+        zone:
+            add_member: إضافة عضو
+            members: الأعضاء
+            name: الاسم
+            type: النوع
+            types:
+                country: الدولة
+                province: المقاطعة
+                zone: المنطقة
+            scope: النطاق
+            scopes:
+                all: الكل
+            select: اختر
+            select_scope: اختر النطاق
+            priority: الأولوية
+        zone_member:
+            select: اختر

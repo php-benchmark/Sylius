@@ -1,0 +1,32 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        product:
+            name: 'Namn'
+            description: 'Beskrivning'
+            attributes: 'Attribut'
+            options: 'Alternativ'
+            meta_keywords: 'Metanyckelord'
+            meta_description: 'Metabeskrivning'
+            slug: 'Slug'
+            taxons: 'Taxon'
+        product_variant:
+            name: 'Namn'
+        association_type:
+            name: 'Namn'
+            translations: 'Översättningar'
+        association:
+            type: 'Associeringstyp'
+            product: 'Associerad produkt'
+        variant:
+            name: 'Namn'
+        option:
+            name: 'Namn'
+            position: 'Position'
+            values: 'Möjliga värden'
+        option_value:
+            add_value: 'Lägg till värde'
+            value: 'Värde'
+

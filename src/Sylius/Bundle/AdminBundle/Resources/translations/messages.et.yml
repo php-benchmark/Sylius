@@ -1,0 +1,17 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    menu:
+        admin:
+            main:
+                configuration:
+                    channels: Kanalid
+                    currencies: Valuutad
+                    locales: Keeled
+            official_support:
+                header: Ametlik tugi
+                browse_plugins: Sirvi pluginaid
+                sylius_plus: Sylius Plus
+                professional_services: Professionaalsed teenused
+                find_a_partner: Leia partner

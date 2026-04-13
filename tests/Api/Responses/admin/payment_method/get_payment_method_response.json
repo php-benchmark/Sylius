@@ -1,0 +1,28 @@
+{
+    "@context": "\/api\/v2\/contexts\/PaymentMethod",
+    "@id": "\/api\/v2\/admin\/payment-methods\/CASH_ON_DELIVERY",
+    "@type": "PaymentMethod",
+    "channels": [
+        "\/api\/v2\/admin\/channels\/WEB"
+    ],
+    "gatewayConfig": {
+        "@type": "GatewayConfig",
+        "@id": "\/api\/v2\/admin\/gateway-configs\/@integer@",
+        "factoryName": "offline",
+        "gatewayName": "Offline",
+        "config": []
+    },
+    "id": "@integer@",
+    "code": "CASH_ON_DELIVERY",
+    "position": 0,
+    "enabled": true,
+    "translations": {
+        "en_US": {
+            "@id": "\/api\/v2\/admin\/payment-methods\/CASH_ON_DELIVERY\/translations\/en_US",
+            "@type": "PaymentMethodTranslation",
+            "name": "Cash on delivery",
+            "description": "@string@",
+            "instructions": null
+        }
+    }
+}

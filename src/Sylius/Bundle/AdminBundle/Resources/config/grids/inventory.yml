@@ -1,0 +1,73 @@
+sylius_grid:
+    grids:
+        sylius_admin_inventory:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%sylius.model.product_variant.class%"
+                    repository:
+                        method: createInventoryListQueryBuilder
+                        arguments: ["%locale%"]
+            sorting:
+                name: asc
+            fields:
+                name:
+                    type: twig
+                    path: .
+                    label: sylius.ui.name
+                    sortable: product.translations.name
+                    options:
+                        template: "@SyliusAdmin/inventory/grid/field/name.html.twig"
+                        vars:
+                            th_class: "w-75"                
+                code:
+                    type: twig
+                    label: sylius.ui.code
+                    sortable: ~
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/code.html.twig"
+                        vars:
+                            th_class: "w-25"
+                inventory:
+                    type: twig
+                    path: .
+                    label: sylius.ui.inventory
+                    options:
+                        template: "@SyliusAdmin/inventory/grid/field/inventory.html.twig"
+            filters:
+                code:
+                    type: string
+                    label: sylius.ui.code
+                name:
+                    type: string
+                    label: sylius.ui.name
+                    options:
+                        fields: [translation.name]
+                product:
+                    type: ux_translatable_autocomplete
+                    label: sylius.ui.product
+                    form_options:
+                        multiple: false
+                        extra_options:
+                            class: '%sylius.model.product.class%'
+                            translation_fields: [name]
+                            choice_label: name
+                    options:
+                        fields: [product.id]
+            actions:
+                item:
+                    update_product:
+                        type: update
+                        label: sylius.ui.edit_product
+                        options:
+                            link:
+                                route: sylius_admin_product_update
+                                parameters:
+                                    id: resource.product.id
+                    update:
+                        type: update
+                        options:
+                            link:
+                                parameters:
+                                    id: resource.id
+                                    productId: resource.product.id

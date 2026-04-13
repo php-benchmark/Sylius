@@ -1,0 +1,10 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    locale:
+        code:
+            max_length: 'Koden må ikke være lengre enn {{ limit }} tegn.'
+            not_blank: 'Vennligst velg en lokalitetskode.'
+            locale: 'Denne verdien er ikke en gyldig lokalitetskode.'
+            unique: 'Lokalitetskoden må være unik.'

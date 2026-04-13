@@ -1,0 +1,23 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius_product:
+    resources:
+        product:
+            classes:
+                model: Sylius\Component\Core\Model\Product
+                repository: Sylius\Bundle\CoreBundle\Doctrine\ORM\ProductRepository
+            translation:
+                classes:
+                    model: Sylius\Component\Core\Model\ProductTranslation
+        product_variant:
+            classes:
+                model: Sylius\Component\Core\Model\ProductVariant
+                controller: Sylius\Bundle\CoreBundle\Controller\ProductVariantController
+                repository: Sylius\Bundle\CoreBundle\Doctrine\ORM\ProductVariantRepository
+        product_option:
+            classes:
+                repository: Sylius\Bundle\CoreBundle\Doctrine\ORM\ProductOptionRepository
+        product_association:
+            classes:
+                repository: Sylius\Bundle\CoreBundle\Doctrine\ORM\ProductAssociationRepository

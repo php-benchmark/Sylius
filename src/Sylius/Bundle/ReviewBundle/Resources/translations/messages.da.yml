@@ -1,0 +1,17 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        review:
+            author: Forfatter
+            comment: Kommentar
+            header: Tilføj en anmeldelse
+            rating: Vurdering
+            status:
+                approved: Godkendt
+                label: Status
+                new: Ny
+                rejected: Afvist
+            submit: Indsend
+            title: Titel

@@ -1,0 +1,17 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    taxon:
+        code:
+            not_blank: Prosimo, vnesite kodo taksona.
+            unique: Takson z dano šifro že obstaja.
+        name:
+            max_length: Ime taksona ne sme biti daljše od 255 znakov.
+            not_blank: Prosimo, vnesite ime taksona.
+        parent:
+            invalid_relation: 'Nadrejeni ne sme biti ne sam takson ne kateri od njegovih potomcev.'
+    taxonomy:
+        name:
+            max_length: Ime taksonomije ne sme biti daljše od 255 znakov.
+            not_blank: Prosimo, vnesite ime taksonomije.

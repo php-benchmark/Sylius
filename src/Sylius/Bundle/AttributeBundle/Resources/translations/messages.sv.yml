@@ -1,0 +1,41 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        attribute:
+            add: Lägg till
+            add_attributes: Lägg till attribut
+            choices: Val
+            code: Kod
+            name: Namn
+            translatable: Översättningsbar
+            translations: Översättningar
+            type: Typ
+        attribute_type:
+            checkbox: Kryssruta
+            configuration: Konfiguration
+            date: Datum
+            datetime: Datum och tid
+            float: Flyttal
+            integer: Heltal
+            percent: Procent
+            select: Välj
+            text: Text
+            textarea: Textfält
+            title: Attributtyper
+            validation: Validering
+        attribute_type_configuration:
+            datetime:
+                format: Format
+            date:
+                format: Format
+            select:
+                multiple: Flera val möjliga
+                values: Värden
+                choose: Välj ett alternativ
+                min: Min antal poster
+                max: Max antal poster
+            text:
+                min: Minsta längd
+                max: Största längd

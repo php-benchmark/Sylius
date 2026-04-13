@@ -1,0 +1,24 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        user:
+            email: 'E-post'
+            enabled: 'Aktivert'
+            password:
+                label: 'Passord'
+                confirmation: 'Bekreftelse'
+            remember_me: 'Husk meg'
+            shipping_address: 'Leveringsadresse'
+            username: 'Brukernavn'
+            verified: 'Verifisert'
+        user_filter:
+            query: 'Søk'
+        user_change_password:
+            confirmation: 'Bekreftelse'
+            current: 'Nåværende passord'
+            new: 'Nytt passord'
+        user_reset_password:
+            confirmation: 'Bekreftelse'
+            new: 'Nytt passord'

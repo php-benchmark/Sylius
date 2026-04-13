@@ -1,0 +1,17 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        review:
+            author: '著者'
+            comment: 'コメント'
+            header: 'レビューを追加'
+            rating: '評価'
+            status:
+                approved: '承認済み'
+                label: 'ステータス'
+                new: '新規'
+                rejected: '却下'
+            submit: '送信'
+            title: 'タイトル'

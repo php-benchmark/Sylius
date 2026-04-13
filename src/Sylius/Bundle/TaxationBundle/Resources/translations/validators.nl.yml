@@ -1,0 +1,35 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    tax_category:
+        name:
+            not_blank: 'Voer belastingcategorie naam in.'
+            min_length: 'Belastingcategorie naam moet minstens 1 teken lang zijn.|Belastingcategorie naam moet minstens {{ limit }} tekens lang zijn.'
+            max_length: 'Belastingcategorie naam mag niet langer zijn dan 1 teken.|Belastingcategorie naam mag niet langer zijn dan {{ limit }} tekens.'
+        code:
+            max_length: 'De code mag niet langer zijn dan {{ limit }} tekens.'
+            not_blank: 'Voer belastingcategorie code in.'
+            regex: 'Belastingcategorie code mag alleen uit letters, cijfers, streepjes en underscores bestaan.'
+            unique: 'De belastingcategorie met de gegeven code bestaat al.'
+    tax_rate:
+        category:
+            not_blank: 'Selecteer belastingcategorie.'
+        name:
+            not_blank: 'Voer belastingtarief naam in.'
+            min_length: 'Belastingtarief naam moet minstens 1 teken lang zijn.|Belastingtarief naam moet minstens {{ limit }} tekens lang zijn.'
+            max_length: 'Belastingtarief naam mag niet langer zijn dan 1 teken.|Belastingtarief naam mag niet langer zijn dan {{ limit }} tekens.'
+        amount:
+            invalid: 'Het belastingtarief bedrag is ongeldig.'
+            not_blank: 'Voer belastingtarief bedrag in.'
+        calculator:
+            not_blank: 'Selecteer belastingcalculator.'
+        zone:
+            not_blank: 'Selecteer belastingzone.'
+        code:
+            max_length: 'De code mag niet langer zijn dan {{ limit }} tekens.'
+            not_blank: 'Voer belastingtarief code in.'
+            regex: 'Belastingtarief code mag alleen uit letters, cijfers, streepjes en underscores bestaan.'
+            unique: 'Het belastingtarief met de gegeven code bestaat al.'
+        date:
+            greater_than_start_date: 'Het belastingtarief mag niet eindigen voordat het begint.'

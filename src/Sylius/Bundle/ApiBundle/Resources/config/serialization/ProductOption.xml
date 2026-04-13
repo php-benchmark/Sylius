@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+
+<!--
+
+ This file is part of the Sylius package.
+
+ (c) Sylius Sp. z o.o.
+
+ For the full copyright and license information, please view the LICENSE
+ file that was distributed with this source code.
+
+-->
+
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="Sylius\Component\Product\Model\ProductOption">
+        <attribute name="code">
+            <group>sylius:admin:product_option:index</group>
+            <group>sylius:admin:product_option:show</group>
+            <group>sylius:admin:product_option:create</group>
+            <group>sylius:shop:product_option:show</group>
+            <group>sylius:shop:product_option:index</group>
+        </attribute>
+        <attribute name="name">
+            <group>sylius:admin:product_option:index</group>
+            <group>sylius:admin:product_option:show</group>
+            <group>sylius:shop:product_option:show</group>
+            <group>sylius:shop:product_option:index</group>
+        </attribute>
+        <attribute name="createdAt">
+            <group>sylius:admin:product_option:index</group>
+            <group>sylius:admin:product_option:show</group>
+        </attribute>
+        <attribute name="updatedAt">
+            <group>sylius:admin:product_option:index</group>
+            <group>sylius:admin:product_option:show</group>
+        </attribute>
+        <attribute name="values">
+            <group>sylius:admin:product_option:index</group>
+            <group>sylius:admin:product_option:show</group>
+            <group>sylius:admin:product_option:create</group>
+            <group>sylius:admin:product_option:update</group>
+            <group>sylius:shop:product_option:show</group>
+        </attribute>
+        <attribute name="translations">
+            <group>sylius:admin:product_option:index</group>
+            <group>sylius:admin:product_option:show</group>
+            <group>sylius:admin:product_option:create</group>
+            <group>sylius:admin:product_option:update</group>
+        </attribute>
+        <attribute name="position">
+            <group>sylius:admin:product_option:index</group>
+            <group>sylius:admin:product_option:show</group>
+            <group>sylius:admin:product_option:create</group>
+            <group>sylius:admin:product_option:update</group>
+        </attribute>
+    </class>
+</serializer>

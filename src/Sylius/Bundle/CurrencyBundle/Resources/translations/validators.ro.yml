@@ -1,0 +1,23 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    currency:
+        code:
+            not_blank: 'Vă rugăm să alegeți codul valutei.'
+            unique: 'Codul valutei trebuie să fie unic.'
+            currency: 'Această valoare nu este un cod valutar valid.'
+        exchange_rate:
+            not_blank: 'Vă rugăm să introduceți rata de schimb.'
+    exchange_rate:
+        ratio:
+            greater_than: 'Raportul trebuie să fie mai mare decât {{ compared_value }}.'
+            less_than: 'Raportul trebuie să fie mai mic decât {{ compared_value }}.'
+            invalid: 'Raportul trebuie să fie un număr.'
+            not_blank: 'Vă rugăm să introduceți raportul de schimb valutar.'
+        source_currency:
+            not_blank: 'Vă rugăm să introduceți din ce valută trebuie derivată rata de schimb.'
+        target_currency:
+            not_blank: 'Vă rugăm să introduceți în ce valută trebuie setată rata de schimb.'
+        unique_currency_pair: 'Perechea valutară trebuie să fie unică.'
+        different_source_target_currency: 'Valutele sursă și țintă trebuie să fie diferite.'

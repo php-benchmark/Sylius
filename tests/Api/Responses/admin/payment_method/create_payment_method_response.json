@@ -1,0 +1,31 @@
+{
+    "@context": "\/api\/v2\/contexts\/PaymentMethod",
+    "@id": "\/api\/v2\/admin\/payment-methods\/test",
+    "@type": "PaymentMethod",
+    "channels": [],
+    "gatewayConfig": {
+        "@id": "\/api\/v2\/admin\/gateway-configs\/@integer@",
+        "@type": "GatewayConfig",
+        "factoryName": "offline",
+        "gatewayName": "Offline",
+        "config": {
+            "sandbox": true,
+            "password": "test",
+            "username": "test",
+            "signature": "test"
+        }
+    },
+    "id": "@integer@",
+    "code": "test",
+    "position": 0,
+    "enabled": true,
+    "translations": {
+        "en_US": {
+            "@id": "\/api\/v2\/admin\/payment-methods\/test\/translations\/en_US",
+            "@type": "PaymentMethodTranslation",
+            "name": "Test",
+            "description": "Test",
+            "instructions": "Testing instructions"
+        }
+    }
+}

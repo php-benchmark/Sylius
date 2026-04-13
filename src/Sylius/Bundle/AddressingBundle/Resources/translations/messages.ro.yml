@@ -1,0 +1,42 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        address:
+            city: 'Oraș'
+            company: 'Companie'
+            country: 'Țară'
+            first_name: 'Prenume'
+            last_name: 'Nume de familie'
+            phone_number: 'Număr de telefon'
+            postcode: 'Cod poștal'
+            street: 'Adresă stradală'
+            province: 'Județ'
+            zone: 'Zonă'
+        country:
+            add_province: 'Adăugați provincie'
+            name: 'Nume'
+            provinces: 'Județe'
+            select: 'Selectați'
+            enabled: 'Activat'
+        province:
+            name: 'Nume'
+            abbreviation: 'Abreviere'
+            select: 'Selectați'
+        zone:
+            add_member: 'Adăugați membru'
+            members: 'Membri'
+            name: 'Nume'
+            type: 'Tip'
+            types:
+                country: 'Țară'
+                province: 'Județ'
+                zone: 'Zonă'
+            scope: 'Scop'
+            scopes:
+                all: 'Toate'
+            select: 'Selectați'
+            priority: 'Prioritate'
+        zone_member:
+            select: 'Selectați'

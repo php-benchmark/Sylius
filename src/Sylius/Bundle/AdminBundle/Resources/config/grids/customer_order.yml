@@ -1,0 +1,21 @@
+sylius_grid:
+    grids:
+        sylius_admin_customer_order:
+            extends: sylius_admin_order
+            driver:
+                options:
+                    repository:
+                        method: createByCustomerIdCriteriaAwareQueryBuilder
+                        arguments:
+                            criteria: ~
+                            customerId: $id
+            fields:
+                customer:
+                    type: string
+                    enabled: false
+            sorting:
+                number: desc
+            filters:
+                customer:
+                    type: string
+                    enabled: false

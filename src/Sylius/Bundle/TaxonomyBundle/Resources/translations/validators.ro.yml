@@ -1,0 +1,22 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    taxon:
+        code:
+            max_length: 'Codul nu poate avea mai mult de {{ limit }} caractere.'
+            not_blank: 'Vă rugăm să introduceți codul taxonului.'
+            regex: 'Codul taxonului poate conține doar litere, cifre, cratime și underscore-uri.'
+            unique: 'Taxonul cu codul dat există deja.'
+        name:
+            max_length: 'Numele taxonului nu poate avea mai mult de 255 caractere.'
+            not_blank: 'Vă rugăm să introduceți numele taxonului.'
+        slug:
+            not_blank: 'Vă rugăm să introduceți slug-ul taxonului.'
+            unique: 'Slug-ul taxonului trebuie să fie unic.'
+        parent:
+            invalid_relation: 'Părintele nu trebuie să fie nici taxonul în sine, nici vreunul dintre descendenții săi.'
+    taxonomy:
+        name:
+            max_length: 'Numele taxonomiei nu poate avea mai mult de 255 caractere.'
+            not_blank: 'Vă rugăm să introduceți numele taxonomiei.'

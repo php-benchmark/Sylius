@@ -1,0 +1,18 @@
+{
+    "@context": "\/api\/v2\/contexts\/ProductAttribute",
+    "@id": "\/api\/v2\/admin\/product-attributes\/damage_reduction",
+    "@type": "ProductAttribute",
+    "code": "damage_reduction",
+    "configuration": {},
+    "position": 0,
+    "storageType": "float",
+    "type": "percent",
+    "translatable": false,
+    "translations": {
+        "en_US": {
+            "@id": "\/api\/v2\/admin\/product-attributes\/damage_reduction\/translations\/en_US",
+            "@type": "ProductAttributeTranslation",
+            "name": "Damage reduction"
+        }
+    }
+}

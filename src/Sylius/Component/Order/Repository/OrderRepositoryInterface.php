@@ -1,0 +1,47 @@
+<?php
+
+/*
+ * This file is part of the Sylius package.
+ *
+ * (c) Sylius Sp. z o.o.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+declare(strict_types=1);
+
+namespace Sylius\Component\Order\Repository;
+
+use Doctrine\ORM\QueryBuilder;
+use Sylius\Component\Order\Model\OrderInterface;
+use Sylius\Resource\Doctrine\Persistence\RepositoryInterface;
+
+/**
+ * @template T of OrderInterface
+ *
+ * @extends RepositoryInterface<T>
+ */
+interface OrderRepositoryInterface extends RepositoryInterface
+{
+    public function countPlacedOrders(): int;
+
+    /** @return T[] */
+    public function findLatest(int $count): array;
+
+    public function findLatestCart(): ?OrderInterface;
+
+    public function findOneByNumber(string $number): ?OrderInterface;
+
+    public function findOneByTokenValue(string $tokenValue): ?OrderInterface;
+
+    public function findCartById(mixed $id): ?OrderInterface;
+
+    /** @return T[] */
+    public function findCartsNotModifiedSince(\DateTimeInterface $terminalDate, ?int $limit = null): array;
+
+    public function createCartQueryBuilder(): QueryBuilder;
+
+    /** @return T[] */
+    public function findAllExceptCarts(): array;
+}

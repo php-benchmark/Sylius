@@ -1,0 +1,13 @@
+vendor/
+bin/
+
+composer.phar
+composer.lock
+
+test/app/cache
+test/app/logs
+
+/.phpunit.result.cache
+
+/test/var
+/test/app/db.sql

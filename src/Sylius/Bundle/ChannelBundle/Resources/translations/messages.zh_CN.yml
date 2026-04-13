@@ -1,0 +1,11 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        channel:
+            color: '颜色'
+            description: '描述'
+            enabled: '启用'
+            name: '名称'
+            url: '网址'

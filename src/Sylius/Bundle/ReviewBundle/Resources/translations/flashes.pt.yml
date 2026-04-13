@@ -1,0 +1,8 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    review:
+        accept: 'A avaliação foi aceita com sucesso.'
+        reject: 'A avaliação foi rejeitada com sucesso.'
+        wait_for_the_acceptation: 'Sua avaliação está aguardando aprovação.'

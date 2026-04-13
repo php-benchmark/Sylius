@@ -1,0 +1,15 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    review:
+        author:
+            already_exists: 'Acest email este deja înregistrat, vă rugăm să vă conectați sau să folosiți funcția de recuperare a parolei.'
+        comment:
+            not_blank: 'Comentariul recenziei nu trebuie să fie gol.'
+        rating:
+            not_blank: 'Trebuie să selectați evaluarea recenziei.'
+        title:
+            not_blank: 'Titlul recenziei nu trebuie să fie gol.'
+            min_length: 'Titlul recenziei trebuie să aibă cel puțin 2 caractere.'
+            max_length: 'Titlul recenziei trebuie să aibă cel mult 255 caractere.'

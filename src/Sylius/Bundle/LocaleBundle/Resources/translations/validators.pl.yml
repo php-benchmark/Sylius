@@ -1,0 +1,10 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    locale:
+        code:
+            max_length: Kod nie może być dłuższy niż {{ limit }} znaków.
+            not_blank: Wybierz kod lokalizacji.
+            locale: Ta wartość nie jest prawidłowym kodem lokalizacji.
+            unique: Kod lokalizacji musi być unikalny.

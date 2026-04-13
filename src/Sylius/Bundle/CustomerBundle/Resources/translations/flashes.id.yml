@@ -1,0 +1,6 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    customer:
+        register: 'Terima kasih telah melakukan pendaftaran, periksa email Anda untuk melakukan verifikasi akun.'

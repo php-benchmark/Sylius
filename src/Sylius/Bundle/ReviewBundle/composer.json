@@ -1,0 +1,93 @@
+{
+    "name": "sylius/review-bundle",
+    "type": "symfony-bundle",
+    "description": "Review system for Symfony ecommerce applications.",
+    "keywords": [
+        "review",
+        "shop",
+        "webshop",
+        "ecommerce",
+        "sylius"
+    ],
+    "homepage": "https://sylius.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paweł Jędrzejewski",
+            "homepage": "https://pjedrzejewski.com"
+        },
+        {
+            "name": "Mateusz Zalewski",
+            "email": "mateusz.zalewski@lakion.com"
+        },
+        {
+            "name": "Grzegorz Sadowski",
+            "email": "grzegorz.sadowski@lakion.com"
+        },
+        {
+            "name": "Daniel Richter",
+            "email": "nexyz9@gmail.com"
+        },
+        {
+            "name": "Sylius project",
+            "homepage": "https://sylius.com"
+        },
+        {
+            "name": "Community contributions",
+            "homepage": "https://github.com/Sylius/Sylius/contributors"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "stof/doctrine-extensions-bundle": "^1.12",
+        "sylius/mailer-bundle": "^2.1",
+        "sylius/resource-bundle": "^1.12",
+        "sylius/review": "^2.0",
+        "sylius/user-bundle": "^2.0",
+        "symfony/framework-bundle": "^6.4.1 || ^7.4"
+    },
+    "require-dev": {
+        "doctrine/doctrine-bundle": "^2.13",
+        "doctrine/orm": "^2.18 || ^3.5",
+        "phpunit/phpunit": "^11.5",
+        "symfony/browser-kit": "^6.4 || ^7.4",
+        "symfony/dependency-injection": "^6.4.1 || ^7.4",
+        "symfony/form": "^6.4.1 || ^7.4",
+        "symfony/security-bundle": "^6.4 || ^7.4",
+        "symfony/validator": "^6.4 || ^7.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "2.2-dev"
+        },
+        "symfony": {
+            "require": "^7.4"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Sylius\\Bundle\\ReviewBundle\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Sylius\\Bundle\\ReviewBundle\\": "tests/"
+        },
+        "classmap": [
+            "test/app/AppKernel.php"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../*/*"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

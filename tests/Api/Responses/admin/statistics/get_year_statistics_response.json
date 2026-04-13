@@ -1,0 +1,25 @@
+{
+    "sales": [
+        {
+            "period": "2022",
+            "total": 5000,
+            "paidOrdersCount": 2
+        },
+        {
+            "period": "2023",
+            "total": 5000,
+            "paidOrdersCount": 2
+        },
+        {
+            "period": "2024",
+            "total": 5000,
+            "paidOrdersCount": 2
+        }
+    ],
+    "businessActivitySummary": {
+        "totalSales": 15000,
+        "paidOrdersCount": 6,
+        "newCustomersCount": 0,
+        "averageOrderValue": 2500
+    }
+}

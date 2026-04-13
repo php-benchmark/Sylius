@@ -1,0 +1,15 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        currency:
+            base: 'Basisvaluta'
+            code: 'Navn'
+            enabled: 'Aktivert'
+            exchange_rate: 'Vekslingskurs'
+        exchange_rate:
+            source_currency: 'Kildevaluta'
+            target_currency: 'Målvaluta'
+            ratio: 'Forhold'
+

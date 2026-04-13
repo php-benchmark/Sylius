@@ -1,0 +1,22 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    taxon:
+        code:
+            max_length: 'Kód nesmie byť dlhší než {{ limit }} znakov.'
+            not_blank: 'Prosím, zadajte kód taxónu.'
+            regex: 'Kód taxónu môže obsahovať iba písmená, čísla, pomlčky a podčiarkovníky.'
+            unique: 'Taxón s daným kódom už existuje.'
+        name:
+            max_length: 'Názov taxónu nesmie byť dlhší než 255 znakov.'
+            not_blank: 'Prosím, zadajte názov taxónu.'
+        slug:
+            not_blank: 'Prosím, zadajte slug taxónu.'
+            unique: 'Slug taxónu musí byť jedinečný.'
+        parent:
+            invalid_relation: 'Rodič nemôže byť ani samotný taxón, ani ktorýkoľvek z jeho potomkov.'
+    taxonomy:
+        name:
+            max_length: 'Názov taxonómie nesmie byť dlhší než 255 znakov.'
+            not_blank: 'Prosím, zadajte názov taxonómie.'

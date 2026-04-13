@@ -1,0 +1,216 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    admin:
+        password_reset_request:
+            email:
+                invalid: 'Acest email nu este valid.'
+                max: 'Email-ul trebuie să aibă cel mult {{ limit }} caractere.'
+                min: 'Email-ul trebuie să aibă cel puțin {{ limit }} caractere.'
+                not_blank: 'Vă rugăm să introduceți un email.'
+        reset_password:
+            mismatch: 'Parolele introduse nu coincid.'
+            password:
+                min: 'Parola trebuie să aibă cel puțin {{ limit }} caractere.'
+                max: 'Parola trebuie să aibă cel mult {{ limit }} caractere.'
+                not_blank: 'Vă rugăm să introduceți parola.'
+    avatar_image:
+        file:
+            max_size: 'Imaginea este prea mare - {{ size }}{{ suffix }}. Dimensiunea maximă permisă este {{ limit }}{{ suffix }}.'
+            upload_ini_size: 'Imaginea este prea mare. Dimensiunea maximă permisă este {{ limit }}{{ suffix }}.'
+    catalog_promotion_action:
+        fixed_discount:
+            channel_not_configured: 'Configurația pentru unul dintre canalele necesare nu este furnizată.'
+            not_valid: 'Configurația oferită conține erori. Vă rugăm să adăugați suma de reducere fixă care este un număr mai mare decât 0.'
+    catalog_promotion_scope:
+        invalid_type: 'Tipul de domeniu al promoției din catalog este invalid. Vă rugăm să alegeți un tip valid.'
+        for_products:
+            invalid_products: 'Configurația oferită conține erori. Vă rugăm să adăugați numai produse existente.'
+            not_empty: 'Configurația oferită conține erori. Vă rugăm să adăugați cel puțin 1 produs.'
+            unique: 'Configurația oferită conține erori. Vă rugăm să adăugați numai produse unice.'
+        for_variants:
+            invalid_variants: 'Configurația oferită conține erori. Vă rugăm să adăugați numai variante existente.'
+            not_empty: 'Vă rugăm să adăugați cel puțin 1 variantă.'
+            unique: 'Configurația oferită conține erori. Vă rugăm să adăugați numai variante unice.'
+        for_taxons:
+            invalid_taxons: 'Configurația oferită conține erori. Vă rugăm să adăugați numai taxoni existenți.'
+            not_empty: 'Configurația oferită conține erori. Vă rugăm să adăugați cel puțin 1 taxon.'
+            unique: 'Configurația oferită conține erori. Vă rugăm să adăugați numai taxoni unici.'
+    channel:
+        base_currency:
+            not_blank: 'Vă rugăm să introduceți moneda de bază a canalului.'
+        default_locale:
+            enabled: 'Localul implicit trebuie să fie activat.'
+            not_blank: 'Vă rugăm să introduceți localul implicit al canalului.'
+        contact_email:
+            invalid: 'Acest email este invalid.'
+            max: 'Email-ul nu trebuie să depășească {{ limit }} caractere.'
+            min: 'Email-ul trebuie să aibă cel puțin {{ limit }} caractere.'
+        contact_phone_number:
+            max_length: 'Numărul de telefon de contact nu trebuie să depășească {{ limit }} caractere.'
+        theme_name:
+            max_length: 'Numele temei nu trebuie să depășească {{ limit }} caractere.'
+        tax_calculation_strategy:
+            not_blank: 'Vă rugăm să introduceți strategia de calcul a taxelor.'
+            max_length: 'Strategia de calcul a taxelor nu trebuie să depășească {{ limit }} caractere.'
+    channel_price_history_config:
+        lowest_price_for_discounted_products_checking_period:
+            greater_than: 'Valoarea trebuie să fie mai mare decât {{ compared_value }}'
+            less_than: 'Valoarea trebuie să fie mai mică decât {{ compared_value }}'
+    channel_pricing:
+        channel_code:
+            not_blank: 'Vă rugăm să setați codul canalului.'
+            unique: 'Acest canal are deja un preț pentru această variantă de produs.'
+        price:
+            min: 'Prețul nu poate fi mai mic decât 0.'
+            not_blank: 'Vă rugăm să introduceți prețul.'
+    channel_code_collection:
+        invalid_channel: 'Canalul cu codul {{ channel_code }} nu există.'
+    checkout:
+        addressing:
+            csrf_error: 'Vă rugăm să retransmiteți formularul complet.'
+        shipping_method:
+            not_blank: 'Vă rugăm să selectați metoda de livrare.'
+        email:
+            not_changeable: 'Email-ul poate fi schimbat doar pentru clienții oaspeți. Odată ce clientul se autentifică și coșul este atribuit, email-ul nu mai poate fi schimbat.'
+    contact:
+        email:
+            invalid: 'Acest email este invalid.'
+            not_blank: 'Vă rugăm să introduceți email-ul.'
+        message:
+            not_blank: 'Vă rugăm să introduceți mesajul.'
+    country:
+        code:
+            not_exist: 'Țara cu codul {{ code }} nu există.'
+    currency:
+        enabled:
+            cannot_disable_base: 'Moneda de bază nu poate fi dezactivată.'
+    customer:
+        currency_code:
+            not_valid: 'Codul valutei introdus este invalid.'
+    customer_group:
+        code:
+            not_exist: 'Grupul de clienți cu codul {{ code }} nu există.'
+    cart_item:
+        not_available: '%itemName% nu are stoc suficient.'
+        insufficient_stock: 'Stoc insuficient'
+        quantity:
+            not_in_range: 'Cantitatea trebuie să fie între {{ min }} și {{ max }}.'
+        variant:
+            not_available: '%variantName% nu este disponibil.'
+    max_integer: 'Valoarea trebuie să fie mai mică decât {{ compared_value }}.'
+    order:
+        address_requirement: 'Vă rugăm să furnizați un %addressName%.'
+        currency_code:
+            not_valid: 'Codul valutei introdus este invalid.'
+        invalid_state_transition: 'Nu se poate finaliza deoarece comanda este într-o stare incorectă. Curent: %currentState%. Tranziții posibile: %possibleTransitions%.'
+        payment_method_eligibility: 'Această metodă de plată %paymentMethodName% a fost dezactivată. Vă rugăm să selectați o altă metodă de plată.'
+        product_eligibility: 'Produsul %productName% nu mai este disponibil.'
+        shipping_method_eligibility: 'Produsul nu îndeplinește cerințele pentru metoda de livrare %shippingMethodName%. Vă rugăm să selectați din nou metoda de livrare.'
+        shipping_method_not_available: 'Metoda de livrare "%shippingMethodName%" nu este disponibilă. Vă rugăm să selectați din nou metoda de livrare.'
+        cart_items_immutable: 'Nu puteți modifica articolele din coș după ce finalizarea comenzii a fost realizată.'
+    resend_order_confirmation_email:
+        invalid_order_state: 'Nu se poate retrimite emailul de confirmare a comenzii pentru o comandă cu starea %state%.'
+    resend_shipment_confirmation_email:
+        invalid_shipment_state: 'Nu se poate retrimite emailul de confirmare a expedierii pentru o expediere în starea %state%.'
+    locale:
+        enabled:
+            cannot_disable_base: 'Localul de bază nu poate fi dezactivat.'
+    product:
+        variants:
+            all_prices_defined: 'Trebuie să definiți mai întâi prețurile variantelor de produs pentru canalele nou atribuite.'
+        code:
+            not_exist: 'Produsul cu codul {{ code }} nu există.'
+    product_attribute:
+        invalid: 'Poziția trebuie să fie un număr întreg.'
+    image:
+        file:
+            allowed_mime_types: 'Fișierul nu este o imagine validă. Tipurile permise sunt %types%.'
+    product_image:
+        file:
+            max_size: 'Imaginea este prea mare - {{ size }}{{ suffix }}. Dimensiunea maximă permisă este {{ limit }}{{ suffix }}.'
+            upload_ini_size: 'Imaginea este prea mare. Dimensiunea maximă permisă este {{ limit }}{{ suffix }}.'
+        product_variant:
+            not_belong_to_owner: 'Varianta de produs cu codul "%productVariantCode%" nu aparține produsului cu codul "%ownerCode%", care este proprietarul imaginii.'
+    product_taxon:
+        unique: 'Taxonii de produs nu pot fi duplicati.'
+        product:
+            not_blank: 'Vă rugăm să selectați un produs.'
+        taxon:
+            not_blank: 'Vă rugăm să selectați un taxon.'
+    product_variant:
+        code:
+            not_exist: 'Varianta de produs cu codul {{ code }} nu există.'
+        onHand:
+            min: 'Stocul disponibil trebuie să fie mai mare decât {{ limit }}.'
+            not_blank: 'Vă rugăm să introduceți stocul disponibil.'
+            reserved: 'Stocul disponibil trebuie să fie mai mare decât numărul unităților rezervate.'
+        original_price:
+            min: 'Prețul original nu poate fi negativ.'
+        weight:
+            min: 'Greutatea nu poate fi negativă.'
+            invalid: 'Greutatea trebuie să fie un număr.'
+        width:
+            min: 'Lățimea nu poate fi negativă.'
+            invalid: 'Lățimea trebuie să fie un număr.'
+        height:
+            min: 'Înălțimea nu poate fi negativă.'
+            invalid: 'Înălțimea trebuie să fie un număr.'
+        depth:
+            min: 'Adâncimea nu poate fi negativă.'
+            invalid: 'Adâncimea trebuie să fie un număr.'
+        channel_pricing:
+            price:
+                not_defined: 'Trebuie să definiți prețul.'
+            existing_code: 'Canalul cu codul {{ channelCode }} nu există.'
+    promotion_coupon:
+        per_customer_usage_limit:
+            min: 'Limita de utilizare a cuponului per client trebuie să fie cel puțin {{ limit }}.'
+    product_translation:
+        short_description:
+            max: 'Descrierea scurtă nu trebuie să depășească {{ limit }} caractere.'
+    province:
+        code:
+            not_exist: 'Provincia cu codul {{ code }} nu există.'
+    review:
+        author:
+            not_blank: 'Vă rugăm să introduceți email-ul.'
+        product:
+            not_blank: 'Vă rugăm să selectați un produs.'
+        rating:
+            range: 'Evaluarea recenziei trebuie să fie un număr întreg între 1-5.'
+            not_in_range: 'Evaluarea recenziei trebuie să fie între {{ min }} și {{ max }}.'
+    taxon:
+        code:
+            not_exist: 'Taxonul cu codul {{ code }} nu există.'
+    taxon_image:
+        file:
+            max_size: 'Imaginea este prea mare - {{ size }}{{ suffix }}. Dimensiunea maximă permisă este {{ limit }}{{ suffix }}.'
+            upload_ini_size: 'Imaginea este prea mare. Dimensiunea maximă permisă este {{ limit }}{{ suffix }}.'
+    translation:
+        locale:
+            not_blank: 'Vă rugăm să introduceți localul.'
+            invalid: 'Această valoare nu este un local valid.'
+            unique: 'O traducere pentru codul de local {{ value }} există deja.'
+        locale_code:
+            invalid: 'Vă rugăm să alegeți unul dintre localurile disponibile: %locales%.'
+    user:
+        email:
+            unique: 'Acest email este deja utilizat.'
+            min: 'Email-ul trebuie să aibă cel puțin {{ limit }} caractere.'
+            max: 'Email-ul trebuie să aibă cel mult {{ limit }} caractere.'
+            invalid: 'Acest email este invalid.'
+        username:
+            unique: 'Acest nume de utilizator este deja folosit.'
+            not_blank: 'Vă rugăm să introduceți numele.'
+            max: 'Numele de utilizator nu trebuie să depășească {{ limit }} caractere.'
+        first_name:
+            max: 'Prenumele nu trebuie să depășească {{ limit }} caractere.'
+        last_name:
+            max: 'Numele de familie nu trebuie să depășească {{ limit }} caractere.'
+        locale_code:
+            not_blank: 'Vă rugăm să alegeți un local.'
+    zone:
+        code:
+            not_exist: 'Zona cu codul {{ code }} nu există.'

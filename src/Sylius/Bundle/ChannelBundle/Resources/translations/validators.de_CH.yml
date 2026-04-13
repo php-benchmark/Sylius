@@ -1,0 +1,17 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    channel:
+        code:
+            max_length: 'Der Code darf nicht länger als {{ limit }} Zeichen sein.'
+            not_blank: 'Bitte geben Sie den Kanalcode ein.'
+            regex: 'Der Kanalcode darf nur aus Buchstaben, Zahlen, Bindestrichen und Unterstrichen bestehen.'
+            unique: 'Der Kanalcode muss eindeutig sein.'
+        name:
+            not_blank: 'Bitte geben Sie den Kanalnamen ein.'
+            max_length: 'Der Kanalname darf nicht länger als {{ limit }} Zeichen sein.'
+        color:
+            max_length: 'Die Farbe darf nicht länger als {{ limit }} Zeichen sein.'
+        hostname:
+            max_length: 'Der Hostname darf nicht länger als {{ limit }} Zeichen sein.'

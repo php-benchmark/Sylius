@@ -1,0 +1,43 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        address:
+            city: Kaupunki
+            company: Yritys
+            country: Maa
+            first_name: Etunimi
+            last_name: Sukunimi
+            phone_number: Puhelinnumero
+            postcode: Postinumero
+            street: Katuosoite
+            province: Lääni
+            zone: Vyöhyke
+        country:
+            add_province: Lisää maakunta
+            name: Nimi
+            provinces: Maakunnat
+            select: Valitse
+            enabled: Aktiivinen
+        province:
+            name: Nimi
+            abbreviation: Lyhenne
+            select: Valitse
+        zone:
+            add_member: Lisää jäsen
+            members: Jäsenet
+            name: Nimi
+            type: Tyyppi
+            types:
+                country: Maa
+                province: Lääni
+                zone: Alue
+            scope: Alue
+            scopes:
+                all: Kaikki
+            select: Valitse
+            select_scope: Valitse alue
+            priority: Prioriteetti
+        zone_member:
+            select: Valitse

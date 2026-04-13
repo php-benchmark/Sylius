@@ -1,0 +1,15 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    review:
+        author:
+            already_exists: 'Dit e-mailadres is al geregistreerd, log in of gebruik vergeten wachtwoord.'
+        comment:
+            not_blank: 'Beoordelingsopmerking mag niet leeg zijn.'
+        rating:
+            not_blank: 'Je moet de beoordelingsscore invullen.'
+        title:
+            not_blank: 'Beoordelingstitel mag niet leeg zijn.'
+            min_length: 'Beoordelingstitel moet minstens 2 tekens lang zijn.'
+            max_length: 'Beoordelingstitel mag maximaal 255 tekens lang zijn.'

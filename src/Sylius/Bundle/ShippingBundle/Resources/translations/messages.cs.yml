@@ -1,0 +1,59 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        rule:
+            unit_count_configuration:
+                count: 'Počet'
+                equal: 'Rovná se'
+            type: 'Typ pravidla'
+        shipment:
+            state: 'Stav'
+            states:
+                checkout: 'Pokladna'
+                pending: 'Čekající'
+                ready: 'Připraveno'
+                shipped: 'Odesláno'
+                returned: 'Vráceno'
+                cancelled: 'Zrušeno'
+            tracking_code: 'Sledovací kód'
+        shipping_calculator:
+            flat_rate_configuration:
+                label: 'Pevná sazba za zásilku'
+                amount: 'Částka'
+            per_unit_rate_configuration:
+                label: 'Pevná sazba za jednotku'
+                amount: 'Částka'
+        shipping_category:
+            description: 'Popis'
+            name: 'Název'
+        shipping_method:
+            add_rule: 'Přidat pravidlo'
+            calculator: 'Kalkulátor'
+            category: 'Kategorie'
+            category_requirement: 'Požadavek na kategorii'
+            channels: 'Kanály'
+            configuration: 'Konfigurace'
+            description: 'Popis'
+            enabled: 'Povoleno'
+            match_all_category_requirement: 'Všechny jednotky musí odpovídat kategorii metody'
+            match_any_category_requirement: 'Alespoň 1 jednotka musí odpovídat kategorii metody'
+            match_none_category_requirement: 'Žádná z jednotek nesmí odpovídat kategorii metody'
+            name: 'Název'
+            position: 'Pozice'
+            rules: 'Pravidla'
+            rules_help: 'Použijte pravidla k rozhodnutí, zda může být tato dopravní metoda aplikována na danou objednávku. Pokud je pravidlo pravdivé, tato dopravní metoda může být aplikována. Všimněte si, že pokud přidáte více pravidel, musí být všechna pravidla pravdivá.'
+            select_calculator: 'Vyberte kalkulátor'
+            tax_category: 'Daňová kategorie'
+            translations: 'Překlady'
+        shipping_method_rule:
+            items_total_greater_than_or_equal: 'Celková cena položek je větší než nebo rovna'
+            items_total_less_than_or_equal: 'Celková cena položek je menší než nebo rovna'
+            type: 'Typ'
+            total: 'Celková částka'
+            total_weight_greater_than_or_equal: 'Celková hmotnost je větší než nebo rovna'
+            total_weight_less_than_or_equal: 'Celková hmotnost je menší než nebo rovna'
+            weight: 'Hmotnost'
+            amount: 'Částka'
+            select: 'Vyberte typ pravidla'

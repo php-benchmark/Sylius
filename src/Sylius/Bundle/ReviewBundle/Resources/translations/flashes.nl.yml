@@ -1,0 +1,8 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    review:
+        accept: 'Beoordeling is succesvol geaccepteerd.'
+        reject: 'Beoordeling is succesvol afgewezen.'
+        wait_for_the_acceptation: 'Je beoordeling wacht op goedkeuring.'

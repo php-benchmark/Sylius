@@ -1,0 +1,33 @@
+sylius_grid:
+    grids:
+        sylius_admin_locale:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%sylius.model.locale.class%"
+            sorting:
+                code: asc
+            fields:
+                name:
+                    type: twig
+                    label: sylius.ui.name
+                    path: .
+                    options:
+                        template: "@SyliusAdmin/locale/grid/field/name.html.twig"
+                code:
+                    type: twig
+                    label: sylius.ui.code
+                    sortable: ~
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/code.html.twig"
+            filters:
+                code:
+                    type: string
+                    label: sylius.ui.code
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    delete:
+                        type: delete

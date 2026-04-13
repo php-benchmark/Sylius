@@ -1,0 +1,24 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    gateway_config:
+        invalid_gateway_factory: "مصنع البوابة غير صالح. المصانع المتاحة هي {{ available_factories }}."
+        gateway_name:
+            not_blank: "يرجى إدخال اسم البوابة."
+        factory_name:
+            not_blank: "يرجى إدخال اسم مصنع البوابة."
+        paypal:
+            password:
+                not_blank: "يرجى إدخال كلمة مرور باي بال."
+            signature:
+                not_blank: "يرجى إدخال توقيع باي بال."
+            username:
+                not_blank: "يرجى إدخال اسم مستخدم باي بال."
+            sandbox:
+                not_null: "يرجى تحديد حالة وضع الاختبار في باي بال."
+        stripe:
+            secret_key:
+                not_blank: "يرجى إدخال المفتاح السري لسترايب."
+            publishable_key:
+                not_blank: "يرجى إدخال المفتاح العام لسترايب."

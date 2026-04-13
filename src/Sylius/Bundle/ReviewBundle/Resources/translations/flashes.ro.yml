@@ -1,0 +1,8 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    review:
+        accept: 'Recenzia a fost acceptată cu succes.'
+        reject: 'Recenzia a fost respinsă cu succes.'
+        wait_for_the_acceptation: 'Recenzia dvs. așteaptă acceptarea.'

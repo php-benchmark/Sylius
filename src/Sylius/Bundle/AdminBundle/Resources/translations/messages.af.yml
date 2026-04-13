@@ -1,0 +1,34 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    menu:
+        admin:
+            main:
+                catalog:
+                    attributes: Kenmerke
+                    header: Katalogus
+                    inventory: Voorraad
+                    products: Produkte
+                configuration:
+                    channels: Kanale
+                    countries: Lande
+                    currencies: Geldeenhede
+                    header: Konfigurasie
+                marketing:
+                    header: Bemarking
+                    product_reviews: Produk resensies
+                    promotions: Promosies
+                customers:
+                    customers: Kliënte
+                    groups: Groepe
+                    header: Kliënt
+                sales:
+                    header: Verkope
+                    orders: Bestellings
+                official_support:
+                    header: Amptelike ondersteuning
+                    browse_plugins: Deurblaai invoegings
+                    sylius_plus: Sylius Plus
+                    professional_services: Professionele dienste
+                    find_a_partner: Vind 'n vennoot

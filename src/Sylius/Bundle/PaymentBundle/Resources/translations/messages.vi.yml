@@ -1,0 +1,12 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        payment:
+            method: Phương thức thanh toán
+            state:
+                new: Mới
+        payment_method:
+            description: Mô tả
+            name: Tên

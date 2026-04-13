@@ -1,0 +1,17 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    channel:
+        code:
+            max_length: لا يجب أن يتجاوز الرمز {{ limit }} حرفًا.
+            not_blank: يرجى إدخال رمز القناة.
+            regex: يمكن أن يتكوّن رمز القناة فقط من أحرف وأرقام وشرطات وشرطات سفلية.
+            unique: يجب أن يكون رمز القناة فريدًا.
+        name:
+            not_blank: يرجى إدخال اسم القناة.
+            max_length: لا يجب أن يتجاوز اسم القناة {{ limit }} حرفًا.
+        color:
+            max_length: لا يجب أن يتجاوز اللون {{ limit }} حرفًا.
+        hostname:
+            max_length: لا يجب أن يتجاوز اسم المضيف {{ limit }} حرفًا.

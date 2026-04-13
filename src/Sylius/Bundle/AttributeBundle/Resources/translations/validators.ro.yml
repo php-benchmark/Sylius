@@ -1,0 +1,31 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    attribute:
+        name:
+            not_blank: 'Vă rugăm să introduceți numele atributului.'
+            min_length: 'Numele atributului trebuie să aibă cel puțin 1 caracter.|Numele atributului trebuie să aibă cel puțin {{ limit }} caractere.'
+            max_length: 'Numele atributului nu poate avea mai mult de 1 caracter.|Numele atributului nu poate avea mai mult de {{ limit }} caractere.'
+        code:
+            min_length: 'Codul atributului trebuie să aibă cel puțin 1 caracter.|Codul atributului trebuie să aibă cel puțin {{ limit }} caractere.'
+            max_length: 'Codul atributului nu poate avea mai mult de 1 caracter.|Codul atributului nu poate avea mai mult de {{ limit }} caractere.'
+            not_blank: 'Vă rugăm să introduceți codul atributului.'
+            regex: 'Codul atributului poate conține doar litere, cifre, cratime și underscore-uri.'
+            unique: 'Acest cod este deja folosit.'
+        configuration:
+            max_entries: 'Valoarea maximă a intrărilor de configurare trebuie să fie mai mare sau egală cu valoarea minimă a intrărilor.'
+            max_length: 'Lungimea maximă de configurare trebuie să fie mai mare sau egală cu lungimea minimă.'
+            min_entries: 'Valoarea minimă a intrărilor de configurare trebuie să fie mai mică sau egală cu numărul de opțiuni adăugate.'
+            multiple: 'Valoarea "multiplu" din configurare trebuie să fie adevărată dacă valorile min sau max de intrări sunt specificate.'
+        presentation:
+            not_blank: 'Vă rugăm să introduceți prezentarea atributului.'
+            min_length: 'Prezentarea atributului trebuie să aibă cel puțin 1 caracter.|Prezentarea atributului trebuie să aibă cel puțin {{ limit }} caractere.'
+            max_length: 'Prezentarea atributului nu poate avea mai mult de 1 caracter.|Prezentarea atributului nu poate avea mai mult de {{ limit }} caractere.'
+        type:
+            unregistered: 'Tipul atributului "%type%" nu este înregistrat. Tipuri de atribute disponibile: %available_types%.'
+    attribute_value:
+        attribute:
+            not_blank: 'Vă rugăm să selectați atributul.'
+        value:
+            not_blank: 'Vă rugăm să introduceți valoarea atributului.'

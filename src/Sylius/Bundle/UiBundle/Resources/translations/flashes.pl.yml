@@ -1,0 +1,32 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    channel:
+        delete_error: 'Kanał nie może być usunięty, wymagane jest aby co najmniej jeden kanał był włączony.'
+    checkout:
+        complete_error: 'Wystąpił nieoczekiwany problem z realizacją zamówienia. Spróbuj ponownie złożyć zamówienie.'
+    contact:
+        request_success: 'Twoja prośba o kontakt została przesłana.'
+        request_error: 'Wystąpił problem w trakcie przesyłania prośby o kontakt. Prosimy spróbować później.'
+    customer:
+        add_address: 'Adres został pomyślnie dodany.'
+        impersonate: 'Pomyślnie zalogowano się jako klient %name%.'
+        set_address_as_default: 'Adres został ustawiony jako domyślny.'
+    order:
+        apply_state_machine_transition_error: 'Wystąpił nieoczekiwany problem w trakcie aktualizacji zamówienia. Prosimy spróbować ponownie.'
+        promotion_integrity: 'Nie możesz ponownie skorzystać z promocji o nazwie %promotionName%.'
+        total_integrity: 'Zmieniono sumę za Twoje zamówienie. Sprawdź zamówienie i zatwierdź je ponownie.'
+        update_error: 'Wystąpił nieoczekiwany problem w trakcie aktualizacji zamówienia. Prosimy spróbować ponownie.'
+    payment:
+        apply_state_machine_transition_error: 'Wystąpił nieoczekiwany problem w trakcie aktualizacji płatności. Spróbuj uaktualnić ją ponownie.'
+    product:
+        in_use_by_promotion_rule: 'Nie można usunąć produktu, który jest używany przez regułę promocji.'
+        out_of_stock: 'W sklepie dostępne jest tylko %quantity% sztuk produktu.'
+    product_variant:
+        update_error: 'Wystąpił nieoczekiwany problem w trakcie aktualizacji wariantu produktu. Spróbuj uaktualnić go ponownie.'
+    promotion:
+        update_rules: 'Niektóre reguły promocji o kodach %codes% zostały zaktualizowane.'
+    taxon:
+        in_use_by_promotion_rule: 'Nie można usunąć taksonu, który jest używany przez regułę promocji.'
+        menu_taxon_delete: 'Nie można usunąć taksonu menu żadnego kanału.'

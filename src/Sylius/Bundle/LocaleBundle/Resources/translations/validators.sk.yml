@@ -1,0 +1,10 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    locale:
+        code:
+            max_length: 'Kód nesmie byť dlhší ako {{ limit }} znakov.'
+            not_blank: 'Vyberte kód lokalizácie.'
+            locale: 'Táto hodnota nie je platný kód lokalizácie.'
+            unique: 'Kód lokalizácie musí byť jedinečný.'

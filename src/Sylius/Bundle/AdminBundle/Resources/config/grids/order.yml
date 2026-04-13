@@ -1,0 +1,149 @@
+sylius_grid:
+    grids:
+        sylius_admin_order:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%sylius.model.order.class%"
+                    repository:
+                        method: createCriteriaAwareSearchListQueryBuilder
+                        arguments:
+                            criteria: $criteria
+            sorting:
+                number: desc
+            fields:
+                number:
+                    type: twig
+                    label: sylius.ui.number
+                    path: .
+                    sortable: ~
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/order_number.html.twig"
+                        vars:
+                            th_class: "w-1"
+                date:
+                    type: twig
+                    label: sylius.ui.date
+                    path: checkoutCompletedAt
+                    sortable: checkoutCompletedAt
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/date.html.twig"
+                        vars:
+                            th_class: "w-1 text-center"
+                customer:
+                    type: twig
+                    label: sylius.ui.customer
+                    sortable: customer.lastName
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/customer.html.twig"
+                        vars:
+                            th_class: "w-100"
+                channel:
+                    type: twig
+                    label: sylius.ui.channel
+                    sortable: channel.code
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/channel.html.twig"
+                state:
+                    type: twig
+                    label: sylius.ui.state
+                    sortable: ~
+                    options:
+                        template: '@SyliusAdmin/order/grid/field/order_state.html.twig'
+                paymentState:
+                    type: twig
+                    label: sylius.ui.payment_state
+                    sortable: ~
+                    options:
+                        template: '@SyliusAdmin/order/grid/field/payment_state.html.twig'
+                shippingState:
+                    type: twig
+                    label: sylius.ui.shipping_state
+                    sortable: ~
+                    options:
+                        template: '@SyliusAdmin/order/grid/field/shipping_state.html.twig'
+                total:
+                    type: twig
+                    label: sylius.ui.total
+                    path: .
+                    sortable: total
+                    options:
+                        template: "@SyliusAdmin/order/grid/field/order_total.html.twig"
+                        vars:
+                            th_class: "w-1 text-end"
+                            td_class: "text-end"
+                currencyCode:
+                    type: string
+                    label: sylius.ui.currency
+                    sortable: ~
+            filters:
+                state:
+                    type: select
+                    label: sylius.ui.state
+                    form_options:
+                        choices:
+                            sylius.ui.cancelled: cancelled
+                            sylius.ui.new: new
+                            sylius.ui.fulfilled: fulfilled
+                product:
+                    type: ux_translatable_autocomplete
+                    label: sylius.ui.product
+                    form_options:
+                        multiple: true
+                        extra_options:
+                            class: '%sylius.model.product.class%'
+                            translation_fields: [name]
+                            choice_label: name
+                variant:
+                    type: ux_translatable_autocomplete
+                    label: sylius.ui.variant
+                    form_options:
+                        multiple: true
+                        extra_options:
+                            class: '%sylius.model.product_variant.class%'
+                            translation_fields: [name]
+                            choice_label: descriptor
+                number:
+                    type: string
+                    label: sylius.ui.number
+                    form_options:
+                        type: !php/const Sylius\Component\Grid\Filter\StringFilter::TYPE_CONTAINS
+                customer:
+                    type: ux_autocomplete
+                    label: sylius.ui.customer
+                    form_options:
+                        extra_options:
+                            class: '%sylius.model.customer.class%'
+                            choice_label: fullname
+                date:
+                    type: date
+                    label: sylius.ui.date
+                    options:
+                        field: checkoutCompletedAt
+                        inclusive_to: true
+                channel:
+                    type: ux_autocomplete
+                    label: sylius.ui.channel
+                    form_options:
+                        extra_options:
+                            class: "%sylius.model.channel.class%"
+                            choice_label: name
+                total:
+                    type: money
+                    label: sylius.ui.total
+                    options:
+                        currency_field: currencyCode
+                shipping_method:
+                    type: ux_translatable_autocomplete
+                    label: sylius.ui.shipping_method
+                    form_options:
+                        extra_options:
+                            class: "%sylius.model.shipping_method.class%"
+                            translation_fields: [name]
+                            choice_label: name
+                    options:
+                        fields: [shipments.method.id]
+            actions:
+                item:
+                    show:
+                        type: show

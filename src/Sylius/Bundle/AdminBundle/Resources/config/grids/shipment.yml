@@ -1,0 +1,84 @@
+sylius_grid:
+    grids:
+        sylius_admin_shipment:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%sylius.model.shipment.class%"
+                    repository:
+                        method: createListQueryBuilder
+            sorting:
+                createdAt: desc
+            fields:
+                createdAt:
+                    type: twig
+                    label: sylius.ui.created_at
+                    sortable: ~
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/date.html.twig"
+                        vars:
+                            th_class: "w-1 text-center"
+                shippedAt:
+                    type: twig
+                    label: sylius.ui.shipped_at
+                    sortable: ~
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/date.html.twig"
+                        vars:
+                            th_class: "w-1 text-center"
+                order:
+                    type: twig
+                    label: sylius.ui.order
+                    path: order
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/order_number.html.twig"
+                        vars:
+                            th_class: "w-1"
+                channel:
+                    type: twig
+                    label: sylius.ui.channel
+                    path: order.channel
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/channel.html.twig"
+                state:
+                    type: twig
+                    label: sylius.ui.state
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/shipment_state.html.twig"
+                        vars:
+                            th_class: "w-1 text-center"
+                            td_class: "text-center"
+            filters:
+                state:
+                    type: select
+                    label: sylius.ui.state
+                    form_options:
+                        choices:
+                            sylius.ui.cancelled: cancelled
+                            sylius.ui.ready: ready
+                            sylius.ui.shipped: shipped
+                channel:
+                    type: ux_autocomplete
+                    label: sylius.ui.channel
+                    form_options:
+                        extra_options:
+                            class: "%sylius.model.channel.class%"
+                            choice_label: name
+                    options:
+                        fields: [order.channel.id]
+                method:
+                    type: ux_translatable_autocomplete
+                    label: sylius.ui.method
+                    form_options:
+                        extra_options:
+                            class: "%sylius.model.shipping_method.class%"
+                            translation_fields: [name]
+                            choice_label: name
+                    options:
+                        fields: [method.id]
+            actions:
+                item:
+                    ship:
+                        type: ship_with_tracking_code
+                    show:
+                        type: show

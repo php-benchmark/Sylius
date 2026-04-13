@@ -1,0 +1,14 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        currency:
+            base: 'Moneda de bază'
+            code: 'Nume'
+            enabled: 'Activat'
+            exchange_rate: 'Rata de schimb'
+        exchange_rate:
+            source_currency: 'Valuta sursă'
+            target_currency: 'Valuta țintă'
+            ratio: 'Raport'

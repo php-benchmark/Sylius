@@ -1,0 +1,11 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    payment:
+        cancelled: 'Maksu on peruutettu.'
+        completed: 'Maksu on suoritettu.'
+        failed: 'Maksu epäonnistui.'
+        processing: 'Maksua käsitellään.'
+        refunded: 'Maksun hyvitys onnistui.'
+        unknown: 'Maksussa tapahtui tuntematon virhe.'

@@ -1,0 +1,10 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    locale:
+        code:
+            max_length: 'Codul nu poate avea mai mult de {{ limit }} caractere.'
+            not_blank: 'Vă rugăm să alegeți codul localului.'
+            locale: 'Această valoare nu este un cod de local valid.'
+            unique: 'Codul localului trebuie să fie unic.'

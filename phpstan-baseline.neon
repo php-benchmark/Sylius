@@ -1,0 +1,7 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Return type \(Doctrine\\Common\\Collections\\Collection\<\(int\|string\), Sylius\\Component\\Core\\Model\\OrderItemInterface\>\) of method Sylius\\Component\\Core\\Model\\OrderInterface\:\:getItems\(\) should be compatible with return type \(Doctrine\\Common\\Collections\\Collection\<\(int\|string\), Sylius\\Component\\Order\\Model\\OrderItemInterface\>\) of method Sylius\\Component\\Order\\Model\\OrderInterface\:\:getItems\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Sylius/Component/Core/Model/OrderInterface.php

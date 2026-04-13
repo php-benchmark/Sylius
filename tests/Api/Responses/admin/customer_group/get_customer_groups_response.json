@@ -1,0 +1,53 @@
+{
+    "@context": "\/api\/v2\/contexts\/CustomerGroup",
+    "@id": "\/api\/v2\/admin\/customer-groups",
+    "@type": "hydra:Collection",
+    "hydra:member": [
+        {
+            "@id": "\/api\/v2\/admin\/customer-groups\/premium",
+            "@type": "CustomerGroup",
+            "id": "@integer@",
+            "code": "premium",
+            "name": "Premium"
+        },
+        {
+            "@id": "\/api\/v2\/admin\/customer-groups\/vip",
+            "@type": "CustomerGroup",
+            "id": "@integer@",
+            "code": "vip",
+            "name": "VIP"
+        }
+    ],
+    "hydra:totalItems": 2,
+    "hydra:search": {
+        "@type": "hydra:IriTemplate",
+        "hydra:template": "\/api\/v2\/admin\/customer-groups{?code,name,order[code],order[name]}",
+        "hydra:variableRepresentation": "BasicRepresentation",
+        "hydra:mapping": [
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "code",
+                "property": "code",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "name",
+                "property": "name",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[code]",
+                "property": "code",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[name]",
+                "property": "name",
+                "required": false
+            }
+        ]
+    }
+}

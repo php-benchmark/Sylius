@@ -1,0 +1,11 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        channel:
+            color: اللون
+            description: الوصف
+            enabled: مفعل
+            name: الاسم
+            url: الرابط (URL)

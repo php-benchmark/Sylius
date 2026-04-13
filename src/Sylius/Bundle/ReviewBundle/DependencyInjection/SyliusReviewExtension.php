@@ -1,0 +1,95 @@
+<?php
+
+/*
+ * This file is part of the Sylius package.
+ *
+ * (c) Sylius Sp. z o.o.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+declare(strict_types=1);
+
+namespace Sylius\Bundle\ReviewBundle\DependencyInjection;
+
+use Sylius\Bundle\ResourceBundle\DependencyInjection\Extension\AbstractResourceExtension;
+use Sylius\Bundle\ReviewBundle\EventListener\ReviewChangeListener;
+use Sylius\Bundle\ReviewBundle\Updater\AverageRatingUpdater;
+use Symfony\Component\Config\FileLocator;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Definition;
+use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
+use Symfony\Component\DependencyInjection\Reference;
+
+final class SyliusReviewExtension extends AbstractResourceExtension
+{
+    public function load(array $configs, ContainerBuilder $container): void
+    {
+        $config = $this->processConfiguration($this->getConfiguration([], $container), $configs);
+        $loader = new PhpFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
+
+        $this->registerResources('sylius', $config['driver'], $this->resolveResources($config['resources'], $container), $container);
+
+        $loader->load('services.php');
+
+        $loader->load(sprintf('integrations/%s.php', $config['driver']));
+    }
+
+    /**
+     * @param array<string, array<mixed>> $resources
+     *
+     * @return array<mixed>
+     */
+    private function resolveResources(array $resources, ContainerBuilder $container): array
+    {
+        $container->setParameter('sylius.review.subjects', $resources);
+
+        $this->createReviewListeners(array_keys($resources), $container);
+
+        $resolvedResources = [];
+        foreach ($resources as $subjectName => $subjectConfig) {
+            foreach ($subjectConfig as $resourceName => $resourceConfig) {
+                if (is_array($resourceConfig)) {
+                    $resolvedResources[$subjectName . '_' . $resourceName] = $resourceConfig;
+                }
+            }
+        }
+
+        return $resolvedResources;
+    }
+
+    /** @param array<mixed> $reviewSubjects */
+    private function createReviewListeners(array $reviewSubjects, ContainerBuilder $container): void
+    {
+        foreach ($reviewSubjects as $reviewSubject) {
+            $reviewChangeListener = new Definition(ReviewChangeListener::class, [
+                new Reference(sprintf('sylius.updater.%s_review.average_rating', $reviewSubject)),
+            ]);
+
+            $reviewChangeListener
+                ->setPublic(true)
+                ->addTag('doctrine.event_listener', [
+                    'event' => 'postPersist',
+                    'lazy' => true,
+                ])
+                ->addTag('doctrine.event_listener', [
+                    'event' => 'postUpdate',
+                    'lazy' => true,
+                ])
+                ->addTag('doctrine.event_listener', [
+                    'event' => 'preRemove',
+                    'lazy' => true,
+                ])
+            ;
+
+            $container->addDefinitions([
+                sprintf('sylius.updater.%s_review.average_rating', $reviewSubject) => (new Definition(AverageRatingUpdater::class, [
+                    new Reference('sylius.calculator.average_rating'),
+                    new Reference(sprintf('sylius.manager.%s_review', $reviewSubject)),
+                ]))->setPublic(true),
+                sprintf('sylius.listener.%s_review_change', $reviewSubject) => $reviewChangeListener,
+            ]);
+        }
+    }
+}

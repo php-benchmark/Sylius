@@ -1,0 +1,11 @@
+{
+    "@context": "\/api\/v2\/contexts\/ProductOption",
+    "@id": "\/api\/v2\/shop\/product-options\/COLOR",
+    "@type": "ProductOption",
+    "code": "COLOR",
+    "values": [
+        "\/api\/v2\/shop\/product-options\/COLOR\/values\/COLOR_BLUE",
+        "\/api\/v2\/shop\/product-options\/COLOR\/values\/COLOR_RED"
+    ],
+    "name": "Color"
+}

@@ -1,0 +1,37 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    shipping_category:
+        name:
+            max_length: '类别名称不得超过 {{ limit }} 个字符。'
+            min_length: '类别名称至少需要 {{ limit }} 个字符。'
+            not_blank: '请输入运输类别名称。'
+        code:
+            max_length: '代码不得超过 {{ limit }} 个字符。'
+            not_blank: '请输入运输类别代码。'
+            regex: '运输类别代码只能包含字母、数字、连字符和下划线。'
+            unique: '具有该代码的运输类别已存在。'
+
+    shipping_method:
+        calculator:
+            min: '运输费用不能低于0。'
+            not_blank: '请选择运输方式计算器。'
+            invalid: '无效的计算器。可用计算器有 {{ available_calculators }}。'
+        name:
+            max_length: '运输方式名称不得超过 {{ limit }} 个字符。'
+            min_length: '运输方式名称至少需要 {{ limit }} 个字符。'
+            not_blank: '请输入运输方式名称。'
+        code:
+            max_length: '代码不得超过 {{ limit }} 个字符。'
+            not_blank: '请输入运输方式代码。'
+            regex: '运输方式代码只能包含字母、数字、连字符和下划线。'
+            unique: '具有该代码的运输方式已存在。'
+        zone:
+            not_blank: '请选择运输方式区域。'
+        rule:
+            invalid_type: '无效的规则类型。可用规则类型有 {{ available_rule_types }}。'
+
+    shipment:
+        shipping_method:
+            not_blank: '请选择运输方式。'

@@ -1,0 +1,16 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        tax_category:
+            description: 'Descriere'
+            name: 'Nume'
+        tax_rate:
+            amount: 'Sumă'
+            calculator: 'Calculator'
+            category: 'Categorie'
+            end_date: 'Data de încheiere'
+            included_in_price: 'Inclus în preț?'
+            name: 'Nume'
+            start_date: 'Data de început'

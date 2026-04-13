@@ -1,0 +1,17 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    user:
+        email:
+            not_blank: 'Por favor, insira seu e-mail.'
+            invalid: 'Este e-mail é inválido.'
+            not_registered: 'Usuário com este e-mail não existe. Por favor, registre-se primeiro.'
+        plainPassword:
+            not_blank: 'Por favor, insira sua senha.'
+            mismatch: 'As senhas inseridas não coincidem'
+            wrong_current: 'A senha fornecida é diferente da atual.'
+        password:
+            min: 'A senha deve ter pelo menos {{ limit }} caracteres.'
+            max: 'A senha não deve ter mais que {{ limit }} caracteres.'
+

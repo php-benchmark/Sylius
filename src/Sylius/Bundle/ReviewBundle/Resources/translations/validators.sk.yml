@@ -1,0 +1,15 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    review:
+        author:
+            already_exists: 'Tento e-mail je už zaregistrovaný, prihláste sa alebo použite zabudnuté heslo.'
+        comment:
+            not_blank: 'Komentár recenzie nesmie byť prázdny.'
+        rating:
+            not_blank: 'Musíte zvoliť hodnotenie recenzie.'
+        title:
+            not_blank: 'Nadpis recenzie nesmie byť prázdny.'
+            min_length: 'Nadpis recenzie musí mať aspoň 2 znaky.'
+            max_length: 'Nadpis recenzie nesmie mať viac ako 255 znakov.'

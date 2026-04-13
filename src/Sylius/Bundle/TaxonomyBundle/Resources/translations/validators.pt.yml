@@ -1,0 +1,22 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    taxon:
+        code:
+            max_length: 'O código não pode ter mais de {{ limit }} caracteres.'
+            not_blank: 'Por favor, informe o código do táxon.'
+            regex: 'O código do táxon pode conter apenas letras, números, hífens e sublinhados.'
+            unique: 'Já existe um táxon com esse código.'
+        name:
+            max_length: 'O nome do táxon não pode ter mais de 255 caracteres.'
+            not_blank: 'Por favor, informe o nome do táxon.'
+        slug:
+            not_blank: 'Por favor, informe o slug do táxon.'
+            unique: 'O slug do táxon deve ser único.'
+        parent:
+            invalid_relation: 'O pai não pode ser o próprio táxon nem qualquer um dos seus descendentes.'
+    taxonomy:
+        name:
+            max_length: 'O nome da taxonomia não pode ter mais de 255 caracteres.'
+            not_blank: 'Por favor, informe o nome da taxonomia.'

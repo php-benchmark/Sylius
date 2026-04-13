@@ -1,0 +1,29 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        product:
+            name: Ime
+            description: Opis
+            attributes: Atributi
+            options: Možnosti
+            meta_keywords: Meta ključne besede
+            meta_description: Meta opis
+            taxons: Taksoni
+        product_variant:
+            name: Ime
+        association_type:
+            name: Ime
+            translations: Prevodi
+        association:
+            type: Vrsta združenja
+            product: Povezani izdelek
+        variant:
+            name: Ime
+        option:
+            name: Ime
+            values: Možne vrednosti
+        option_value:
+            add_value: Dodajte vrednost
+            value: Vrednost

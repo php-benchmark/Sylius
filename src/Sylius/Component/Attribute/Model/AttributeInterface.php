@@ -1,0 +1,58 @@
+<?php
+
+/*
+ * This file is part of the Sylius package.
+ *
+ * (c) Sylius Sp. z o.o.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+declare(strict_types=1);
+
+namespace Sylius\Component\Attribute\Model;
+
+use Sylius\Resource\Model\CodeAwareInterface;
+use Sylius\Resource\Model\ResourceInterface;
+use Sylius\Resource\Model\TimestampableInterface;
+use Sylius\Resource\Model\TranslatableInterface;
+use Sylius\Resource\Model\TranslationInterface;
+
+interface AttributeInterface extends
+    ResourceInterface,
+    CodeAwareInterface,
+    TimestampableInterface,
+    TranslatableInterface
+{
+    public function getName(): ?string;
+
+    public function setName(?string $name): void;
+
+    public function getType(): ?string;
+
+    public function setType(?string $type): void;
+
+    /** @return array<string, mixed> */
+    public function getConfiguration(): array;
+
+    /** @param array<string, mixed> $configuration */
+    public function setConfiguration(array $configuration): void;
+
+    public function getStorageType(): ?string;
+
+    public function setStorageType(string $storageType): void;
+
+    public function getPosition(): ?int;
+
+    public function setPosition(?int $position): void;
+
+    public function isTranslatable(): bool;
+
+    public function setTranslatable(bool $translatable): void;
+
+    /**
+     * @return AttributeTranslationInterface
+     */
+    public function getTranslation(?string $locale = null): TranslationInterface;
+}

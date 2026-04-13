@@ -1,0 +1,13 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        taxon:
+            description: 'Descriere'
+            enabled: 'Activat'
+            name: 'Nume'
+            parent: 'Părinte'
+            slug: 'Slug'
+        taxonomy:
+            name: 'Nume'

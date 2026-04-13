@@ -1,0 +1,113 @@
+<?php
+
+/*
+ * This file is part of the Sylius package.
+ *
+ * (c) Sylius Sp. z o.o.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+declare(strict_types=1);
+
+namespace Sylius\Component\Core\Test\Services;
+
+use Sylius\Component\Channel\Factory\ChannelFactoryInterface;
+use Sylius\Component\Core\Model\ChannelInterface;
+use Sylius\Component\Core\Model\ShopBillingDataInterface;
+use Sylius\Component\Currency\Model\CurrencyInterface;
+use Sylius\Component\Locale\Model\LocaleInterface;
+use Sylius\Resource\Doctrine\Persistence\RepositoryInterface;
+use Sylius\Resource\Factory\FactoryInterface;
+
+final class DefaultChannelFactory implements DefaultChannelFactoryInterface
+{
+    public const DEFAULT_CHANNEL_NAME = 'Default';
+
+    public const DEFAULT_CHANNEL_CODE = 'DEFAULT';
+
+    public const DEFAULT_CHANNEL_CURRENCY = 'USD';
+
+    /**
+     * @param FactoryInterface<CurrencyInterface> $currencyFactory
+     * @param FactoryInterface<LocaleInterface> $localeFactory
+     * @param FactoryInterface<ShopBillingDataInterface> $shopBillingDataFactory
+     * @param RepositoryInterface<ChannelInterface> $channelRepository
+     * @param RepositoryInterface<CurrencyInterface> $currencyRepository
+     * @param RepositoryInterface<LocaleInterface> $localeRepository
+     */
+    public function __construct(
+        private readonly ChannelFactoryInterface $channelFactory,
+        private readonly FactoryInterface $currencyFactory,
+        private readonly FactoryInterface $localeFactory,
+        private readonly FactoryInterface $shopBillingDataFactory,
+        private readonly RepositoryInterface $channelRepository,
+        private readonly RepositoryInterface $currencyRepository,
+        private readonly RepositoryInterface $localeRepository,
+        private readonly string $defaultLocaleCode,
+    ) {
+    }
+
+    public function create(?string $code = null, ?string $name = null, ?string $currencyCode = null, ?string $localeCode = null): array
+    {
+        $currency = $this->provideCurrency($currencyCode);
+        $locale = $this->provideLocale($localeCode);
+
+        /** @var ChannelInterface $channel */
+        $channel = $this->channelFactory->createNamed($name ?: self::DEFAULT_CHANNEL_NAME);
+        $channel->setCode($code ?: self::DEFAULT_CHANNEL_CODE);
+        $channel->setTaxCalculationStrategy('order_items_based');
+
+        $channel->addCurrency($currency);
+        $channel->setBaseCurrency($currency);
+
+        $channel->addLocale($locale);
+        $channel->setDefaultLocale($locale);
+        if ($channel->getShopBillingData() === null) {
+            $channel->setShopBillingData($this->shopBillingDataFactory->createNew());
+        }
+
+        $this->channelRepository->add($channel);
+
+        return [
+            'channel' => $channel,
+            'currency' => $currency,
+            'locale' => $locale,
+        ];
+    }
+
+    private function provideCurrency(?string $currencyCode): CurrencyInterface
+    {
+        $currencyCode = $currencyCode ?? self::DEFAULT_CHANNEL_CURRENCY;
+
+        /** @var CurrencyInterface|null $currency */
+        $currency = $this->currencyRepository->findOneBy(['code' => $currencyCode]);
+
+        if (null === $currency) {
+            /** @var CurrencyInterface $currency */
+            $currency = $this->currencyFactory->createNew();
+            $currency->setCode($currencyCode);
+
+            $this->currencyRepository->add($currency);
+        }
+
+        return $currency;
+    }
+
+    private function provideLocale(?string $localeCode = null): LocaleInterface
+    {
+        /** @var LocaleInterface|null $locale */
+        $locale = $this->localeRepository->findOneBy(['code' => $this->defaultLocaleCode]);
+
+        if (null === $locale) {
+            /** @var LocaleInterface $locale */
+            $locale = $this->localeFactory->createNew();
+            $locale->setCode($localeCode ?? $this->defaultLocaleCode);
+
+            $this->localeRepository->add($locale);
+        }
+
+        return $locale;
+    }
+}

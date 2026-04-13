@@ -1,0 +1,10 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    locale:
+        code:
+            max_length: '代码长度不得超过 {{ limit }} 个字符。'
+            not_blank: '请选择语言环境代码。'
+            locale: '该值不是有效的语言环境代码。'
+            unique: '语言环境代码必须唯一。'

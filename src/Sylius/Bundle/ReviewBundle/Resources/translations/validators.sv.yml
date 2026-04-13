@@ -1,0 +1,16 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    review:
+        author:
+            already_exists: 'Denna e-postadress är redan registrerad, logga in eller använd funktionen för glömt lösenord.'
+        comment:
+            not_blank: 'Recensionskommentaren får inte vara tom.'
+        rating:
+            not_blank: 'Du måste ange ett betyg för recensionen.'
+        title:
+            not_blank: 'Recensionstiteln får inte vara tom.'
+            min_length: 'Recensionstiteln måste vara minst 2 tecken lång.'
+            max_length: 'Recensionstiteln får vara högst 255 tecken lång.'
+

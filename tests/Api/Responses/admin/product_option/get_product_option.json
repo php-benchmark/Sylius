@@ -1,0 +1,21 @@
+{
+    "@context": "\/api\/v2\/contexts\/ProductOption",
+    "@id": "\/api\/v2\/admin\/product-options\/COLOR",
+    "@type": "ProductOption",
+    "code": "COLOR",
+    "position": 0,
+    "values": [
+        "\/api\/v2\/admin\/product-options\/COLOR\/values\/COLOR_BLUE",
+        "\/api\/v2\/admin\/product-options\/COLOR\/values\/COLOR_RED"
+    ],
+    "createdAt": "@datetime@",
+    "updatedAt": "@datetime@",
+    "translations": {
+        "en_US": {
+            "@id": "\/api\/v2\/admin\/product-options\/COLOR\/translations\/en_US",
+            "@type": "ProductOptionTranslation",
+            "name": "Color"
+        }
+    },
+    "name": "Color"
+}

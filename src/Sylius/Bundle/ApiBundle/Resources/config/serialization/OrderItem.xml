@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+
+<!--
+
+ This file is part of the Sylius package.
+
+ (c) Sylius Sp. z o.o.
+
+ For the full copyright and license information, please view the LICENSE
+ file that was distributed with this source code.
+
+-->
+
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="Sylius\Component\Core\Model\OrderItem">
+        <attribute name="id">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+            <group>sylius:shop:order_item:show</group>
+        </attribute>
+        <attribute name="order">
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:order_item:show</group>
+        </attribute>
+        <attribute name="variant">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+            <group>sylius:shop:order_item:show</group>
+        </attribute>
+        <attribute name="quantity">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+            <group>sylius:shop:order_item:show</group>
+        </attribute>
+        <attribute name="unitPrice">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:order_item:show</group>
+            <group>sylius:shop:cart:show</group>
+        </attribute>
+        <attribute name="originalUnitPrice">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:order_item:show</group>
+            <group>sylius:shop:cart:show</group>
+        </attribute>
+        <attribute name="discountedUnitPrice">
+            <group>sylius:shop:order_item:show</group>
+            <group>sylius:shop:cart:show</group>
+        </attribute>
+        <attribute name="units">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:order_item:show</group>
+        </attribute>
+        <attribute name="adjustments">
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:order_item:show</group>
+        </attribute>
+        <attribute name="adjustmentsRecursively">
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:order_item:show</group>
+        </attribute>
+        <attribute name="adjustmentsTotal">
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:order_item:show</group>
+        </attribute>
+        <attribute name="adjustmentsTotalRecursively">
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:order_item:show</group>
+        </attribute>
+        <attribute name="product">
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:order_item:show</group>
+        </attribute>
+        <attribute name="productName">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+            <group>sylius:shop:order_item:show</group>
+        </attribute>
+        <attribute name="variantName">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+            <group>sylius:shop:order_item:show</group>
+        </attribute>
+        <attribute name="subtotal">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order_item:show</group>
+        </attribute>
+        <attribute name="total">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:admin:order_item:show</group>
+            <group>sylius:shop:order_item:show</group>
+            <group>sylius:shop:cart:show</group>
+        </attribute>
+        <attribute name="fullDiscountedUnitPrice">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:admin:order_item:show</group>
+        </attribute>
+    </class>
+</serializer>

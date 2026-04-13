@@ -1,0 +1,24 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        user:
+            email: '电子邮件'
+            enabled: '启用'
+            password:
+                label: '密码'
+                confirmation: '确认密码'
+            remember_me: '记住我'
+            shipping_address: '收货地址'
+            username: '用户名'
+            verified: '已验证'
+        user_filter:
+            query: '搜索'
+        user_change_password:
+            confirmation: '确认'
+            current: '当前密码'
+            new: '新密码'
+        user_reset_password:
+            confirmation: '确认'
+            new: '新密码'

@@ -1,0 +1,38 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        credit_card:
+            cardholder_name: 'Kaarthouder Naam'
+            expiry_month: 'Vervaldatum Maand'
+            expiry_year: 'Vervaldatum Jaar'
+            number: 'Kaartnummer'
+            security_code: 'Beveiligingscode (CVV)'
+            type: 'Kaarttype'
+        payment:
+            amount: 'Betalingsbedrag'
+            method: 'Betaalmethode'
+            state:
+                header: 'Betalingsstatus'
+                checkout: 'Afrekenen'
+                completed: 'Voltooid'
+                authorized: 'Geautoriseerd'
+                failed: 'Mislukt'
+                new: 'Nieuw'
+                pending: 'In afwachting'
+                processing: 'In behandeling'
+                unknown: 'Onbekend'
+                void: 'Nietig'
+                cancelled: 'Geannuleerd'
+                refunded: 'Terugbetaald'
+        payment_method:
+            description: 'Beschrijving'
+            enabled: 'Ingeschakeld'
+            instructions: 'Instructies'
+            name: 'Naam'
+            position: 'Positie'
+        gateway_config:
+            type: 'Type'
+    gateway_factory:
+        offline: 'Offline'

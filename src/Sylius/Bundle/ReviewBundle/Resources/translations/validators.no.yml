@@ -1,0 +1,15 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    review:
+        author:
+            already_exists: 'Denne e-posten er allerede registrert, vennligst logg inn eller bruk glemt passord.'
+        comment:
+            not_blank: 'Anmeldelseskommentaren må ikke være tom.'
+        rating:
+            not_blank: 'Du må velge vurdering for anmeldelsen.'
+        title:
+            not_blank: 'Anmeldelsestittel må ikke være tom.'
+            min_length: 'Anmeldelsestittel må være minst 2 tegn lang.'
+            max_length: 'Anmeldelsestittel kan være maksimalt 255 tegn lang.'

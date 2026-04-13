@@ -1,0 +1,13 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        taxon:
+            description: 'Popis'
+            enabled: 'Povoleno'
+            name: 'Název'
+            parent: 'Rodič'
+            slug: 'Slug'
+        taxonomy:
+            name: 'Název'

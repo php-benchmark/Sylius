@@ -1,0 +1,67 @@
+###> project files ###
+/behat.php
+/composer.lock
+/docker-compose.override.yml
+/public/media
+!/public/media/image/.gitkeep
+###< project files ###
+
+###> build ###
+/etc/build/*
+!/etc/build/.gitignore
+###< build ###
+
+###> drivers ###
+/drivers/
+###< drivers ###
+
+###> configuration ###
+/.php-version
+/php.ini
+###< configuration ###
+
+###> dependencies ###
+/node_modules/
+/public/bundles/
+/vendor/
+/var/
+###< dependencies ###
+
+###> sylius/sylius ###
+/config/encryption/dev.key
+###< sylius/sylius ###
+
+###> symfony/framework-bundle ###
+.env.*.local
+.env.local
+.env.local.php
+/config/reference.php
+###< symfony/framework-bundle ###
+
+###> symfony/webpack-encore-bundle ###
+/public/build/
+npm-debug.log
+pnpm-lock.yaml
+yarn-error.log
+yarn.lock
+package-lock.json
+###< symfony/webpack-encore-bundle ###
+
+###> friendsofphp/php-cs-fixer ###
+/.php_cs
+/.php_cs.cache
+###< friendsofphp/php-cs-fixer ###
+
+###> phpstan/phpstan ###
+/phpstan.neon
+###< phpstan/phpstan ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+/.phpunit.result.cache
+###< phpunit/phpunit ###
+
+###> lexik/jwt-authentication-bundle ###
+/config/jwt/*.pem
+!/config/jwt/*-test.pem
+###< lexik/jwt-authentication-bundle ###

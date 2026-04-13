@@ -1,0 +1,43 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        address:
+            city: '市区町村'
+            company: '会社'
+            country: '国'
+            first_name: '名'
+            last_name: '姓'
+            phone_number: '電話番号'
+            postcode: '郵便番号'
+            street: '住所'
+            province: '都道府県'
+            zone: 'ゾーン'
+        country:
+            add_province: '州/県を追加'
+            name: '名称'
+            provinces: '州/県'
+            select: '選択'
+            enabled: '有効'
+        province:
+            name: '名称'
+            abbreviation: '略称'
+            select: '選択'
+        zone:
+            add_member: 'メンバーを追加'
+            members: 'メンバー'
+            name: '名称'
+            type: 'タイプ'
+            types:
+                country: '国'
+                province: '都道府県'
+                zone: 'ゾーン'
+            scope: 'スコープ'
+            scopes:
+                all: 'すべて'
+            select: '選択'
+            priority: '優先度'
+        zone_member:
+            select: '選択'
+

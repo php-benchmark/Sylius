@@ -1,0 +1,59 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        rule:
+            unit_count_configuration:
+                count: 'Conteggio'
+                equal: 'Uguale a'
+            type: 'Tipo di regola'
+        shipment:
+            state: 'Stato'
+            states:
+                checkout: 'Checkout'
+                pending: 'In sospeso'
+                ready: 'Pronto'
+                shipped: 'Spedito'
+                returned: 'Restituito'
+                cancelled: 'Annullato'
+            tracking_code: 'Codice di tracciamento'
+        shipping_calculator:
+            flat_rate_configuration:
+                label: 'Tariffa fissa per spedizione'
+                amount: 'Importo'
+            per_unit_rate_configuration:
+                label: 'Tariffa fissa per unità'
+                amount: 'Importo'
+        shipping_category:
+            description: 'Descrizione'
+            name: 'Nome'
+        shipping_method:
+            add_rule: 'Aggiungi regola'
+            calculator: 'Calcolatore'
+            category: 'Categoria'
+            category_requirement: 'Requisito di categoria'
+            channels: 'Canali'
+            configuration: 'Configurazione'
+            description: 'Descrizione'
+            enabled: 'Abilitato'
+            match_all_category_requirement: 'Tutte le unità devono corrispondere alla categoria del metodo'
+            match_any_category_requirement: 'Almeno 1 unità deve corrispondere alla categoria del metodo'
+            match_none_category_requirement: 'Nessuna unità deve corrispondere alla categoria del metodo'
+            name: 'Nome'
+            position: 'Posizione'
+            rules: 'Regole'
+            rules_help: 'Usa le regole per decidere se questo metodo di spedizione può essere applicato a un ordine dato. Se una regola è vera, questo metodo di spedizione può essere applicato. Nota che se aggiungi più regole, tutte le regole devono essere vere.'
+            select_calculator: 'Seleziona un calcolatore'
+            tax_category: 'Categoria fiscale'
+            translations: 'Traduzioni'
+        shipping_method_rule:
+            items_total_greater_than_or_equal: 'Totale articoli maggiore o uguale'
+            items_total_less_than_or_equal: 'Totale articoli inferiore o uguale'
+            type: 'Tipo'
+            total: 'Totale'
+            total_weight_greater_than_or_equal: 'Peso totale maggiore o uguale'
+            total_weight_less_than_or_equal: 'Peso totale inferiore o uguale'
+            weight: 'Peso'
+            amount: 'Importo'
+            select: 'Seleziona un tipo di regola'

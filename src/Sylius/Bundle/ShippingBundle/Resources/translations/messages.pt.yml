@@ -1,0 +1,59 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        rule:
+            unit_count_configuration:
+                count: 'Contagem'
+                equal: 'Igual a'
+            type: 'Tipo de regra'
+        shipment:
+            state: 'Estado'
+            states:
+                checkout:   'Checkout'
+                pending:    'Pendente'
+                ready:      'Pronto'
+                shipped:    'Enviado'
+                returned:   'Devolvido'
+                cancelled:  'Cancelado'
+            tracking_code: 'Código de rastreamento'
+        shipping_calculator:
+            flat_rate_configuration:
+                label: 'Taxa fixa por envio'
+                amount: 'Valor'
+            per_unit_rate_configuration:
+                label: 'Taxa fixa por unidade'
+                amount: 'Valor'
+        shipping_category:
+            description: 'Descrição'
+            name: 'Nome'
+        shipping_method:
+            add_rule: 'Adicionar regra'
+            calculator: 'Calculadora'
+            category: 'Categoria'
+            category_requirement: 'Requisito de categoria'
+            channels: 'Canais'
+            configuration: 'Configuração'
+            description: 'Descrição'
+            enabled: 'Ativo'
+            match_all_category_requirement: 'Todas as unidades devem corresponder à categoria do método'
+            match_any_category_requirement: 'Pelo menos 1 unidade deve corresponder à categoria do método'
+            match_none_category_requirement: 'Nenhuma unidade precisa corresponder à categoria do método'
+            name: 'Nome'
+            position: 'Posição'
+            rules: 'Regras'
+            rules_help: 'Use regras para decidir se este método de envio pode ser aplicado a um pedido. Se uma regra for verdadeira, este método de envio poderá ser aplicado. Observe que, se adicionar várias regras, todas elas devem ser verdadeiras.'
+            select_calculator: 'Selecionar uma calculadora'
+            tax_category: 'Categoria de imposto'
+            translations: 'Traduções'
+        shipping_method_rule:
+            items_total_greater_than_or_equal: 'Total dos itens maior ou igual'
+            items_total_less_than_or_equal: 'Total dos itens menor ou igual'
+            type: 'Tipo'
+            total: 'Total'
+            total_weight_greater_than_or_equal: 'Peso total maior ou igual'
+            total_weight_less_than_or_equal: 'Peso total menor ou igual'
+            weight: 'Peso'
+            amount: 'Valor'
+            select: 'Selecionar um tipo de regra'

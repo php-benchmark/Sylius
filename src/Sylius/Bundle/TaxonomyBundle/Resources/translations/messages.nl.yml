@@ -1,0 +1,13 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        taxon:
+            description: 'Beschrijving'
+            enabled: 'Ingeschakeld'
+            name: 'Naam'
+            parent: 'Ouder'
+            slug: 'Slug'
+        taxonomy:
+            name: 'Naam'

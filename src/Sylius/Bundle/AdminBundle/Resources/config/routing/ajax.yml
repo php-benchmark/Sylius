@@ -1,0 +1,11 @@
+sylius_admin_ajax_product_taxon:
+    resource: "@SyliusAdminBundle/Resources/config/routing/ajax/product_taxon.yml"
+    prefix: /product-taxons
+
+sylius_admin_ajax_product_variant:
+    resource: "@SyliusAdminBundle/Resources/config/routing/ajax/product_variant.yml"
+    prefix: /product-variants
+
+sylius_admin_entity_autocomplete:
+    controller: ux.autocomplete.entity_autocomplete_controller
+    path: '/autocomplete/{alias}'

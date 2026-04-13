@@ -1,0 +1,23 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    currency:
+        code:
+            not_blank: 'Kies een valuta code.'
+            unique: 'Valutacode moet uniek zijn.'
+            currency: 'Deze waarde is geen geldige valutacode.'
+        exchange_rate:
+            not_blank: 'Voer de wisselkoers in.'
+    exchange_rate:
+        ratio:
+            greater_than: 'De verhouding moet groter zijn dan {{ compared_value }}.'
+            less_than: 'De verhouding moet kleiner zijn dan {{ compared_value }}.'
+            invalid: 'De verhouding moet een getal zijn.'
+            not_blank: 'Voer de wisselkoersverhouding in.'
+        source_currency:
+            not_blank: 'Voer de valuta in waarvan de wisselkoers moet worden afgeleid.'
+        target_currency:
+            not_blank: 'Voer de valuta in waaraan de wisselkoers moet worden ingesteld.'
+        unique_currency_pair: 'Valutapaar moet uniek zijn.'
+        different_source_target_currency: 'De bron- en doelfrancs moeten verschillen.'

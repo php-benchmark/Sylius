@@ -1,0 +1,11 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        channel:
+            color: '색상'
+            description: '설명'
+            enabled: '사용'
+            name: '이름'
+            url: 'URL'

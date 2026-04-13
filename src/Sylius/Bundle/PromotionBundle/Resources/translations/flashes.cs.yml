@@ -1,0 +1,8 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    promotion_coupon:
+        generate: 'Kupóny na propagaci byly úspěšně vygenerovány.'
+    catalog_promotion:
+        remove: 'Byl požádán o odstranění propagace katalogu. Tento proces může chvíli trvat v závislosti na počtu postižených produktů.'

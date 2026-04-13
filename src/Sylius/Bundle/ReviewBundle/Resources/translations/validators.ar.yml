@@ -1,0 +1,15 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    review:
+        author:
+            already_exists: هذا البريد الإلكتروني مسجل بالفعل، يرجى تسجيل الدخول أو استخدام كلمة المرور المنسية.
+        comment:
+            not_blank: يجب ألا يكون تعليق المراجعة فارغاً.
+        rating:
+            not_blank: يجب عليك التحقق من تقييم المراجعة.
+        title:
+            not_blank: يجب ألا يكون عنوان المراجعة فارغاً.
+            min_length: يجب أن يتكون عنوان المراجعة من 2 حرف على الأقل.
+            max_length: يجب أن يتكون عنوان المراجعة من 255 حرفاً كحد أقصى.

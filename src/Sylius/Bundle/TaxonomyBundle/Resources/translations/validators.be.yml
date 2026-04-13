@@ -1,0 +1,14 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    taxon:
+        name:
+            max_length: Назва катэгорыі не можа быць даўжэй за 255 сімвалаў.
+            not_blank: Калі ласка, увядзіце назву катэгорыі.
+        parent:
+            invalid_relation: 'Бацькоўскі таксон не можа быць ні самім таксонам, ні адным з яго нашчадкаў.'
+    taxonomy:
+        name:
+            max_length: Назва катэгорыі не можа быць даўжэй за 255 сімвалаў.
+            not_blank: Калі ласка, ўвядзіце назву катэгорыі.

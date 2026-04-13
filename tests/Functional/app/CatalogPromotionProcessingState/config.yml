@@ -1,0 +1,3 @@
+services:
+    sylius.listener.catalog_promotion.created:
+        class: stdClass

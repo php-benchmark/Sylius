@@ -1,0 +1,24 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        user:
+            email: بريد إلكتروني
+            enabled: مفعل
+            password:
+                label: كلمة المرور
+                confirmation: تأكيد
+            remember_me: تذكرني
+            shipping_address: عنوان الشحن
+            username: اسم المستخدم
+            verified: تم التحقق
+        user_filter:
+            query: بحث
+        user_change_password:
+            confirmation: تأكيد
+            current: كلمة المرور الحالية
+            new: كلمة المرور الجديدة
+        user_reset_password:
+            confirmation: تأكيد
+            new: كلمة المرور الجديدة

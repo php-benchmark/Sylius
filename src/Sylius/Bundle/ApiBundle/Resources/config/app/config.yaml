@@ -1,0 +1,89 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+parameters:
+    env(SYLIUS_API_AUTHORIZATION_HEADER): Authorization
+    sylius.api.authorization_header: "%env(resolve:SYLIUS_API_AUTHORIZATION_HEADER)%"
+    sylius.api.doctrine.orm.query.extension.shop.order.filter_cart.allowed_operations:
+        - "sylius_api_shop_order_get"
+        - "sylius_api_shop_order_payment_get_configuration"
+        - "sylius_api_shop_order_payment_patch"
+        - "sylius_api_shop_order_payment_patch_account"
+    sylius.security.api_route: "/api/v2"
+    sylius.security.api_regex: "^%sylius.security.api_route%"
+    sylius.security.api_admin_route: "%sylius.security.api_route%/admin"
+    sylius.security.api_admin_regex: "^%sylius.security.api_admin_route%"
+    sylius.security.api_shop_route: "%sylius.security.api_route%/shop"
+    sylius.security.api_shop_regex: "^%sylius.security.api_shop_route%"
+    sylius.security.api_shop_account_route: "%sylius.security.api_shop_route%/account"
+    sylius.security.api_shop_account_regex: "^%sylius.security.api_shop_account_route%"
+
+sylius_api:
+    filter_eager_loading_extension:
+        restricted_resources:
+            '%sylius.model.product.class%':
+                operations:
+                    sylius_api_shop_product_get_collection: ~
+    order_states_to_filter_out:
+        - !php/const Sylius\Component\Core\Model\OrderInterface::STATE_CART
+
+api_platform:
+    serializer:
+        hydra_prefix: true
+    use_symfony_listeners: true
+    formats:
+        jsonld: ['application/ld+json']
+        json: ['application/json']
+    patch_formats:
+        json: ['application/merge-patch+json']
+    path_segment_name_generator: api_platform.path_segment_name_generator.dash
+    swagger:
+        versions: [3]
+        api_keys:
+            JWT:
+                name: "%sylius.api.authorization_header%"
+                type: header
+    exception_to_status:
+        # Default API Platform exception to status code mapping
+        ApiPlatform\Exception\FilterValidationException: 400
+        ApiPlatform\Metadata\Exception\InvalidArgumentException: 400
+        ApiPlatform\Validator\Exception\ValidationException: 422
+        Doctrine\ORM\OptimisticLockException: 409
+        Symfony\Component\Serializer\Exception\MissingConstructorArgumentsException: 422
+        Symfony\Component\Serializer\Exception\ExceptionInterface: 400
+
+        # Sylius exception to status code mapping
+        Sylius\Abstraction\StateMachine\Exception\StateMachineExecutionException: 422
+        Sylius\Bundle\ApiBundle\Exception\ChannelPricingChannelCodeMismatchException: 422
+        Sylius\Bundle\ApiBundle\Exception\InvalidProductAttributeValueTypeException: 422
+        Sylius\Bundle\ApiBundle\Exception\InvalidRequestArgumentException: 400
+        Sylius\Bundle\ApiBundle\Exception\LocaleIsUsedException: 422
+        Sylius\Component\Payment\Exception\PaymentRequestNotFoundException: 404
+        Sylius\Bundle\ApiBundle\Exception\PaymentNotFoundException: 404
+        Sylius\Bundle\ApiBundle\Exception\PaymentMethodNotFoundException: 404
+        Sylius\Bundle\ApiBundle\Exception\StateMachineTransitionFailedException: 422
+        Sylius\Bundle\ApiBundle\Exception\TranslationInDefaultLocaleCannotBeRemoved: 422
+        Sylius\Bundle\ApiBundle\Exception\TranslationLocaleMismatchException: 422
+        Sylius\Bundle\ApiBundle\Exception\CannotRemoveMenuTaxonException: 409
+        Sylius\Bundle\UserBundle\Exception\UserNotFoundException: 404
+        Sylius\Component\Core\Exception\ResourceDeleteException: 422
+        Sylius\Component\Core\Inventory\Exception\NotEnoughUnitsOnHandException: 422
+        Sylius\Component\Core\Inventory\Exception\NotEnoughUnitsOnHoldException: 422
+        Sylius\Component\Payment\Exception\InvalidPaymentRequestPayloadException: 422
+        Sylius\Component\Promotion\Exception\FailedGenerationException: 422
+        Symfony\Component\Serializer\Exception\UnexpectedValueException: 400
+        Sylius\Bundle\ApiBundle\CommandHandler\Checkout\Exception\OrderTotalHasChangedException: 409
+        Sylius\Bundle\ApiBundle\Serializer\Exception\InvalidAmountTypeException: 400
+    defaults:
+        normalization_context:
+            skip_null_values: false
+        pagination_client_items_per_page: true
+        extra_properties:
+            rfc_7807_compliant_errors: true
+            standard_put: false
+
+lexik_jwt_authentication:
+    api_platform:
+        check_path: "%sylius.security.api_route%/administrators/token"
+        username_path: email
+        password_path: password

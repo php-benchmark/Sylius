@@ -1,0 +1,43 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        address:
+            city: 'By'
+            company: 'Firma'
+            country: 'Land'
+            first_name: 'Fornavn'
+            last_name: 'Etternavn'
+            phone_number: 'Telefonnummer'
+            postcode: 'Postnummer'
+            street: 'Gateadresse'
+            province: 'Fylke'
+            zone: 'Sone'
+        country:
+            add_province: 'Legg til fylke'
+            name: 'Navn'
+            provinces: 'Fylker'
+            select: 'Velg'
+            enabled: 'Aktivert'
+        province:
+            name: 'Navn'
+            abbreviation: 'Forkortelse'
+            select: 'Velg'
+        zone:
+            add_member: 'Legg til medlem'
+            members: 'Medlemmer'
+            name: 'Navn'
+            type: 'Type'
+            types:
+                country: 'Land'
+                province: 'Fylke'
+                zone: 'Sone'
+            scope: 'Område'
+            scopes:
+                all: 'Alle'
+            select: 'Velg'
+            priority: 'Prioritet'
+        zone_member:
+            select: 'Velg'
+

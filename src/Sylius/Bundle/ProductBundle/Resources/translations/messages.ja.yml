@@ -1,0 +1,31 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        product:
+            name: '名前'
+            description: '説明'
+            attributes: '属性'
+            options: 'オプション'
+            meta_keywords: 'メタキーワード'
+            meta_description: 'メタディスクリプション'
+            slug: 'スラッグ'
+            taxons: 'タクソン'
+        product_variant:
+            name: '名前'
+        association_type:
+            name: '名前'
+            translations: '翻訳'
+        association:
+            type: '関連タイプ'
+            product: '関連商品'
+        variant:
+            name: '名前'
+        option:
+            name: '名前'
+            position: '位置'
+            values: '可能な値'
+        option_value:
+            add_value: '値を追加'
+            value: '値'

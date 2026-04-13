@@ -1,0 +1,10 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    cart:
+        add_item: 'تم إضافة العنصر إلى السلة'
+        cannot_modify: 'تم تقديم طلب بالفعل للسلة التي كنت تحاول تعديلها.'
+        not_recalculated: 'بسبب القيم غير الصالحة في سلتك، لم يتم إعادة حسابها.'
+        remove_item: 'تم إزالة العنصر من السلة'
+        save: 'تم تحديث السلة بنجاح'

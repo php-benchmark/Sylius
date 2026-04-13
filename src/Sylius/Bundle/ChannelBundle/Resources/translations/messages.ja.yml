@@ -1,0 +1,12 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        channel:
+            color: 'カラー'
+            description: '説明'
+            enabled: '有効'
+            name: '名前'
+            url: 'URL'
+

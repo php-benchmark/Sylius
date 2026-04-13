@@ -1,0 +1,38 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        credit_card:
+            cardholder_name: 'Nome del titolare della carta'
+            expiry_month: 'Mese di scadenza'
+            expiry_year: 'Anno di scadenza'
+            number: 'Numero della carta'
+            security_code: 'Codice di sicurezza (CVV)'
+            type: 'Tipo di carta'
+        payment:
+            amount: 'Importo del pagamento'
+            method: 'Metodo di pagamento'
+            state:
+                header: 'Stato del pagamento'
+                checkout: 'Checkout'
+                completed: 'Completato'
+                authorized: 'Autorizzato'
+                failed: 'Fallito'
+                new: 'Nuovo'
+                pending: 'In sospeso'
+                processing: 'In elaborazione'
+                unknown: 'Sconosciuto'
+                void: 'Annullato'
+                cancelled: 'Annullato'
+                refunded: 'Rimborsato'
+        payment_method:
+            description: 'Descrizione'
+            enabled: 'Abilitato'
+            instructions: 'Istruzioni'
+            name: 'Nome'
+            position: 'Posizione'
+        gateway_config:
+            type: 'Tipo'
+    gateway_factory:
+        offline: 'Offline'

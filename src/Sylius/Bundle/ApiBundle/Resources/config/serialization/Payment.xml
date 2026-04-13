@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+
+<!--
+
+ This file is part of the Sylius package.
+
+ (c) Sylius Sp. z o.o.
+
+ For the full copyright and license information, please view the LICENSE
+ file that was distributed with this source code.
+
+-->
+
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="Sylius\Component\Core\Model\Payment">
+        <attribute name="id">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:admin:payment:index</group>
+            <group>sylius:admin:payment:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:payment:show</group>
+        </attribute>
+        <attribute name="method">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:admin:payment:index</group>
+            <group>sylius:admin:payment:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+            <group>sylius:shop:payment:show</group>
+        </attribute>
+        <attribute name="currencyCode">
+            <group>sylius:admin:payment:index</group>
+            <group>sylius:admin:payment:show</group>
+            <group>sylius:shop:payment:show</group>
+        </attribute>
+        <attribute name="amount">
+            <group>sylius:admin:payment:index</group>
+            <group>sylius:admin:payment:show</group>
+            <group>sylius:shop:payment:show</group>
+        </attribute>
+        <attribute name="state">
+            <group>sylius:admin:payment:index</group>
+            <group>sylius:admin:payment:show</group>
+            <group>sylius:shop:payment:show</group>
+        </attribute>
+        <attribute name="details">
+            <group>sylius:admin:payment:index</group>
+            <group>sylius:admin:payment:show</group>
+            <group>sylius:shop:payment:show</group>
+        </attribute>
+        <attribute name="createdAt">
+            <group>sylius:admin:payment:index</group>
+            <group>sylius:admin:payment:show</group>
+            <group>sylius:shop:payment:show</group>
+        </attribute>
+        <attribute name="updatedAt">
+            <group>sylius:admin:payment:index</group>
+            <group>sylius:admin:payment:show</group>
+            <group>sylius:shop:payment:show</group>
+        </attribute>
+        <attribute name="order">
+            <group>sylius:admin:payment:index</group>
+            <group>sylius:admin:payment:show</group>
+            <group>sylius:shop:payment:show</group>
+        </attribute>
+    </class>
+</serializer>

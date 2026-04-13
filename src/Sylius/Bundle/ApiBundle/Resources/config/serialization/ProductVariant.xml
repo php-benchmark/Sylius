@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+
+<!--
+
+ This file is part of the Sylius package.
+
+ (c) Sylius Sp. z o.o.
+
+ For the full copyright and license information, please view the LICENSE
+ file that was distributed with this source code.
+
+-->
+
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="Sylius\Component\Core\Model\ProductVariant">
+        <attribute name="code">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:shop:product_variant:index</group>
+            <group>sylius:shop:product_variant:show</group>
+        </attribute>
+        <attribute name="product">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:shop:product_variant:index</group>
+            <group>sylius:shop:product_variant:show</group>
+        </attribute>
+        <attribute name="translations">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:admin:product_variant:update</group>
+        </attribute>
+        <attribute name="optionValues">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:admin:product_variant:update</group>
+            <group>sylius:shop:product_variant:index</group>
+            <group>sylius:shop:product_variant:show</group>
+        </attribute>
+        <attribute name="channelPricings">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:admin:product_variant:update</group>
+        </attribute>
+        <attribute name="name">
+            <group>sylius:shop:product_variant:index</group>
+            <group>sylius:shop:product_variant:show</group>
+            <group>sylius:shop:product:index:default_variant</group>
+            <group>sylius:shop:product:show:default_variant</group>
+        </attribute>
+        <attribute name="enabled">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:admin:product_variant:update</group>
+        </attribute>
+        <attribute name="position">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:admin:product_variant:update</group>
+        </attribute>
+        <attribute name="tracked">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:admin:product_variant:update</group>
+        </attribute>
+        <attribute name="onHold">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:admin:product_variant:update</group>
+        </attribute>
+        <attribute name="onHand">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:admin:product_variant:update</group>
+        </attribute>
+        <attribute name="weight">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:admin:product_variant:update</group>
+        </attribute>
+        <attribute name="width">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:admin:product_variant:update</group>
+        </attribute>
+        <attribute name="height">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:admin:product_variant:update</group>
+        </attribute>
+        <attribute name="depth">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:admin:product_variant:update</group>
+        </attribute>
+        <attribute name="taxCategory">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:admin:product_variant:update</group>
+        </attribute>
+        <attribute name="shippingCategory">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:admin:product_variant:update</group>
+        </attribute>
+        <attribute name="shippingRequired">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+            <group>sylius:admin:product_variant:create</group>
+            <group>sylius:admin:product_variant:update</group>
+        </attribute>
+        <attribute name="createdAt">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+        </attribute>
+        <attribute name="updatedAt">
+            <group>sylius:admin:product_variant:index</group>
+            <group>sylius:admin:product_variant:show</group>
+        </attribute>
+    </class>
+</serializer>

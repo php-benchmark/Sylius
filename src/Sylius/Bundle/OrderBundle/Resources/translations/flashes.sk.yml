@@ -1,0 +1,10 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    cart:
+        add_item: 'Položka bola pridaná do košíka'
+        cannot_modify: 'Pre košík, ktorý ste sa snažili upraviť, už bola odoslaná objednávka.'
+        not_recalculated: 'V dôsledku neplatných hodnôt vo vašom košíku nebol prepočítaný.'
+        remove_item: 'Položka bola odstránená z košíka'
+        save: 'Košík bol úspešne aktualizovaný'

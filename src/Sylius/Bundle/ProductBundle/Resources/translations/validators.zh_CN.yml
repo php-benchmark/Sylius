@@ -1,0 +1,75 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    product:
+        sku:
+            not_blank: '请输入产品SKU。'
+            unique: '产品SKU必须唯一。'
+        slug:
+            not_blank: '请输入产品别名。'
+            unique: '产品别名必须唯一。'
+            max_length: '产品别名不得长于1个字符。|产品别名不得长于{{ limit }}个字符。'
+        code:
+            max_length: '代码不得长于{{ limit }}个字符。'
+            not_blank: '请输入产品代码。'
+            regex: '产品代码只能包含字母、数字、破折号和下划线。'
+            unique: '产品代码必须唯一。'
+        name:
+            not_blank: '请输入产品名称。'
+            min_length: '产品名称至少要有1个字符。|产品名称至少要有{{ limit }}个字符。'
+            max_length: '产品名称不得长于1个字符。|产品名称不得长于{{ limit }}个字符。'
+        meta_keywords:
+            max_length: '产品元关键字不得长于1个字符。|产品元关键字不得长于{{ limit }}个字符。'
+        meta_description:
+            max_length: '产品元描述不得长于1个字符。|产品元描述不得长于{{ limit }}个字符。'
+    product_variant:
+        combination: '该选项集的变体已存在。'
+        code:
+            max_length: '代码不得长于{{ limit }}个字符。'
+            not_blank: '请输入代码。'
+            regex: '产品变体代码只能包含字母、数字、破折号和下划线。'
+            unique: '产品变体代码必须唯一。'
+            within_product_unique: '该代码在此产品内必须唯一。'
+        option_values:
+            not_configured: '产品变体必须为产品所选的所有选项配置值。'
+    simple_product:
+        code:
+            unique: '简单产品代码必须在所有产品和产品变体中唯一。'
+    option:
+        code:
+            max_length: '代码不得长于{{ limit }}个字符。'
+            not_blank: '请输入选项代码。'
+            regex: '选项代码只能包含字母、数字、破折号和下划线。'
+            unique: '具有该代码的选项已存在。'
+        name:
+            not_blank: '请输入选项名称。'
+            min_length: '选项名称至少要有1个字符。|选项名称至少要有{{ limit }}个字符。'
+            max_length: '选项名称不得长于1个字符。|选项名称不得长于{{ limit }}个字符。'
+        values:
+            min_count: '请至少添加{{ limit }}个选项值。|请至少添加{{ limit }}个选项值。'
+    option_value:
+        code:
+            max_length: '代码不得长于{{ limit }}个字符。'
+            not_blank: '请输入选项值代码。'
+            regex: '选项值代码只能包含字母、数字、破折号和下划线。'
+            unique: '具有该代码的选项值已存在。'
+        value:
+            not_blank: '请输入选项值。'
+    association:
+        unique: '此所有者和类型的关联已存在。'
+        type:
+            not_blank: '请输入关联类型。'
+        owner:
+            not_blank: '请输入关联所有者。'
+    association_type:
+        name:
+            not_blank: '请输入关联类型名称。'
+            min_length: '关联类型名称至少要有1个字符。|关联名称至少要有{{ limit }}个字符。'
+            max_length: '关联类型名称不得长于1个字符。|关联名称不得长于{{ limit }}个字符。'
+        code:
+            min_length: '关联类型代码至少要有1个字符。|关联类型代码至少要有{{ limit }}个字符。'
+            max_length: '关联类型代码不得长于1个字符。|关联类型代码不得长于{{ limit }}个字符。'
+            not_blank: '请输入关联类型代码。'
+            regex: '关联类型代码只能包含字母、数字、破折号和下划线。'
+            unique: '具有该代码的关联类型已存在。'

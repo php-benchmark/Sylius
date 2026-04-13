@@ -1,0 +1,17 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        review:
+            author: 'Autor'
+            comment: 'Komentář'
+            header: 'Přidat recenzi'
+            rating: 'Hodnocení'
+            status:
+                approved: 'Schváleno'
+                label: 'Stav'
+                new: 'Nové'
+                rejected: 'Zamítnuto'
+            submit: 'Odeslat'
+            title: 'Název'

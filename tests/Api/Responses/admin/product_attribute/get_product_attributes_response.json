@@ -1,0 +1,221 @@
+{
+    "@context": "\/api\/v2\/contexts\/ProductAttribute",
+    "@id": "\/api\/v2\/admin\/product-attributes",
+    "@type": "hydra:Collection",
+    "hydra:totalItems": 9,
+    "hydra:member": [
+        {
+            "@id": "\/api\/v2\/admin\/product-attributes\/dishwasher_safe",
+            "@type": "ProductAttribute",
+            "code": "dishwasher_safe",
+            "type": "checkbox",
+            "configuration": [],
+            "storageType": "boolean",
+            "position": 0,
+            "translatable": false,
+            "translations": {
+                "en_US": {
+                    "@id": "\/api\/v2\/admin\/product-attributes\/dishwasher_safe\/translations\/en_US",
+                    "@type": "ProductAttributeTranslation",
+                    "name": "dishwasher safe"
+                },
+                "pl_PL": {
+                    "@id": "\/api\/v2\/admin\/product-attributes\/dishwasher_safe\/translations\/pl_PL",
+                    "@type": "ProductAttributeTranslation",
+                    "name": "mozna myc w zmywarce"
+                }
+            }
+        },
+        {
+            "@id": "\/api\/v2\/admin\/product-attributes\/manufactured",
+            "@type": "ProductAttribute",
+            "code": "manufactured",
+            "type": "date",
+            "configuration": [],
+            "storageType": "date",
+            "position": 1,
+            "translatable": false,
+            "translations": {
+                "en_US": {
+                    "@id": "\/api\/v2\/admin\/product-attributes\/manufactured\/translations\/en_US",
+                    "@type": "ProductAttributeTranslation",
+                    "name": "manufactured"
+                }
+            }
+        },
+        {
+            "@id": "\/api\/v2\/admin\/product-attributes\/available_until",
+            "@type": "ProductAttribute",
+            "code": "available_until",
+            "type": "datetime",
+            "configuration": [],
+            "storageType": "datetime",
+            "position": 2,
+            "translatable": false,
+            "translations": {
+                "en_US": {
+                    "@id": "\/api\/v2\/admin\/product-attributes\/available_until\/translations\/en_US",
+                    "@type": "ProductAttributeTranslation",
+                    "name": "available until"
+                }
+            }
+        },
+        {
+            "@id": "\/api\/v2\/admin\/product-attributes\/capacity",
+            "@type": "ProductAttribute",
+            "code": "capacity",
+            "type": "integer",
+            "configuration": [],
+            "storageType": "integer",
+            "position": 3,
+            "translatable": false,
+            "translations": {
+                "en_US": {
+                    "@id": "\/api\/v2\/admin\/product-attributes\/capacity\/translations\/en_US",
+                    "@type": "ProductAttributeTranslation",
+                    "name": "capacity"
+                }
+            }
+        },
+        {
+            "@id": "\/api\/v2\/admin\/product-attributes\/yixing_clay",
+            "@type": "ProductAttribute",
+            "code": "yixing_clay",
+            "type": "percent",
+            "configuration": [],
+            "storageType": "float",
+            "position": 4,
+            "translatable": false,
+            "translations": {
+                "en_US": {
+                    "@id": "\/api\/v2\/admin\/product-attributes\/yixing_clay\/translations\/en_US",
+                    "@type": "ProductAttributeTranslation",
+                    "name": "yixing clay"
+                }
+            }
+        },
+        {
+            "@id": "\/api\/v2\/admin\/product-attributes\/extra_info",
+            "@type": "ProductAttribute",
+            "code": "extra_info",
+            "type": "select",
+            "configuration": {
+                "choices": {
+                    "0afb212e-cd08-11ec-871e-0242ac120005": {
+                        "fr_FR": "fait a la main",
+                        "en_US": "handmade"
+                    },
+                    "0afb4e88-cd08-11ec-bcd4-0242ac120005": {
+                        "fr_FR": "coffret cadeau",
+                        "en_US": "gift box",
+                        "pl_PL": "opakowanie prezentowe"
+                    }
+                }
+            },
+            "storageType": "json",
+            "position": 5,
+            "translatable": false,
+            "translations": {
+                "en_US": {
+                    "@id": "\/api\/v2\/admin\/product-attributes\/extra_info\/translations\/en_US",
+                    "@type": "ProductAttributeTranslation",
+                    "name": "extra info"
+                }
+            }
+        },
+        {
+            "@id": "\/api\/v2\/admin\/product-attributes\/note",
+            "@type": "ProductAttribute",
+            "code": "note",
+            "type": "textarea",
+            "configuration": [],
+            "storageType": "text",
+            "position": 6,
+            "translatable": false,
+            "translations": {
+                "en_US": {
+                    "@id": "\/api\/v2\/admin\/product-attributes\/note\/translations\/en_US",
+                    "@type": "ProductAttributeTranslation",
+                    "name": "note"
+                }
+            }
+        },
+        {
+            "@id": "\/api\/v2\/admin\/product-attributes\/origin",
+            "@type": "ProductAttribute",
+            "code": "origin",
+            "type": "text",
+            "configuration": [],
+            "storageType": "text",
+            "position": 7,
+            "translatable": true,
+            "translations": {
+                "en_US": {
+                    "@id": "\/api\/v2\/admin\/product-attributes\/origin\/translations\/en_US",
+                    "@type": "ProductAttributeTranslation",
+                    "name": "origin"
+                }
+            }
+        },
+        {
+            "@id": "\/api\/v2\/admin\/product-attributes\/text_delete",
+            "@type": "ProductAttribute",
+            "code": "text_delete",
+            "type": "text",
+            "configuration": [],
+            "storageType": "text",
+            "position": 8,
+            "translatable": false,
+            "translations": {
+                "en_US": {
+                    "@id": "\/api\/v2\/admin\/product-attributes\/text_delete\/translations\/en_US",
+                    "@type": "ProductAttributeTranslation",
+                    "name": "text delete"
+                }
+            }
+        }
+    ],
+    "hydra:search": {
+        "@type": "hydra:IriTemplate",
+        "hydra:template": "\/api\/v2\/admin\/product-attributes{?translatable,order[position],code,type,type[],translations.name}",
+        "hydra:variableRepresentation": "BasicRepresentation",
+        "hydra:mapping": [
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "translatable",
+                "property": "translatable",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[position]",
+                "property": "position",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "code",
+                "property": "code",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "type",
+                "property": "type",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "type[]",
+                "property": "type",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "translations.name",
+                "property": "translations.name",
+                "required": false
+            }
+        ]
+    }
+}

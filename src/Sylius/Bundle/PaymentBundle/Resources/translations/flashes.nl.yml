@@ -1,0 +1,12 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    payment:
+        authorized: 'Betaling is geautoriseerd.'
+        cancelled: 'Betaling is geannuleerd.'
+        completed: 'Betaling is voltooid.'
+        failed: 'Betaling is mislukt.'
+        processing: 'Betaling wordt verwerkt.'
+        refunded: 'Betaling is succesvol terugbetaald.'
+        unknown: 'Er was een onbekend probleem met de betaling.'

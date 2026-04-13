@@ -1,0 +1,25 @@
+{
+    "@context": "\/api\/v2\/contexts\/Zone",
+    "@id": "\/api\/v2\/admin\/zones\/US",
+    "@type": "Zone",
+    "id": "@integer@",
+    "code": "US",
+    "name": "UnitedStates",
+    "type": "country",
+    "scope": "all",
+    "priority": 0,
+    "members": [
+        {
+            "@type": "ZoneMember",
+            "code": "NL"
+        },
+        {
+            "@type": "ZoneMember",
+            "code": "BE"
+        },
+        {
+            "@type": "ZoneMember",
+            "code": "PL"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        tax_category:
+            description: 'Beschrijving'
+            name: 'Naam'
+        tax_rate:
+            amount: 'Bedrag'
+            calculator: 'Rekenmachine'
+            category: 'Categorie'
+            end_date: 'Einddatum'
+            included_in_price: 'Inbegrepen in prijs?'
+            name: 'Naam'
+            start_date: 'Startdatum'

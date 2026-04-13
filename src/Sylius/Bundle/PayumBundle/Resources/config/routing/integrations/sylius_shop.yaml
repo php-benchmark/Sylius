@@ -1,0 +1,5 @@
+# This file is a part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius_shop_payum:
+    resource: "sylius_shop.php"

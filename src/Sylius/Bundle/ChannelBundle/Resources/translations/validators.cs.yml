@@ -1,0 +1,17 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    channel:
+        code:
+            max_length: 'Kód nesmí být delší než {{ limit }} znaků.'
+            not_blank: 'Prosím zadejte kód kanálu.'
+            regex: 'Kód kanálu může obsahovat pouze písmena, číslice, pomlčky a podtržítka.'
+            unique: 'Kód kanálu musí být jedinečný.'
+        name:
+            not_blank: 'Prosím zadejte název kanálu.'
+            max_length: 'Název kanálu nesmí být delší než {{ limit }} znaků.'
+        color:
+            max_length: 'Barva nesmí být delší než {{ limit }} znaků.'
+        hostname:
+            max_length: 'Hostname nesmí být delší než {{ limit }} znaků.'

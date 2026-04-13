@@ -1,0 +1,85 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+imports:
+    - { resource: "@SyliusUiBundle/Resources/config/app/config.yml" }
+    - { resource: 'twig_hooks/**/*.yaml' }
+    - { resource: "@SyliusShopBundle/Resources/config/app/integration/twig_hooks.php" }
+    - { resource: "@SyliusShopBundle/Resources/config/app/sylius/sylius_mailer.yml" }
+    - { resource: "@SyliusShopBundle/Resources/config/grids/account/order.yml" }
+    - { resource: "@SyliusShopBundle/Resources/config/grids/product.yml" }
+
+parameters:
+    sylius.security.shop_regex: "^/(?!%sylius_admin.path_name%|api/.*|api$|media/.*)[^/]++"
+
+webpack_encore:
+    builds:
+        shop: '%kernel.project_dir%/public/build/shop'
+
+sylius_grid:
+    templates:
+        action:
+            shop_delete: "@SyliusShop/grid/action/delete.html.twig"
+            shop_list: "@SyliusShop/grid/action/list.html.twig"
+            shop_pay: "@SyliusShop/account/order/grid/action/pay.html.twig"
+            shop_show: "@SyliusShop/grid/action/show.html.twig"
+            shop_update: "@SyliusShop/grid/action/update.html.twig"
+        filter:
+            shop_string: "@SyliusShop/grid/filter/string.html.twig"
+
+sylius_shop:
+    checkout_resolver:
+        pattern: "%sylius.security.shop_regex%/checkout/.+"
+        route_map:
+            empty_order:
+                route: sylius_shop_cart_summary
+            cart:
+                route: sylius_shop_checkout_address
+            addressed:
+                route: sylius_shop_checkout_select_shipping
+            shipping_selected:
+                route: sylius_shop_checkout_select_payment
+            shipping_skipped:
+                route: sylius_shop_checkout_select_payment
+            payment_selected:
+                route: sylius_shop_checkout_complete
+            payment_skipped:
+                route: sylius_shop_checkout_complete
+
+liip_imagine:
+    filter_sets:
+        sylius_shop_product_original: ~
+        sylius_shop_product_small_thumbnail:
+            format: webp
+            quality: 80
+            filters:
+                thumbnail: { size: [300, 400], mode: outbound }
+        sylius_shop_product_thumbnail:
+            format: webp
+            quality: 80
+            filters:
+                thumbnail: { size: [600, 800], mode: outbound }
+        sylius_shop_product_large_thumbnail:
+            format: webp
+            quality: 80
+            filters:
+                thumbnail: { size: [1200, 1600], mode: outbound }
+        sylius_shop_taxon_thumbnail:
+            format: webp
+            quality: 80
+            filters:
+                thumbnail: { size: [1200, 300], mode: outbound }
+
+sylius_ui:
+    twig_ux:
+        live_component_tags:
+            shop:
+                route: sylius_shop_live_component
+            shop_account: 
+                route: sylius_shop_account_live_component
+        anonymous_component_template_prefixes:
+            sylius_shop: "@SyliusShop/shared/components"
+        component_default_template: "@SyliusUi/components/default.html.twig"
+
+framework:
+    http_method_override: true

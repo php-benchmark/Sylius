@@ -1,0 +1,80 @@
+{
+    "name": "sylius/payment-bundle",
+    "type": "symfony-bundle",
+    "description": "Flexible payments system for Symfony e-commerce applications.",
+    "keywords": [
+        "payments",
+        "payment",
+        "shop",
+        "webshop",
+        "ecommerce"
+    ],
+    "homepage": "https://sylius.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paweł Jędrzejewski",
+            "homepage": "https://pjedrzejewski.com"
+        },
+        {
+            "name": "Sylius project",
+            "homepage": "https://sylius.com"
+        },
+        {
+            "name": "Community contributions",
+            "homepage": "https://github.com/Sylius/Sylius/contributors"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "sylius/payment": "^2.0",
+        "sylius/resource-bundle": "^1.12",
+        "sylius/state-machine-abstraction": "^2.0",
+        "symfony/doctrine-bridge": "^6.4 || ^7.4",
+        "symfony/framework-bundle": "^6.4.1 || ^7.4",
+        "symfony/messenger": "^6.4 || ^7.4"
+    },
+    "require-dev": {
+        "doctrine/doctrine-bundle": "^2.13",
+        "doctrine/orm": "^2.18 || ^3.5",
+        "matthiasnoback/symfony-dependency-injection-test": "^6.0",
+        "phpunit/phpunit": "^11.5",
+        "sylius/locale-bundle": "^2.0",
+        "symfony/browser-kit": "^6.4 || ^7.4",
+        "symfony/dependency-injection": "^6.4.1 || ^7.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "2.2-dev"
+        },
+        "symfony": {
+            "require": "^7.4"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Sylius\\Bundle\\PaymentBundle\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Sylius\\Bundle\\PaymentBundle\\": "tests/"
+        },
+        "classmap": [
+            "test/app/AppKernel.php"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../*/*"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,0 +1,38 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        credit_card:
+            cardholder_name: '持卡人姓名'
+            expiry_month: '过期月份'
+            expiry_year: '过期年份'
+            number: '卡号'
+            security_code: '安全码 (CVV)'
+            type: '卡类型'
+        payment:
+            amount: '支付金额'
+            method: '支付方式'
+            state:
+                header: '支付状态'
+                checkout: '结账'
+                completed: '已完成'
+                authorized: '已授权'
+                failed: '失败'
+                new: '新建'
+                pending: '待处理'
+                processing: '处理中'
+                unknown: '未知'
+                void: '作废'
+                cancelled: '已取消'
+                refunded: '已退款'
+        payment_method:
+            description: '描述'
+            enabled: '启用'
+            instructions: '说明'
+            name: '名称'
+            position: '位置'
+        gateway_config:
+            type: '类型'
+    gateway_factory:
+        offline: '离线'

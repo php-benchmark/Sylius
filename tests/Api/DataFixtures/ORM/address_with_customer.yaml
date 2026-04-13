@@ -1,0 +1,28 @@
+Sylius\Component\Core\Model\Address:
+    address_{tony, oliver}:
+        firstName: "John"
+        lastName: "Doe"
+        customer: "@customer_<current()>"
+        company: "CocaCola"
+        street: "Green Avenue"
+        countryCode: "US"
+        city: "New York"
+        postcode: "00000"
+        phoneNumber: "123456789"
+
+Sylius\Component\Core\Model\ShopUser:
+    shop_user_{tony, oliver}:
+        plainPassword: "sylius"
+        roles: [ROLE_USER]
+        enabled: true
+        customer: "@customer_<current()>"
+        username: "<current()>\\@example.com"
+        usernameCanonical: "<current()>\\@example.com"
+
+Sylius\Component\Core\Model\Customer:
+    customer_{tony, oliver}:
+        firstName: "<current()>"
+        lastName: "Jones"
+        email: "<current()>\\@example.com"
+        emailCanonical: "<current()>\\@example.com"
+        birthday: "<(new \\DateTime())>"

@@ -1,0 +1,71 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    address:
+        city:
+            max_length: '城市名称不能超过 {{ limit }} 个字符。'
+            min_length: '城市名称至少需要 {{ limit }} 个字符。'
+            not_blank: '请输入城市名称。'
+        country:
+            not_blank: '请选择国家。'
+            disabled: '所选国家已被禁用，请选择其他国家。'
+        first_name:
+            max_length: '名字不能超过 {{ limit }} 个字符。'
+            min_length: '名字至少需要 {{ limit }} 个字符。'
+            not_blank: '请输入名字。'
+        last_name:
+            max_length: '姓氏不能超过 {{ limit }} 个字符。'
+            min_length: '姓氏至少需要 {{ limit }} 个字符。'
+            not_blank: '请输入姓氏。'
+        postcode:
+            max_length: '邮政编码不能超过 {{ limit }} 个字符。'
+            min_length: '邮政编码至少需要 {{ limit }} 个字符。'
+            not_blank: '请输入邮政编码。'
+        province:
+            valid: '请选择正确的省/州。'
+        street:
+            max_length: '街道地址不能超过 {{ limit }} 个字符。'
+            min_length: '街道地址至少需要 {{ limit }} 个字符。'
+            not_blank: '请输入街道地址。'
+        not_shippable: '此地址不是有效的送货地址。'
+    country:
+        code:
+            not_blank: '请输入国家的 ISO 编码。'
+            unique: '国家 ISO 编码必须唯一。'
+            country: '国家 ISO 编码无效。'
+        unique_provinces: '该国家下的所有省份必须具有唯一的代码和名称。'
+    province:
+        code:
+            max_length: '代码不能超过 {{ limit }} 个字符。'
+            not_blank: '请输入省份代码。'
+            regex: '省份代码格式应为 XX-XX（例如：US-FL）。'
+            unique: '省份代码必须唯一。'
+        name:
+            max_length: '省份名称不能超过 {{ limit }} 个字符。'
+            min_length: '省份名称至少需要 {{ limit }} 个字符。'
+            not_blank: '请输入省份名称。'
+            unique: '省份名称必须唯一。'
+    zone:
+        scope:
+            not_blank: '请输入作用域。'
+        code:
+            max_length: '区域代码不能超过 {{ limit }} 个字符。'
+            not_blank: '请输入区域代码。'
+            regex: '区域代码只能包含字母、数字、连字符和下划线。'
+            unique: '区域代码必须唯一。'
+        type:
+            invalid: "'类型 {{ value }} 无效。允许的类型包括：{{ choices }}。'"
+        members:
+            min_count: '请至少添加 {{ limit }} 个区域成员。'
+        name:
+            max_length: '区域名称不能超过 {{ limit }} 个字符。'
+            min_length: '区域名称至少需要 {{ limit }} 个字符。'
+            not_blank: '请输入区域名称。'
+    zone_member:
+        cannot_be_the_same_as_zone: '区域成员不能与区域本身相同。'
+        code:
+            max_length: '区域成员代码不能超过 {{ limit }} 个字符。'
+            not_blank: '请选择一个区域成员。'
+            regex: '区域成员代码只能包含字母、数字、连字符和下划线。'
+        unique: '所选区域成员已存在于该区域中。'

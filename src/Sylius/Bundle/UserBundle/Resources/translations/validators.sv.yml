@@ -1,0 +1,17 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    user:
+        email:
+            not_blank: 'Ange din e-postadress.'
+            invalid: 'Denna e-postadress är ogiltig.'
+            not_registered: 'Användare med denna e-postadress finns inte. Registrera dig först.'
+        plainPassword:
+            not_blank: 'Ange ditt lösenord.'
+            mismatch: 'De angivna lösenorden matchar inte.'
+            wrong_current: 'Det angivna lösenordet skiljer sig från det aktuella.'
+        password:
+            min: 'Lösenordet måste vara minst {{ limit }} tecken långt.'
+            max: 'Lösenordet får inte vara längre än {{ limit }} tecken.'
+

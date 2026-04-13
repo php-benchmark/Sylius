@@ -1,0 +1,42 @@
+<?php
+
+/*
+ * This file is part of the Sylius package.
+ *
+ * (c) Sylius Sp. z o.o.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+declare(strict_types=1);
+
+namespace Sylius\Component\Channel\Repository;
+
+use Sylius\Component\Channel\Model\ChannelInterface;
+use Sylius\Resource\Doctrine\Persistence\RepositoryInterface;
+
+/**
+ * @template T of ChannelInterface
+ *
+ * @extends RepositoryInterface<T>
+ */
+interface ChannelRepositoryInterface extends RepositoryInterface
+{
+    public function findOneEnabledByHostname(string $hostname): ?ChannelInterface;
+
+    public function findOneByCode(string $code): ?ChannelInterface;
+
+    /** @return iterable<ChannelInterface> */
+    public function findByName(string $name): iterable;
+
+    /** @return iterable<array<string, mixed>> */
+    public function findAllWithBasicData(): iterable;
+
+    /**
+     * @return ChannelInterface[]
+     */
+    public function findEnabled(): iterable;
+
+    public function countAll(): int;
+}

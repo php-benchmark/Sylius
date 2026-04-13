@@ -1,0 +1,11 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    locale:
+        code:
+            max_length: 'O código não pode ter mais de {{ limit }} caracteres.'
+            not_blank: 'Por favor, escolha o código do locale.'
+            locale: 'Este valor não é um código de locale válido.'
+            unique: 'O código do locale deve ser único.'
+

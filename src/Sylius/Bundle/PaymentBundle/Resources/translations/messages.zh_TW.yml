@@ -1,0 +1,15 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        payment:
+            state:
+                header: 付款狀態
+                checkout: 結帳
+                pending: 待處理
+                cancelled: 已取消
+        payment_method:
+            description: 説明
+            name: 名稱
+            position: 位置

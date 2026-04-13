@@ -1,0 +1,40 @@
+{
+    "@context": "\/api\/v2\/contexts\/ProductVariant",
+    "@id": "\/api\/v2\/admin\/product-variants\/MUG_3",
+    "@type": "ProductVariant",
+    "code": "MUG_3",
+    "product": "\/api\/v2\/admin\/products\/MUG_SW",
+    "optionValues": [],
+    "channelPricings": {
+        "WEB": {
+            "@id": "\/api\/v2\/admin\/product-variants\/MUG_3\/channel-pricings\/WEB",
+            "@type": "ChannelPricing",
+            "price": 4000,
+            "originalPrice": null,
+            "minimumPrice": 0,
+            "lowestPriceBeforeDiscount": null,
+            "appliedPromotions": []
+        }
+    },
+    "translations": {
+        "en_US": {
+            "@id": "\/api\/v2\/admin\/product-variants\/MUG_3\/translations\/en_US",
+            "@type": "ProductVariantTranslation",
+            "name": null
+        }
+    },
+    "enabled": true,
+    "position": 3,
+    "tracked": false,
+    "onHold": 0,
+    "onHand": 0,
+    "weight": null,
+    "width": null,
+    "height": null,
+    "depth": null,
+    "taxCategory": null,
+    "shippingCategory": null,
+    "shippingRequired": true,
+    "createdAt": "@date@",
+    "updatedAt": "@date@"
+}

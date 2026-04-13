@@ -1,0 +1,35 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    customer:
+        first_name:
+            max: 'Fornavn kan ikke være lengre enn {{ limit }} tegn.'
+            min: 'Fornavn må være minst {{ limit }} tegn langt.'
+            not_blank: 'Vennligst skriv inn fornavnet ditt.'
+        last_name:
+            max: 'Etternavn kan ikke være lengre enn {{ limit }} tegn.'
+            min: 'Etternavn må være minst {{ limit }} tegn langt.'
+            not_blank: 'Vennligst skriv inn etternavnet ditt.'
+        gender:
+            not_blank: 'Vennligst velg kjønn.'
+        email:
+            already_used: 'Denne e-posten er allerede i bruk, vennligst logg inn eller bruk glemt passord.'
+            max: 'E-post kan ikke være lengre enn {{ limit }} tegn.'
+            not_blank: 'Vennligst skriv inn e-posten din.'
+            invalid: 'Denne e-posten er ugyldig.'
+            unique: 'Denne e-posten er allerede i bruk.'
+            registered: 'Denne e-posten er allerede registrert, vennligst logg inn eller bruk glemt passord.'
+        phone_number:
+            max: 'Telefonnummer kan ikke være lengre enn {{ limit }} tegn.'
+    customer_group:
+        code:
+            max_length: 'Koden kan ikke være lengre enn {{ limit }} tegn.'
+            regex: 'Kunden gruppens kode kan kun bestå av bokstaver, tall, bindestreker og understreker.'
+            unique: 'Kundegruppens kode må være unik.'
+            not_blank: 'Vennligst skriv inn en kundeggruppekode.'
+        name:
+            max: 'Kundeggruppenavn kan ikke være lengre enn {{ limit }} tegn.'
+            min: 'Kundeggruppenavn må være minst {{ limit }} tegn langt.'
+            not_blank: 'Vennligst skriv inn et kundeggruppenavn.'
+

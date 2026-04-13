@@ -1,0 +1,10 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    locale:
+        code:
+            max_length: 'Kód nesmí být delší než {{ limit }} znaků.'
+            not_blank: 'Prosím vyberte kód jazykové verze.'
+            locale: 'Tato hodnota není platný kód jazykové verze.'
+            unique: 'Kód jazykové verze musí být jedinečný.'

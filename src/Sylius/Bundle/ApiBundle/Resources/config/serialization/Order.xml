@@ -1,0 +1,222 @@
+<?xml version="1.0" ?>
+
+<!--
+
+ This file is part of the Sylius package.
+
+ (c) Sylius Sp. z o.o.
+
+ For the full copyright and license information, please view the LICENSE
+ file that was distributed with this source code.
+
+-->
+
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="Sylius\Component\Core\Model\Order">
+        <attribute name="id">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+        </attribute>
+
+        <attribute name="number">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+            <group>sylius:shop:order:index</group>
+        </attribute>
+
+        <attribute name="currencyCode">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+        </attribute>
+
+        <attribute name="channel">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:order:index</group>
+            <group>sylius:shop:cart:show</group>
+        </attribute>
+
+        <attribute name="customer">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+        </attribute>
+
+        <attribute name="payments">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+
+        <attribute name="shipments">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:order:account:show</group>
+            <group>sylius:shop:cart:show</group>
+        </attribute>
+
+        <attribute name="checkoutState">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:order:account:show</group>
+            <group>sylius:shop:cart:show</group>
+        </attribute>
+
+        <attribute name="checkoutCompletedAt">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+            <group>sylius:shop:order:index</group>
+        </attribute>
+
+        <attribute name="state">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:order:index</group>
+            <group>sylius:shop:cart:show</group>
+        </attribute>
+
+        <attribute name="paymentState">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+        </attribute>
+
+        <attribute name="shippingState">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+        </attribute>
+
+        <attribute name="total">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+
+        <attribute name="orderPromotionTotal">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+
+        <attribute name="shippingPromotionTotal">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+
+        <attribute name="tokenValue">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+            <group>sylius:shop:order:index</group>
+        </attribute>
+
+        <attribute name="items">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+
+        <attribute name="notes">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+        </attribute>
+
+        <attribute name="itemsTotal">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:index</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+
+        <attribute name="itemsSubtotal">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:index</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+
+        <attribute name="taxTotal">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+
+        <attribute name="shippingTaxTotal">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+
+        <attribute name="taxExcludedTotal">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+
+        <attribute name="taxIncludedTotal">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+
+        <attribute name="localeCode">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:admin:cart:update</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+
+        <attribute name="shippingTotal">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+
+        <attribute name="shippingAddress">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+
+        <attribute name="billingAddress">
+            <group>sylius:admin:order:index</group>
+            <group>sylius:admin:order:show</group>
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+
+        <attribute name="customerIp">
+            <group>sylius:admin:order:show</group>
+        </attribute>
+
+        <attribute name="promotionCoupon">
+            <group>sylius:shop:cart:show</group>
+            <group>sylius:shop:order:account:show</group>
+        </attribute>
+    </class>
+</serializer>

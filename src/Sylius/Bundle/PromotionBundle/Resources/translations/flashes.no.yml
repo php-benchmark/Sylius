@@ -1,0 +1,8 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    promotion_coupon:
+        generate: 'Kampanjekuponger har blitt generert.'
+    catalog_promotion:
+        remove: 'Fjerning av katalogkampanje er forespurt. Denne prosessen kan ta litt tid avhengig av antall berørte produkter.'

@@ -1,0 +1,43 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        attribute:
+            add: 'Legg til'
+            add_attributes: 'Legg til attributter'
+            choices: 'Valg'
+            code: 'Kode'
+            name: 'Navn'
+            translatable: 'Kan oversettes'
+            translations: 'Oversettelser'
+            type: 'Type'
+        attribute_type:
+            checkbox: 'Avkrysningsboks'
+            configuration: 'Konfigurasjon'
+            date: 'Dato'
+            datetime: 'Dato og klokkeslett'
+            float: 'Flyttall'
+            integer: 'Heltall'
+            percent: 'Prosent'
+            select: 'Velg'
+            text: 'Tekst'
+            textarea: 'Tekstområde'
+            title: 'Attributttyper'
+            validation: 'Validering'
+        attribute_type_configuration:
+            datetime:
+                format: 'Format'
+            date:
+                format: 'Format'
+            select:
+                multiple: 'Flere valg'
+                values: 'Verdier'
+                choose: 'Velg et alternativ'
+                min: 'Minimum antall'
+                max: 'Maksimum antall'
+            text:
+                min: 'Minimum lengde'
+                max: 'Maksimum lengde'
+
+

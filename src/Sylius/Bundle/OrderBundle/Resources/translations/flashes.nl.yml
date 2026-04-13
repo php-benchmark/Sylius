@@ -1,0 +1,10 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    cart:
+        add_item: 'Item is toegevoegd aan het winkelwagentje'
+        cannot_modify: 'Er is al een bestelling ingediend voor het winkelwagentje dat je probeerde te wijzigen.'
+        not_recalculated: 'Vanwege ongeldige waarden in je winkelwagentje, is het niet opnieuw berekend.'
+        remove_item: 'Item is verwijderd uit het winkelwagentje'
+        save: 'Het winkelwagentje is succesvol bijgewerkt'

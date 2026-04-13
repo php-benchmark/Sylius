@@ -1,0 +1,10 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    locale:
+        code:
+            max_length: يجب ألا يكون الرمز أطول من {{ limit }} حرفًا.
+            not_blank: الرجاء اختيار رمز اللغة.
+            locale: هذه القيمة ليست رمز لغة صالح.
+            unique: يجب أن يكون رمز اللغة فريدًا.

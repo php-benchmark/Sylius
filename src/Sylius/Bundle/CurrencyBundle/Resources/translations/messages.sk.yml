@@ -1,0 +1,14 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        currency:
+            base: 'Základná mena'
+            code: 'Názov'
+            enabled: 'Povolené'
+            exchange_rate: 'Menový kurz'
+        exchange_rate:
+            source_currency: 'Zdrojová mena'
+            target_currency: 'Cieľová mena'
+            ratio: 'Pomer'

@@ -1,0 +1,41 @@
+Sylius\Component\Core\Model\Product:
+    product_mug:
+        code: 'MUG'
+        fallbackLocale: 'en_US'
+        currentLocale: 'en'
+        images: ['@product_mug_thumbnail', '@product_mug_main']
+    product_cap:
+        code: 'CAP'
+        fallbackLocale: 'en_US'
+        currentLocale: 'en'
+        images: ['@product_cap_banner']
+
+Sylius\Component\Core\Model\ProductVariant:
+    product_variant_mug_blue:
+        code: 'MUG_BLUE'
+        product: '@product_mug'
+        fallbackLocale: 'en_US'
+        currentLocale: 'en'
+    product_variant_mug_red:
+        code: 'MUG_RED'
+        product: '@product_mug'
+        fallbackLocale: 'en_US'
+        currentLocale: 'en'
+    product_variant_cap_yellow:
+        code: 'CAP_YELLOW'
+        product: '@product_cap'
+        fallbackLocale: 'en_US'
+        currentLocale: 'en'
+
+Sylius\Component\Core\Model\ProductImage:
+    product_mug_thumbnail:
+        type: 'thumbnail'
+        path: 'uo/thumbnail.jpg'
+        productVariants: ['@product_variant_mug_blue']
+    product_mug_main:
+        type: 'main'
+        path: 'uo/main.jpg'
+        productVariants: ['@product_variant_mug_red']
+    product_cap_banner:
+        type: 'banner'
+        path: 'uo/banner.jpg'

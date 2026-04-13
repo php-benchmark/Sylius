@@ -1,0 +1,18 @@
+{
+    "@context": "\/api\/v2\/contexts\/ProductAttribute",
+    "@id": "\/api\/v2\/admin\/product-attributes\/new",
+    "@type": "ProductAttribute",
+    "code": "new",
+    "configuration": {},
+    "position": 0,
+    "storageType": "boolean",
+    "type": "checkbox",
+    "translatable": false,
+    "translations": {
+        "en_US": {
+            "@id": "\/api\/v2\/admin\/product-attributes\/new/translations\/en_US",
+            "@type": "ProductAttributeTranslation",
+            "name": "New"
+        }
+    }
+}

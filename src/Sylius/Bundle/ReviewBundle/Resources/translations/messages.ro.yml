@@ -1,0 +1,17 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        review:
+            author: 'Autor'
+            comment: 'Comentariu'
+            header: 'Adaugă o recenzie'
+            rating: 'Evaluare'
+            status:
+                approved: 'Aprobat'
+                label: 'Stare'
+                new: 'Nou'
+                rejected: 'Respins'
+            submit: 'Trimite'
+            title: 'Titlu'

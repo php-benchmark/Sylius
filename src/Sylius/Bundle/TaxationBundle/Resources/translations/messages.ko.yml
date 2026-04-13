@@ -1,0 +1,16 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        tax_category:
+            description: '설명'
+            name: '이름'
+        tax_rate:
+            amount: '금액'
+            calculator: '계산기'
+            category: '카테고리'
+            end_date: '종료일'
+            included_in_price: '가격에 포함?'
+            name: '이름'
+            start_date: '시작일'

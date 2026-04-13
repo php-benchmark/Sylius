@@ -1,0 +1,16 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        tax_category:
+            description: 'Opis'
+            name: 'Nazwa'
+        tax_rate:
+            amount: 'Wartość'
+            calculator: 'Kalkulator'
+            category: 'Kategoria'
+            end_date: 'Data zakończenia'
+            included_in_price: 'Wliczony w cenę?'
+            name: 'Nazwa'
+            start_date: 'Data rozpoczęcia'

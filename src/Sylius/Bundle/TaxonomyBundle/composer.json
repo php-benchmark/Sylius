@@ -1,0 +1,80 @@
+{
+    "name": "sylius/taxonomy-bundle",
+    "type": "symfony-bundle",
+    "description": "Flexible categorization system for Symfony.",
+    "keywords": [
+        "shop",
+        "ecommerce",
+        "taxonomies",
+        "taxonomy",
+        "category",
+        "categorization",
+        "sylius"
+    ],
+    "homepage": "https://sylius.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paweł Jędrzejewski",
+            "homepage": "https://pjedrzejewski.com"
+        },
+        {
+            "name": "Sylius project",
+            "homepage": "https://sylius.com"
+        },
+        {
+            "name": "Community contributions",
+            "homepage": "https://github.com/Sylius/Sylius/contributors"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "stof/doctrine-extensions-bundle": "^1.12",
+        "sylius/resource-bundle": "^1.12",
+        "sylius/taxonomy": "^2.0",
+        "symfony/framework-bundle": "^6.4.1 || ^7.4"
+    },
+    "require-dev": {
+        "doctrine/doctrine-bundle": "^2.13",
+        "doctrine/orm": "^2.18 || ^3.5",
+        "phpunit/phpunit": "^11.5",
+        "symfony/dependency-injection": "^6.4.1 || ^7.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "2.2-dev"
+        },
+        "symfony": {
+            "require": "^7.4"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Sylius\\Bundle\\TaxonomyBundle\\": ""
+        },
+        "exclude-from-classmap": [
+            "/tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Sylius\\Bundle\\TaxonomyBundle\\": "tests/"
+        },
+        "files": [
+            "tests/Functional/app/AppKernel.php"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../*/*"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

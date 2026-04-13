@@ -1,0 +1,12 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    payment:
+        authorized: 'تم تفويض الدفع.'
+        cancelled: 'تم إلغاء الدفع.'
+        completed: 'تم إتمام الدفع.'
+        failed: 'فشل الدفع.'
+        processing: 'يتم معالجة الدفع.'
+        refunded: 'تم استرداد الدفع بنجاح.'
+        unknown: 'حدثت مشكلة غير معروفة مع الدفع.'

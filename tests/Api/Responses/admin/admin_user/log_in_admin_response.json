@@ -1,0 +1,4 @@
+{
+    "token": "@string@",
+    "adminUser": "\/api\/v2\/admin\/administrators\/@integer@"
+}

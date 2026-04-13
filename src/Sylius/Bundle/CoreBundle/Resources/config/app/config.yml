@@ -1,0 +1,113 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+imports:
+    - { resource: "@SyliusOrderBundle/Resources/config/app/config.yml" }
+    - { resource: "@SyliusPaymentBundle/Resources/config/app/config.yml" }
+    - { resource: "@SyliusProductBundle/Resources/config/app/config.yml" }
+    - { resource: "@SyliusPromotionBundle/Resources/config/app/config.yml" }
+    - { resource: "@SyliusShippingBundle/Resources/config/app/config.yml" }
+    - { resource: "@SyliusUserBundle/Resources/config/app/config.yml" }
+
+    - { resource: "@SyliusCoreBundle/Resources/config/app/parameters.yml" }
+    - { resource: "@SyliusCoreBundle/Resources/config/app/sylius.yml" }
+    - { resource: "@SyliusCoreBundle/Resources/config/app/winzou_state_machine.php" }
+    - { resource: "@SyliusCoreBundle/Resources/config/app/workflow.yaml" }
+    - { resource: "@SyliusCoreBundle/Resources/config/app/fixtures.yml" }
+    - { resource: "@SyliusCoreBundle/Resources/config/app/messenger.yaml" }
+    - { resource: "@SyliusCoreBundle/Resources/config/app/doctrine_migrations.yaml" }
+
+parameters:
+    sylius_core.public_dir: "%kernel.project_dir%/web"
+    sylius_core.images_dir: "%sylius_core.public_dir%/media/image"
+    sylius_core.default_telemetry_salt: 'd7bf76db51983848f9653988cde044ead342754ef803f65bd234aa0a89d30d34'
+    env(SYLIUS_TELEMETRY_SALT): '%sylius_core.default_telemetry_salt%'
+    locale: en_US
+
+sylius_core:
+    orders_statistics:
+        intervals_map:
+            day:
+                interval: P1D
+                period_format: Y-m-d
+            month:
+                interval: P1M
+                period_format: Y-m
+            year:
+                interval: P1Y
+                period_format: Y
+    telemetry:
+        salt: '%env(SYLIUS_TELEMETRY_SALT)%'
+
+doctrine:
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        entity_managers:
+            default:
+                auto_mapping: true
+                dql:
+                    string_functions:
+                        DATE_FORMAT: Sylius\Bundle\CoreBundle\Doctrine\DQL\DateFormat
+                        DAY: Sylius\Bundle\CoreBundle\Doctrine\DQL\Day
+                        HOUR: Sylius\Bundle\CoreBundle\Doctrine\DQL\Hour
+                        MONTH: Sylius\Bundle\CoreBundle\Doctrine\DQL\Month
+                        WEEK: Sylius\Bundle\CoreBundle\Doctrine\DQL\Week
+                        YEAR: Sylius\Bundle\CoreBundle\Doctrine\DQL\Year
+                        CAST: Sylius\Bundle\CoreBundle\Doctrine\DQL\Cast
+
+flysystem:
+    storages:
+        sylius.storage:
+            adapter: 'local'
+            options:
+                directory: '%sylius_core.images_dir%'
+            directory_visibility: 'public'
+
+liip_imagine:
+    cache: sylius_image
+    data_loader: sylius_image
+    loaders:
+        sylius_image:
+            filesystem:
+                data_root: "%sylius_core.images_dir%"
+    resolvers:
+        sylius_image:
+            web_path:
+                web_root: "%sylius_core.public_dir%"
+                cache_prefix: "media/cache"
+    filter_sets:
+        sylius_original: ~
+        sylius_small:
+            format: webp
+            quality: 80
+            filters:
+                thumbnail: { size: [120, 90], mode: outbound }
+        sylius_medium:
+            format: webp
+            quality: 80
+            filters:
+                thumbnail: { size: [240, 180], mode: outbound }
+        sylius_large:
+            format: webp
+            quality: 80
+            filters:
+                thumbnail: { size: [640, 480], mode: outbound }
+
+stof_doctrine_extensions:
+    default_locale: "%locale%"
+    orm:
+        default:
+            tree: true
+            sluggable: true
+            timestampable: true
+            loggable: true
+            sortable: true
+
+twig:
+    debug: "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+    globals:
+        sylius: "@sylius.context.shopper"
+        sylius_base_locale: "%locale%"
+        sylius_meta:
+            version: !php/const Sylius\Bundle\CoreBundle\SyliusCoreBundle::VERSION

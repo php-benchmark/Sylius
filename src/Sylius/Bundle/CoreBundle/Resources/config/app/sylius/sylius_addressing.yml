@@ -1,0 +1,29 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius_addressing:
+    scopes:
+        shipping: sylius.form.zone.scopes.shipping
+        tax: sylius.form.zone.scopes.tax
+        all: sylius.form.zone.scopes.all
+    resources:
+        address:
+            classes:
+                model: Sylius\Component\Core\Model\Address
+                repository: Sylius\Bundle\CoreBundle\Doctrine\ORM\AddressRepository
+        address_log_entry:
+            classes:
+                model: Sylius\Component\Addressing\Model\AddressLogEntry
+                repository: Sylius\Bundle\ResourceBundle\Doctrine\ORM\ResourceLogEntryRepository
+
+    zone_member:
+        validation_groups:
+            country:
+                - 'sylius'
+                - 'sylius_zone_member_country'
+            province:
+                - 'sylius'
+                - 'sylius_zone_member_province'
+            zone:
+                - 'sylius'
+                - 'sylius_zone_member_zone'

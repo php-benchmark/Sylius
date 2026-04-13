@@ -1,0 +1,22 @@
+{
+    "@context": "\/api\/v2\/contexts\/ProductAssociationType",
+    "@id": "\/api\/v2\/admin\/product-association-types\/similar_products",
+    "@type": "ProductAssociationType",
+    "id": "@integer@",
+    "code": "similar_products",
+    "name": "Similar products",
+    "createdAt": "@string@",
+    "updatedAt": "@string@",
+    "translations": {
+        "de_DE": {
+            "@id": "\/api\/v2\/admin\/product-association-types\/similar_products\/translations\/de_DE",
+            "@type": "ProductAssociationTypeTranslation",
+            "name": "test"
+        },
+        "en_US": {
+            "@id": "\/api\/v2\/admin\/product-association-types\/similar_products\/translations\/en_US",
+            "@type": "ProductAssociationTypeTranslation",
+            "name": "Similar products"
+        }
+    }
+}

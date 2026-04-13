@@ -1,0 +1,11 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        channel:
+            color: Ngjyra
+            description: Përshkrimi
+            enabled: E aktivizuar
+            name: Emri
+            url: URL

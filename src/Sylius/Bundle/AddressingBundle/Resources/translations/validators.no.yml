@@ -1,0 +1,72 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    address:
+        city:
+            max_length: 'Byen kan ikke være lenger enn {{ limit }} tegn.'
+            min_length: 'Byen må være minst {{ limit }} tegn lang.'
+            not_blank: 'Vennligst oppgi by.'
+        country:
+            not_blank: 'Vennligst velg land.'
+            disabled: 'Det valgte landet er deaktivert. Vennligst velg et annet.'
+        first_name:
+            max_length: 'Fornavnet kan ikke være lenger enn {{ limit }} tegn.'
+            min_length: 'Fornavnet må være minst {{ limit }} tegn langt.'
+            not_blank: 'Vennligst oppgi fornavn.'
+        last_name:
+            max_length: 'Etternavnet kan ikke være lenger enn {{ limit }} tegn.'
+            min_length: 'Etternavnet må være minst {{ limit }} tegn langt.'
+            not_blank: 'Vennligst oppgi etternavn.'
+        postcode:
+            max_length: 'Postnummeret kan ikke være lenger enn {{ limit }} tegn.'
+            min_length: 'Postnummeret må være minst {{ limit }} tegn langt.'
+            not_blank: 'Vennligst oppgi postnummer.'
+        province:
+            valid: 'Vennligst velg riktig fylke.'
+        street:
+            max_length: 'Gatenavn kan ikke være lenger enn {{ limit }} tegn.'
+            min_length: 'Gatenavn må være minst {{ limit }} tegn langt.'
+            not_blank: 'Vennligst oppgi gatenavn.'
+        not_shippable: 'Denne adressen er ikke en gyldig leveringsadresse.'
+    country:
+        code:
+            not_blank: 'Vennligst oppgi ISO-kode for landet.'
+            unique: 'ISO-koden for landet må være unik.'
+            country: 'ISO-koden for landet er ugyldig.'
+        unique_provinces: 'Alle fylker i dette landet må ha unike koder og navn.'
+    province:
+        code:
+            max_length: 'Koden kan ikke være lenger enn {{ limit }} tegn.'
+            not_blank: 'Vennligst oppgi fylkeskode.'
+            regex: 'Fylkeskoden skal ha formatet XX-XX (f.eks. NO-01).'
+            unique: 'Fylkeskoden må være unik.'
+        name:
+            max_length: 'Fylkesnavnet kan ikke være lenger enn {{ limit }} tegn.'
+            min_length: 'Fylkesnavnet må være minst {{ limit }} tegn langt.'
+            not_blank: 'Vennligst oppgi fylkesnavn.'
+            unique: 'Fylkesnavnet må være unikt.'
+    zone:
+        scope:
+            not_blank: 'Vennligst oppgi område.'
+        code:
+            max_length: 'Koden kan ikke være lenger enn {{ limit }} tegn.'
+            not_blank: 'Vennligst oppgi sonekode.'
+            regex: 'Sonekode kan kun inneholde bokstaver, tall, bindestreker og understreker.'
+            unique: 'Sonekode må være unik.'
+        type:
+            invalid: 'Type {{ value }} er ugyldig. Tillatte typer er: {{ choices }}.'
+        members:
+            min_count: 'Vennligst legg til minst {{ limit }} sone-medlem.'
+        name:
+            max_length: 'Sonenavnet kan ikke være lenger enn {{ limit }} tegn.'
+            min_length: 'Sonenavnet må være minst {{ limit }} tegn langt.'
+            not_blank: 'Vennligst oppgi sonenavn.'
+    zone_member:
+        cannot_be_the_same_as_zone: 'Sone-medlem kan ikke være den samme som en sone.'
+        code:
+            max_length: 'Sone-medlemskoden kan ikke være lenger enn {{ limit }} tegn.'
+            not_blank: 'Vennligst velg et sone-medlem.'
+            regex: 'Sone-medlemskoden kan kun inneholde bokstaver, tall, bindestreker og understreker.'
+        unique: 'Det valgte sone-medlemmet er allerede i denne sonen.'
+

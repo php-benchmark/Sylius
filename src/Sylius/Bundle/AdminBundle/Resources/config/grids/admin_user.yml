@@ -1,0 +1,66 @@
+sylius_grid:
+    grids:
+        sylius_admin_admin_user:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%sylius.model.admin_user.class%"
+            sorting:
+                createdAt: desc
+            fields:
+                email:
+                    type: twig
+                    label: sylius.ui.email
+                    sortable: ~
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/name.html.twig"
+                firstName:
+                    type: string
+                    label: sylius.ui.first_name
+                    sortable: ~
+                lastName:
+                    type: string
+                    label: sylius.ui.last_name
+                    sortable: ~
+                username:
+                    type: string
+                    label: sylius.ui.username
+                    sortable: ~
+                createdAt:
+                    type: twig
+                    label: sylius.ui.registration_date
+                    sortable: ~
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/date.html.twig"
+                        vars:
+                            th_class: "w-1 text-center"
+                enabled:
+                    type: twig
+                    label: sylius.ui.enabled
+                    sortable: ~
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/boolean.html.twig"
+                        vars:
+                            th_class: "w-1 text-center"
+                            td_class: "text-center"
+            filters:
+                search:
+                    type: string
+                    label: sylius.ui.search
+                    options:
+                        fields: [email, username, firstName, lastName]
+                enabled:
+                    type: boolean
+                    label: sylius.ui.enabled
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete
+                bulk:
+                    delete:
+                        type: delete

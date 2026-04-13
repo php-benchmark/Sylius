@@ -1,0 +1,41 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        attribute:
+            add: إضافة
+            add_attributes: إضافة السمات
+            choices: الخيارات
+            code: الرمز
+            name: الاسم
+            translatable: قابل للترجمة
+            translations: الترجمات
+            type: النوع
+        attribute_type:
+            checkbox: خانة اختيار
+            configuration: الإعدادات
+            date: التاريخ
+            datetime: التاريخ والوقت
+            float: عدد عشري
+            integer: عدد صحيح
+            percent: النسبة المئوية
+            select: اختيار
+            text: نص
+            textarea: حقل نصي
+            title: أنواع السمات
+            validation: التحقق من الصحة
+        attribute_type_configuration:
+            datetime:
+                format: التنسيق
+            date:
+                format: التنسيق
+            select:
+                multiple: متعدد
+                values: القيم
+                choose: اختر خيارًا
+                min: الحد الأدنى من الإدخالات
+                max: الحد الأقصى من الإدخالات
+            text:
+                min: الحد الأدنى للطول
+                max: الحد الأقصى للطول

@@ -1,0 +1,45 @@
+<?php
+
+/*
+ * This file is part of the Sylius package.
+ *
+ * (c) Sylius Sp. z o.o.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+declare(strict_types=1);
+
+namespace Sylius\Component\Core\Repository;
+
+use Doctrine\ORM\QueryBuilder;
+use Sylius\Component\Core\Model\ChannelInterface;
+use Sylius\Component\Core\Model\CustomerInterface;
+use Sylius\Component\Core\Model\ShipmentInterface;
+use Sylius\Resource\Doctrine\Persistence\RepositoryInterface;
+
+/**
+ * @template T of ShipmentInterface
+ *
+ * @extends RepositoryInterface<T>
+ */
+interface ShipmentRepositoryInterface extends RepositoryInterface
+{
+    public function createListQueryBuilder(): QueryBuilder;
+
+    public function findOneByOrderId(mixed $shipmentId, mixed $orderId): ?ShipmentInterface;
+
+    public function findOneByOrderTokenAndChannel(mixed $shipmentId, string $tokenValue, ChannelInterface $channel): ?ShipmentInterface;
+
+    public function findOneByCustomer(mixed $id, CustomerInterface $customer): ?ShipmentInterface;
+
+    public function findOneByCustomerAndOrderToken(mixed $id, CustomerInterface $customer, string $token): ?ShipmentInterface;
+
+    /**
+     * @return array|ShipmentInterface[]
+     */
+    public function findByName(string $name, string $locale): array;
+
+    public function countReadyByChannel(ChannelInterface $channel): int;
+}

@@ -1,0 +1,13 @@
+parameters:
+    env(MONOLOG_STREAM_PATH): '%kernel.logs_dir%/%kernel.environment%.log'
+
+monolog:
+    handlers:
+        main:
+            type: fingers_crossed
+            action_level: error
+            handler: nested
+        nested:
+            type: stream
+            path: "%env(resolve:MONOLOG_STREAM_PATH)%"
+            level: debug

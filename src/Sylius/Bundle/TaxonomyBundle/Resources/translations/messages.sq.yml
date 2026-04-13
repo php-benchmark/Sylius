@@ -1,0 +1,12 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        taxon:
+            description: Përshkrimi
+            enabled: E aktivizuar
+            name: Emri
+            parent: Prind
+        taxonomy:
+            name: Emri

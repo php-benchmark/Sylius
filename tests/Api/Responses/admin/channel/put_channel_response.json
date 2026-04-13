@@ -1,0 +1,43 @@
+{
+    "@context": "\/api\/v2\/contexts\/Channel",
+    "@id": "\/api\/v2\/admin\/channels\/WEB",
+    "@type": "Channel",
+    "code": "WEB",
+    "name": "Web Store",
+    "enabled": true,
+    "baseCurrency": "\/api\/v2\/admin\/currencies\/USD",
+    "defaultLocale": "\/api\/v2\/admin\/locales\/en_US",
+    "defaultTaxZone": null,
+    "taxCalculationStrategy": "order_items_based",
+    "currencies": [],
+    "locales": [
+      "\/api\/v2\/admin\/locales\/en_US"
+    ],
+    "countries": [],
+    "themeName": null,
+    "contactEmail": "web@sylius.com",
+    "contactPhoneNumber": null,
+    "skippingShippingStepAllowed": false,
+    "skippingPaymentStepAllowed": false,
+    "accountVerificationRequired": false,
+    "shippingAddressInCheckoutRequired": true,
+    "shopBillingData": {
+        "@type": "ShopBillingData",
+        "company": "Web Channel Company: Updated",
+        "taxId": "Web Channel Tax ID: Updated",
+        "countryCode": "PL",
+        "street": "Web Channel Street: Updated",
+        "city": "Web Channel City: Updated",
+        "postcode": "Web Channel Postcode: Updated"
+    },
+    "menuTaxon": "\/api\/v2\/admin\/taxons\/CATEGORY",
+    "description": "different description",
+    "hostname": "updated-hostname.com",
+    "color": "blue",
+    "channelPriceHistoryConfig": {
+        "@type": "ChannelPriceHistoryConfig",
+        "lowestPriceForDiscountedProductsVisible": true,
+        "lowestPriceForDiscountedProductsCheckingPeriod": 60,
+        "taxonsExcludedFromShowingLowestPrice": "@array@.count(1).inArray('/api/v2/admin/taxons/MUG')"
+    }
+}

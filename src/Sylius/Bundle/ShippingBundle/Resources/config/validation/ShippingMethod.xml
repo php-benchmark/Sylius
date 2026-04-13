@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+ This file is part of the Sylius package.
+
+ (c) Sylius Sp. z o.o.
+
+ For the full copyright and license information, please view the LICENSE
+ file that was distributed with this source code.
+
+-->
+
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/services/constraint-mapping-1.0.xsd">
+    <class name="Sylius\Component\Shipping\Model\ShippingMethod">
+        <constraint name="Sylius\Bundle\ShippingBundle\Validator\Constraint\ValidDeliveryTimeRange">
+            <option name="groups">sylius</option>
+        </constraint>
+        <constraint name="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity" >
+            <option name="fields">code</option>
+            <option name="message">sylius.shipping_method.code.unique</option>
+            <option name="groups">sylius</option>
+        </constraint>
+        <property name="code">
+            <constraint name="NotBlank">
+                <option name="message">sylius.shipping_method.code.not_blank</option>
+                <option name="groups">sylius</option>
+            </constraint>
+            <constraint name="Regex">
+                <option name="message">sylius.shipping_method.code.regex</option>
+                <option name="pattern">/^[\w-]*$/</option>
+                <option name="groups">sylius</option>
+            </constraint>
+            <constraint name="Length">
+                <option name="max">255</option>
+                <option name="maxMessage">sylius.shipping_method.code.max_length</option>
+                <option name="groups">sylius</option>
+            </constraint>
+        </property>
+        <property name="calculator">
+            <constraint name="NotBlank">
+                <option name="message">sylius.shipping_method.calculator.not_blank</option>
+                <option name="groups">sylius</option>
+            </constraint>
+            <constraint name="Sylius\Bundle\ShippingBundle\Validator\Constraint\ShippingMethodCalculatorExists">
+                <option name="groups">
+                    <value>sylius</value>
+                </option>
+            </constraint>
+        </property>
+        <property name="rules">
+            <constraint name="Valid" />
+        </property>
+        <property name="translations">
+            <constraint name="Valid" />
+        </property>
+        <property name="minDeliveryTimeDays">
+            <constraint name="Symfony\Component\Validator\Constraints\GreaterThanOrEqual">
+                <option name="value">0</option>
+                <option name="message">sylius.form.shipping_method.min_delivery_time_days.greater_or_equal_zero</option>
+                <option name="groups">sylius</option>
+            </constraint>
+            <constraint name="Symfony\Component\Validator\Constraints\LessThanOrEqual">
+                <option name="value">1000</option>
+                <option name="message">sylius.form.shipping_method.min_delivery_time_days.less_or_equal_max</option>
+                <option name="groups">sylius</option>
+            </constraint>
+        </property>
+        <property name="maxDeliveryTimeDays">
+            <constraint name="Symfony\Component\Validator\Constraints\GreaterThanOrEqual">
+                <option name="value">0</option>
+                <option name="message">sylius.form.shipping_method.max_delivery_time_days.greater_or_equal_zero</option>
+                <option name="groups">sylius</option>
+            </constraint>
+            <constraint name="Symfony\Component\Validator\Constraints\LessThanOrEqual">
+                <option name="value">1000</option>
+                <option name="message">sylius.form.shipping_method.max_delivery_time_days.less_or_equal_max</option>
+                <option name="groups">sylius</option>
+            </constraint>
+        </property>
+    </class>
+</constraint-mapping>

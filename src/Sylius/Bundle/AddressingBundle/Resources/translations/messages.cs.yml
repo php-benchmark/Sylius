@@ -1,0 +1,42 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        address:
+            city: 'Město'
+            company: 'Společnost'
+            country: 'Země'
+            first_name: 'Jméno'
+            last_name: 'Příjmení'
+            phone_number: 'Telefonní číslo'
+            postcode: 'PSČ'
+            street: 'Ulice'
+            province: 'Kraj'
+            zone: 'Oblast'
+        country:
+            add_province: 'Přidat kraj'
+            name: 'Název'
+            provinces: 'Kraje'
+            select: 'Vybrat'
+            enabled: 'Povoleno'
+        province:
+            name: 'Název'
+            abbreviation: 'Zkratka'
+            select: 'Vybrat'
+        zone:
+            add_member: 'Přidat člena'
+            members: 'Členové'
+            name: 'Název'
+            type: 'Typ'
+            types:
+                country: 'Země'
+                province: 'Kraj'
+                zone: 'Oblast'
+            scope: 'Rozsah'
+            scopes:
+                all: 'Všechny'
+            select: 'Vybrat'
+            priority: 'Priorita'
+        zone_member:
+            select: 'Vybrat'

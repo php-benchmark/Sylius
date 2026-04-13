@@ -1,0 +1,83 @@
+sylius_grid:
+    grids:
+        sylius_admin_customer:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%sylius.model.customer.class%"
+            sorting:
+                createdAt: desc
+            fields:
+                email:
+                    type: twig
+                    label: sylius.ui.email
+                    sortable: ~
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/name.html.twig"
+                lastName:
+                    type: string
+                    label: sylius.ui.last_name
+                    sortable: ~
+                firstName:
+                    type: string
+                    label: sylius.ui.first_name
+                    sortable: ~
+                createdAt:
+                    type: twig
+                    label: sylius.ui.registration_date
+                    sortable: ~
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/date.html.twig"
+                        vars:
+                            th_class: "w-1 text-center"
+                enabled:
+                    type: twig
+                    label: sylius.ui.enabled
+                    path: .
+                    options:
+                        template: "@SyliusAdmin/customer/grid/field/enabled.html.twig"
+                        vars:
+                            th_class: "w-1 text-center"
+                verified:
+                    type: twig
+                    label: sylius.ui.verified
+                    path: user?.verified
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/boolean.html.twig"
+                        vars:
+                            th_class: "w-1 text-center"
+            filters:
+                search:
+                    type: string
+                    label: sylius.ui.search
+                    options:
+                        fields: [email, firstName, lastName]
+                group:
+                    type: ux_autocomplete
+                    label: sylius.ui.customer_groups
+                    form_options:
+                        multiple: true
+                        extra_options:
+                            class: '%sylius.model.customer_group.class%'
+                            choice_label: name
+                    options:
+                        fields: [group.id]
+
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    show_orders:
+                        type: show
+                        label: sylius.ui.show_orders
+                        icon: "tabler:shopping-bag"
+                        options:
+                            link:
+                                route: sylius_admin_customer_order_index
+                                parameters:
+                                    id: resource.id
+                    show:
+                        type: show
+                    update:
+                        type: update

@@ -1,0 +1,12 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        gateway_config:
+            use_payum: '使用 Payum'
+    payum_gateway:
+        cash_on_delivery: '货到付款'
+        offline: '离线 (Payum)'
+    payum_gateway_factory:
+        offline: '离线'

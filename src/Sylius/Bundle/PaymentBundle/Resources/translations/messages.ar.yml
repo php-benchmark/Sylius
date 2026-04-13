@@ -1,0 +1,38 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        credit_card:
+            cardholder_name: اسم صاحب البطاقة
+            expiry_month: شهر الانتهاء
+            expiry_year: سنة الانتهاء
+            number: رقم البطاقة
+            security_code: رمز الأمان (CVV)
+            type: نوع البطاقة
+        payment:
+            amount: مبلغ الدفع
+            method: طريقة الدفع
+            state:
+                header: حالة الدفع
+                checkout: في مرحلة الدفع
+                completed: مكتمل
+                authorized: تم التفويض
+                failed: فشل
+                new: جديد
+                pending: قيد الانتظار
+                processing: جاري المعالجة
+                unknown: غير معروف
+                void: لاغٍ
+                cancelled: تم الإلغاء
+                refunded: تم الاسترداد
+        payment_method:
+            description: الوصف
+            enabled: مفعّل
+            instructions: التعليمات
+            name: الاسم
+            position: الترتيب
+        gateway_config:
+            type: النوع
+    gateway_factory:
+        offline: دون اتصال

@@ -1,0 +1,8 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    promotion_coupon:
+        generate: "تم إنشاء كوبونات الترويج بنجاح."
+    catalog_promotion:
+        remove: "تم طلب إزالة الترويج من الكتالوج. قد تستغرق هذه العملية بعض الوقت اعتمادًا على عدد المنتجات المتأثرة."

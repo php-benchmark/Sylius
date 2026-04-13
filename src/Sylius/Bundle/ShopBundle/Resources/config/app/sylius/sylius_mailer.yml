@@ -1,0 +1,23 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius_mailer:
+    emails:
+        contact_request:
+            subject: sylius.emails.contact_request.subject
+            template: "@SyliusShop/email/contact_request.html.twig"
+        order_confirmation:
+            subject: sylius.emails.order_confirmation.subject
+            template: "@SyliusShop/email/order_confirmation.html.twig"
+        user_registration:
+            subject: sylius.emails.user_registration.subject
+            template: "@SyliusShop/email/user_registration.html.twig"
+        password_reset:
+            subject: sylius.emails.user.password_reset.subject
+            template: "@SyliusShop/email/password_reset.html.twig"
+        reset_password_token:
+            subject: sylius.emails.user.password_reset.subject
+            template: "@SyliusShop/email/password_reset.html.twig"
+        verification_token:
+            subject: sylius.emails.user.verification_token.subject
+            template: "@SyliusShop/email/verification.html.twig"

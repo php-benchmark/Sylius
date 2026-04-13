@@ -1,0 +1,3 @@
+services:
+    sylius.generator.image_path:
+        class: Sylius\Behat\Service\Generator\UploadedImagePathGenerator

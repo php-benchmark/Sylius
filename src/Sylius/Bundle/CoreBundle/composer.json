@@ -1,0 +1,117 @@
+{
+    "name": "sylius/core-bundle",
+    "type": "symfony-bundle",
+    "description": "Sylius core bundle. It integrates all other bundles into full stack Symfony ecommerce solution.",
+    "keywords": [
+        "shop",
+        "ecommerce",
+        "store",
+        "webshop",
+        "sylius"
+    ],
+    "homepage": "https://sylius.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paweł Jędrzejewski",
+            "homepage": "https://pjedrzejewski.com"
+        },
+        {
+            "name": "Sylius project",
+            "homepage": "https://sylius.com"
+        },
+        {
+            "name": "Community contributions",
+            "homepage": "https://github.com/Sylius/Sylius/contributors"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "doctrine/dbal": "^3.9",
+        "doctrine/doctrine-migrations-bundle": "^3.3",
+        "egulias/email-validator": "^4.0",
+        "fakerphp/faker": "^1.23",
+        "league/flysystem-bundle": "^3.3",
+        "liip/imagine-bundle": "^2.15",
+        "sylius-labs/association-hydrator": "^1.2",
+        "sylius-labs/doctrine-migrations-extra-bundle": "^0.3",
+        "sylius/addressing-bundle": "^2.0",
+        "sylius/attribute-bundle": "^2.0",
+        "sylius/channel-bundle": "^2.0",
+        "sylius/core": "^2.0",
+        "sylius/currency-bundle": "^2.0",
+        "sylius/customer-bundle": "^2.0",
+        "sylius/fixtures-bundle": "^1.9",
+        "sylius/grid-bundle": "^1.13",
+        "sylius/inventory-bundle": "^2.0",
+        "sylius/locale-bundle": "^2.0",
+        "sylius/mailer-bundle": "^2.1",
+        "sylius/money-bundle": "^2.0",
+        "sylius/order-bundle": "^2.0",
+        "sylius/payment-bundle": "^2.0",
+        "sylius/product-bundle": "^2.0",
+        "sylius/promotion-bundle": "^2.0",
+        "sylius/resource-bundle": "^1.12",
+        "sylius/review-bundle": "^2.0",
+        "sylius/shipping-bundle": "^2.0",
+        "sylius/state-machine-abstraction": "^2.0",
+        "sylius/taxation-bundle": "^2.0",
+        "sylius/taxonomy-bundle": "^2.0",
+        "sylius/user-bundle": "^2.0",
+        "symfony/clock": "^6.4 || ^7.4",
+        "symfony/framework-bundle": "^6.4.1 || ^7.4",
+        "symfony/intl": "^6.4 || ^7.4",
+        "symfony/mailer": "^6.4 || ^7.4",
+        "symfony/messenger": "^6.4 || ^7.4",
+        "symfony/webpack-encore-bundle": "^2.2",
+        "symfony/workflow": "^6.4 || ^7.4",
+        "php-http/discovery": "^1.20"
+    },
+    "conflict": {
+        "phpstan/phpdoc-parser": ">= 2.0"
+    },
+    "require-dev": {
+        "doctrine/doctrine-bundle": "^2.13",
+        "doctrine/orm": "^2.18 || ^3.5",
+        "hwi/oauth-bundle": "^2.2",
+        "matthiasnoback/symfony-config-test": "^6.0",
+        "matthiasnoback/symfony-dependency-injection-test": "^6.0",
+        "phpunit/phpunit": "^11.5",
+        "symfony/dependency-injection": "^6.4.1 || ^7.4",
+        "symfony/dotenv": "^6.4 || ^7.4",
+        "nyholm/psr7": "^1.8"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true,
+            "php-http/discovery": false
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "2.2-dev"
+        },
+        "symfony": {
+            "require": "^7.4"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Sylius\\Bundle\\CoreBundle\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sylius\\Bundle\\CoreBundle\\Application\\": "test/src/",
+            "Tests\\Sylius\\Bundle\\CoreBundle\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../*/*"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

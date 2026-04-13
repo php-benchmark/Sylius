@@ -1,0 +1,35 @@
+sylius_admin_catalog_promotion:
+    resource: |
+        alias: sylius.catalog_promotion
+        section: admin
+        templates: "@SyliusAdmin\\shared\\crud"
+        except: ['delete']
+        redirect: update
+        grid: sylius_admin_catalog_promotion
+        form:
+            type: Sylius\Bundle\AdminBundle\Form\Type\CatalogPromotionType
+        permission: true
+    type: sylius.resource
+
+sylius_admin_catalog_promotion_product_variant_index:
+    path: /catalog-promotions/{id}/variants
+    methods: [GET]
+    defaults:
+        _controller: sylius.controller.product_variant::indexAction
+        _sylius:
+            section: admin
+            grid: sylius_admin_product_variant_with_catalog_promotion
+            template: "@SyliusAdmin/catalog_promotion/product_variant/index.html.twig"
+            permission: true
+            vars:
+                catalogPromotion: expr:service('sylius.repository.catalog_promotion').find($id)
+
+sylius_admin_catalog_promotion_delete:
+    path: /catalog-promotions/{code}
+    methods: [DELETE]
+    defaults:
+        _controller: sylius_admin.controller.remove_catalog_promotion
+        _sylius:
+            section: admin
+            permission: true
+            alias: catalog_promotion

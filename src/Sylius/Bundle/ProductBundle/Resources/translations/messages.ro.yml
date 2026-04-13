@@ -1,0 +1,31 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        product:
+            name: 'Nume'
+            description: 'Descriere'
+            attributes: 'Atribute'
+            options: 'Opțiuni'
+            meta_keywords: 'Meta cuvinte cheie'
+            meta_description: 'Meta descriere'
+            slug: 'Slug'
+            taxons: 'Taxoni'
+        product_variant:
+            name: 'Nume'
+        association_type:
+            name: 'Nume'
+            translations: 'Traduceri'
+        association:
+            type: 'Tip asociere'
+            product: 'Produs asociat'
+        variant:
+            name: 'Nume'
+        option:
+            name: 'Nume'
+            position: 'Poziție'
+            values: 'Valori posibile'
+        option_value:
+            add_value: 'Adaugă valoare'
+            value: 'Valoare'

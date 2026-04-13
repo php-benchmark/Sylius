@@ -1,0 +1,38 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        credit_card:
+            cardholder_name: 'Meno držiteľa karty'
+            expiry_month: 'Mesiac expirácie'
+            expiry_year: 'Rok expirácie'
+            number: 'Číslo karty'
+            security_code: 'Bezpečnostný kód (CVV)'
+            type: 'Typ karty'
+        payment:
+            amount: 'Suma platby'
+            method: 'Spôsob platby'
+            state:
+                header: 'Stav platby'
+                checkout: 'Pokladňa'
+                completed: 'Dokončené'
+                authorized: 'Autorizované'
+                failed: 'Zlyhané'
+                new: 'Nové'
+                pending: 'Čaká'
+                processing: 'Spracováva sa'
+                unknown: 'Neznáme'
+                void: 'Zrušené'
+                cancelled: 'Zrušené'
+                refunded: 'Vrátené'
+        payment_method:
+            description: 'Popis'
+            enabled: 'Povolené'
+            instructions: 'Inštrukcie'
+            name: 'Názov'
+            position: 'Pozícia'
+        gateway_config:
+            type: 'Typ'
+    gateway_factory:
+        offline: 'Offline'

@@ -1,0 +1,31 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    attribute:
+        name:
+            not_blank: 'Voer attribuutnaam in.'
+            min_length: 'Attributenaam moet minstens 1 teken lang zijn.|Attributenaam moet minstens {{ limit }} tekens lang zijn.'
+            max_length: 'Attributenaam mag niet langer zijn dan 1 teken.|Attributenaam mag niet langer zijn dan {{ limit }} tekens.'
+        code:
+            min_length: 'Attributecode moet minstens 1 teken lang zijn.|Attributecode moet minstens {{ limit }} tekens lang zijn.'
+            max_length: 'Attributecode mag niet langer zijn dan 1 teken.|Attributecode mag niet langer zijn dan {{ limit }} tekens.'
+            not_blank: 'Voer attributecode in.'
+            regex: 'Attributecode mag alleen uit letters, cijfers, streepjes en underscores bestaan.'
+            unique: 'Deze code is al in gebruik.'
+        configuration:
+            max_entries: 'Configuratie maximum aantal invoeren moet groter of gelijk zijn aan het minimum aantal invoeren.'
+            max_length: 'Configuratie maximum lengte moet groter of gelijk zijn aan de minimum lengte.'
+            min_entries: 'Configuratie minimum aantal invoeren moet lager of gelijk zijn aan het aantal toegevoegde keuzes.'
+            multiple: 'Configuratie meerdere moet waar zijn als min- of max-invoerwaarden zijn opgegeven.'
+        presentation:
+            not_blank: 'Voer presentatie van het attribuut in.'
+            min_length: 'Presentatie van het attribuut moet minstens 1 teken lang zijn.|Presentatie van het attribuut moet minstens {{ limit }} tekens lang zijn.'
+            max_length: 'Presentatie van het attribuut mag niet langer zijn dan 1 teken.|Presentatie van het attribuut mag niet langer zijn dan {{ limit }} tekens.'
+        type:
+            unregistered: 'Het attribuuttype "%type%" is niet geregistreerd. Beschikbare attribuuttypes: %available_types%.'
+    attribute_value:
+        attribute:
+            not_blank: 'Selecteer attribuut.'
+        value:
+            not_blank: 'Voer attribuutwaarde in.'

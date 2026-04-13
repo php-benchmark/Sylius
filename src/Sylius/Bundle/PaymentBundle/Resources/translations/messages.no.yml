@@ -1,0 +1,38 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        credit_card:
+            cardholder_name: 'Kortholders navn'
+            expiry_month: 'Utløpsmåned'
+            expiry_year: 'Utløpsår'
+            number: 'Kortnummer'
+            security_code: 'Sikkerhetskode (CVV)'
+            type: 'Korttype'
+        payment:
+            amount: 'Betalingsbeløp'
+            method: 'Betalingsmetode'
+            state:
+                header: 'Betalingsstatus'
+                checkout: 'Til betaling'
+                completed: 'Fullført'
+                authorized: 'Autorisert'
+                failed: 'Mislyktes'
+                new: 'Ny'
+                pending: 'Avventer'
+                processing: 'Behandles'
+                unknown: 'Ukjent'
+                void: 'Ugyldig'
+                cancelled: 'Avbrutt'
+                refunded: 'Refundert'
+        payment_method:
+            description: 'Beskrivelse'
+            enabled: 'Aktivert'
+            instructions: 'Instruksjoner'
+            name: 'Navn'
+            position: 'Posisjon'
+        gateway_config:
+            type: 'Type'
+    gateway_factory:
+        offline: 'Offline'

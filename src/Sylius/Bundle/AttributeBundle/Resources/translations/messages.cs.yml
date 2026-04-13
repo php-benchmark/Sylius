@@ -1,0 +1,41 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        attribute:
+            add: 'Přidat'
+            add_attributes: 'Přidat atributy'
+            choices: 'Možnosti'
+            code: 'Kód'
+            name: 'Název'
+            translatable: 'Přeložitelné'
+            translations: 'Překlady'
+            type: 'Typ'
+        attribute_type:
+            checkbox: 'Zaškrtávací políčko'
+            configuration: 'Konfigurace'
+            date: 'Datum'
+            datetime: 'Datum a čas'
+            float: 'Desetinné číslo'
+            integer: 'Celé číslo'
+            percent: 'Procento'
+            select: 'Výběr'
+            text: 'Text'
+            textarea: 'Textové pole'
+            title: 'Typy atributů'
+            validation: 'Validace'
+        attribute_type_configuration:
+            datetime:
+                format: 'Formát'
+            date:
+                format: 'Formát'
+            select:
+                multiple: 'Vícenásobný'
+                values: 'Hodnoty'
+                choose: 'Vyberte možnost'
+                min: 'Min. počet položek'
+                max: 'Max. počet položek'
+            text:
+                min: 'Min. délka'
+                max: 'Max. délka'

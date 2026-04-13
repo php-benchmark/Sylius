@@ -1,0 +1,43 @@
+sylius_grid:
+    grids:
+        sylius_admin_tax_category:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%sylius.model.tax_category.class%"
+            sorting:
+                nameAndDescription: asc
+            fields:
+                nameAndDescription:
+                    type: twig
+                    label: sylius.ui.name
+                    path: .
+                    sortable: name
+                    options:
+                        template: "@SyliusUi/grid/field/name_and_description.html.twig"
+                code:
+                    type: twig
+                    label: sylius.ui.code
+                    sortable: ~
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/code.html.twig"
+            filters:
+                search:
+                    type: string
+                    label: sylius.ui.search
+                    options:
+                        fields: [code, name]
+                    form_options:
+                        type: !php/const Sylius\Component\Grid\Filter\StringFilter::TYPE_CONTAINS
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete
+                bulk:
+                    delete:
+                        type: delete

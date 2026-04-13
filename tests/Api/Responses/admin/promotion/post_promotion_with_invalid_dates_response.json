@@ -1,0 +1,17 @@
+{
+    "@context": "\/api\/v2\/contexts\/@string@.startsWith('ConstraintViolation')",
+    "@id": "\/api\/v2\/validation_errors\/@string@",
+    "@type": "@string@.startsWith('ConstraintViolation')",
+    "hydra:title": "An error occurred",
+    "hydra:description": "endsAt: End date cannot be set prior start date.",
+    "status": 422,
+    "violations": [
+        {
+            "propertyPath": "endsAt",
+            "message": "End date cannot be set prior start date.",
+            "code": null
+        }
+    ],
+    "detail": "endsAt: End date cannot be set prior start date.",
+    "type": "\/validation_errors\/@string@"
+}

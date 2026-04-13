@@ -1,0 +1,16 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    user:
+        email:
+            not_blank: 'Vă rugăm să introduceți emailul.'
+            invalid: 'Acest email este invalid.'
+            not_registered: 'Un utilizator cu acest email nu există. Vă rugăm să vă înregistrați mai întâi.'
+        plainPassword:
+            not_blank: 'Vă rugăm să introduceți parola.'
+            mismatch: 'Parolele introduse nu coincid.'
+            wrong_current: 'Parola furnizată este diferită de cea curentă.'
+        password:
+            min: 'Parola trebuie să aibă cel puțin {{ limit }} caractere.'
+            max: 'Parola nu trebuie să aibă mai mult de {{ limit }} caractere.'

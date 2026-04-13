@@ -1,0 +1,24 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        user:
+            email: 'E-mail'
+            enabled: 'Povolené'
+            password:
+                label: 'Heslo'
+                confirmation: 'Potvrdenie'
+            remember_me: 'Zapamätať si ma'
+            shipping_address: 'Adresa doručenia'
+            username: 'Užívateľské meno'
+            verified: 'Overené'
+        user_filter:
+            query: 'Hľadať'
+        user_change_password:
+            confirmation: 'Potvrdenie'
+            current: 'Aktuálne heslo'
+            new: 'Nové heslo'
+        user_reset_password:
+            confirmation: 'Potvrdenie'
+            new: 'Nové heslo'

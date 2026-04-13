@@ -1,0 +1,22 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    taxon:
+        code:
+            max_length: 'Koden må ikke være lengre enn {{ limit }} tegn.'
+            not_blank: 'Vennligst skriv inn takson-kode.'
+            regex: 'Takson-kode kan kun bestå av bokstaver, tall, bindestreker og understreker.'
+            unique: 'Takson med denne koden finnes allerede.'
+        name:
+            max_length: 'Taksonnavn må ikke være lengre enn 255 tegn.'
+            not_blank: 'Vennligst skriv inn takson-navn.'
+        slug:
+            not_blank: 'Vennligst skriv inn takson slug.'
+            unique: 'Takson slug må være unik.'
+        parent:
+            invalid_relation: 'Forelder må verken være taksonet selv eller noen av dets etterkommere.'
+    taxonomy:
+        name:
+            max_length: 'Taksonomynavn må ikke være lengre enn 255 tegn.'
+            not_blank: 'Vennligst skriv inn taksonomynavn.'

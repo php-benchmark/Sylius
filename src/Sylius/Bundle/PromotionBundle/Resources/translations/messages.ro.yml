@@ -1,0 +1,83 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        catalog_promotion:
+            action:
+                fixed_discount: 'Reducere fixă'
+                percentage_discount: 'Reducere procentuală'
+            description: 'Descriere'
+            enabled: 'Activat'
+            end_date: 'Data de încheiere'
+            label: 'Etichetă'
+            name: 'Nume'
+            priority: 'Prioritate'
+            start_date: 'Data de început'
+            translations: 'Traduceri'
+        promotion:
+            actions: 'Acțiuni'
+            add_action: 'Adăugați acțiune'
+            add_rule: 'Adăugați regulă'
+            applies_to_discounted: 'Se aplică articolelor din comandă deja reduse'
+            applies_to_discounted_details: 'Cu această opțiune, promoția de coș se va aplica articolelor din comandă deja reduse de promoțiile din catalog.'
+            coupon_based: 'Bazat pe cupon'
+            description: 'Descriere'
+            ends_at: 'Se încheie la'
+            exclusive: 'Exclusiv'
+            label: 'Etichetă'
+            name: 'Nume'
+            priority: 'Prioritate'
+            rules: 'Reguli'
+            starts_at: 'Începe la'
+            usage_limit: 'Limită de utilizare'
+        promotion_action:
+            item_fixed_discount: 'Reducere fixă pe articol'
+            item_percentage_discount: 'Reducere procentuală pe articol'
+            order_fixed_discount: 'Reducere fixă pe comandă'
+            order_percentage_discount: 'Reducere procentuală pe comandă'
+            shipping_percentage_discount: 'Reducere procentuală la livrare'
+            filters: 'Filtre'
+            fixed_discount_configuration:
+                amount: 'Sumă'
+            percentage_discount_configuration:
+                percentage: 'Procent'
+            type: 'Tip'
+        promotion_coupon:
+            expires_at: 'Expiră la'
+            usage_limit: 'Limită de utilizare'
+        promotion_coupon_generator_instruction:
+            amount: 'Sumă'
+            code_length: 'Lungime cod'
+            expires_at: 'Expiră la'
+            prefix: 'Prefix'
+            suffix: 'Sufix'
+            usage_limit: 'Limită de utilizare'
+        promotion_filter:
+            price_range: 'Filtru interval de preț'
+        promotion_rule:
+            cart_quantity: 'Cantitate coș'
+            contains_product: 'Conține produs'
+            customer_group: 'Grup de clienți'
+            has_at_least_one_from_taxons: 'Are cel puțin unul din taxoni'
+            item_total: 'Total articole'
+            nth_order: 'A N-a comandă'
+            shipping_country: 'Țara de livrare'
+            taxonomy: 'Taxonomie'
+            total_price_of_items_from_taxon: 'Preț total al articolelor din taxon'
+            cart_quantity_configuration:
+                count: 'Cantitate'
+                equal: 'Egal'
+            contains_product_configuration:
+                exclude: 'Exclude'
+                variants: 'Produse'
+            item_total_configuration:
+                amount: 'Sumă'
+            nth_order_configuration:
+                nth: 'N'
+            shipping_country_configuration:
+                country: 'Țară'
+            taxonomy_configuration:
+                exclude: 'Exclude'
+                taxons: 'Taxoni'
+            type: 'Tip'

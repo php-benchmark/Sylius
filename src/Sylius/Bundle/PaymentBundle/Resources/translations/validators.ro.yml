@@ -1,0 +1,52 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    credit_card:
+        cardholder_name:
+            min_length: 'Numele titularului cardului trebuie să aibă cel puțin {{ limit }} caractere.'
+            not_blank: 'Vă rugăm să introduceți numele titularului cardului.'
+        expiry_month:
+            max_range: 'Luna de expirare a cardului de credit trebuie să fie între {{ min }} și {{ max }}.'
+            min_range: 'Luna de expirare a cardului de credit trebuie să fie între {{ min }} și {{ max }}.'
+            not_blank: 'Vă rugăm să selectați luna de expirare.'
+        number:
+            not_blank: 'Vă rugăm să introduceți numărul cardului.'
+            luhn: 'Numărul de card de credit introdus este invalid.'
+        security_code:
+            not_blank: 'Vă rugăm să introduceți codul de securitate.'
+            max_length: 'Codul CVV al cardului de credit trebuie să aibă cel puțin {{ limit }} cifre.'
+            min_length: 'Codul CVV al cardului de credit trebuie să aibă cel mult {{ limit }} cifre.'
+        expiry_year:
+            not_blank: 'Vă rugăm să selectați anul de expirare.'
+    gateway_config:
+        invalid_gateway_factory: 'Factory-ul gateway-ului este invalid. Factory-urile disponibile sunt {{ available_factories }}.'
+        gateway_name:
+            not_blank: 'Vă rugăm să introduceți numele gateway-ului.'
+        factory_name:
+            not_blank: 'Vă rugăm să introduceți numele factory-ului gateway-ului.'
+    payment:
+        currency_code:
+            not_valid: 'Codul valutei introdus este invalid.'
+        method:
+            not_blank: 'Vă rugăm să selectați o metodă de plată.'
+    payment_method:
+        gateway:
+            not_blank: 'Vă rugăm să selectați gateway-ul metodei de plată.'
+        name:
+            max_length: 'Numele metodei de plată trebuie să aibă cel mult {{ limit }} caractere.'
+            min_length: 'Numele metodei de plată trebuie să aibă cel puțin {{ limit }} caractere.'
+            not_blank: 'Vă rugăm să introduceți numele metodei de plată.'
+        fee_calculator_configuration:
+            amount:
+                greater_than_or_equal: 'Taxa nu poate fi mai mică decât {{ compared_value }}.'
+                not_blank: 'Vă rugăm să introduceți suma taxei.'
+            percent:
+                max_range: 'Procentul taxei nu poate fi mai mare decât {{ limit }}.'
+                min_range: 'Procentul taxei nu poate fi mai mic decât {{ limit }}.'
+                not_blank: 'Vă rugăm să introduceți procentul taxei.'
+        code:
+            max_length: 'Codul nu poate avea mai mult de {{ limit }} caractere.'
+            not_blank: 'Vă rugăm să introduceți codul metodei de plată.'
+            regex: 'Codul metodei de plată poate conține doar litere, cifre, cratime și underscore-uri.'
+            unique: 'O metodă de plată cu codul furnizat există deja.'

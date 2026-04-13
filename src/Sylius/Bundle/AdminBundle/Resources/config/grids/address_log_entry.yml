@@ -1,0 +1,29 @@
+# This configuration is deprecated. The address log entries are no longer rendered with Sylius grids.
+# This will be removed in Sylius 3.0
+sylius_grid:
+    grids:
+        sylius_admin_address_log_entry:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%sylius.model.address_log_entry.class%"
+                    repository:
+                        method: createByObjectIdQueryBuilder
+                        arguments:
+                            objectId: $id
+            fields:
+                action:
+                    type: twig
+                    label: sylius.ui.action
+                    options:
+                        template: "@SyliusUi/grid/field/log_action.html.twig"
+                loggedAt:
+                    type: datetime
+                    label: sylius.ui.logged_at
+                    options:
+                        format: d-m-Y H:i:s
+                data:
+                    type: twig
+                    label: sylius.ui.changes
+                    options:
+                        template: "@SyliusUi/grid/field/log_data.html.twig"

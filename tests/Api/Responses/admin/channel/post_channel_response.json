@@ -1,0 +1,43 @@
+{
+    "@context": "\/api\/v2\/contexts\/Channel",
+    "@id": "\/api\/v2\/admin\/channels\/@string@",
+    "@type": "Channel",
+    "code": "WEB",
+    "name": "Web Store",
+    "enabled": true,
+    "description": "Lorem ipsum",
+    "hostname": "test.com",
+    "color": "blue",
+    "baseCurrency": "\/api\/v2\/admin\/currencies\/USD",
+    "defaultLocale": "\/api\/v2\/admin\/locales\/en_US",
+    "defaultTaxZone": null,
+    "taxCalculationStrategy": "order_items_based",
+    "currencies": [],
+    "locales": [
+        "\/api\/v2\/admin\/locales\/en_US"
+    ],
+    "countries": [],
+    "themeName": "garish",
+    "contactEmail": "contact@test.com",
+    "contactPhoneNumber": "1-800-00-00-00",
+    "skippingShippingStepAllowed": false,
+    "skippingPaymentStepAllowed": true,
+    "accountVerificationRequired": true,
+    "shippingAddressInCheckoutRequired": false,
+    "shopBillingData": {
+        "@type": "ShopBillingData",
+        "company": "Company: Created",
+        "taxId": "Tax ID: Created",
+        "countryCode": "US",
+        "street": "Street: Created",
+        "city": "City: Created",
+        "postcode": "Postcode: Created"
+    },
+    "menuTaxon": "\/api\/v2\/admin\/taxons\/CATEGORY",
+    "channelPriceHistoryConfig": {
+        "@type": "ChannelPriceHistoryConfig",
+        "lowestPriceForDiscountedProductsVisible": true,
+        "lowestPriceForDiscountedProductsCheckingPeriod": 60,
+        "taxonsExcludedFromShowingLowestPrice": "@array@.count(2).inArray('/api/v2/admin/taxons/BRAND').inArray('/api/v2/admin/taxons/HAT')"
+    }
+}

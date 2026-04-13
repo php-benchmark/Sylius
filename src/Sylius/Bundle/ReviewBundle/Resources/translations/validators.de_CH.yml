@@ -1,0 +1,15 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    review:
+        author:
+            already_exists: 'Diese E-Mail-Adresse ist bereits registriert, bitte melden Sie sich an oder nutzen Sie das Passwort-Wiederherstellungsverfahren.'
+        comment:
+            not_blank: 'Der Bewertungskommentar darf nicht leer sein.'
+        rating:
+            not_blank: 'Sie müssen die Bewertungsbewertung auswählen.'
+        title:
+            not_blank: 'Der Bewertungstitel darf nicht leer sein.'
+            min_length: 'Der Bewertungstitel muss mindestens 2 Zeichen lang sein.'
+            max_length: 'Der Bewertungstitel darf höchstens 255 Zeichen lang sein.'

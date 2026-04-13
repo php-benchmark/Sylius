@@ -1,0 +1,15 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        catalog_promotion:
+            name: Nimi
+        promotion:
+            name: Nimi
+        promotion_action:
+            type: Tüüp
+        promotion_rule:
+            shipping_country_configuration:
+                country: Riik
+            type: Tüüp

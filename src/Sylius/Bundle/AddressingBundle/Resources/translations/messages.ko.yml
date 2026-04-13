@@ -1,0 +1,42 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        address:
+            city: '도시'
+            company: '회사'
+            country: '국가'
+            first_name: '이름'
+            last_name: '성'
+            phone_number: '전화번호'
+            postcode: '우편번호'
+            street: '도로명 주소'
+            province: '도'
+            zone: '구역'
+        country:
+            add_province: '도 추가'
+            name: '이름'
+            provinces: '도'
+            select: '선택'
+            enabled: '사용'
+        province:
+            name: '이름'
+            abbreviation: '약어'
+            select: '선택'
+        zone:
+            add_member: '멤버 추가'
+            members: '멤버'
+            name: '이름'
+            type: '유형'
+            types:
+                country: '국가'
+                province: '도'
+                zone: '구역'
+            scope: '범위'
+            scopes:
+                all: '전체'
+            select: '선택'
+            priority: '우선순위'
+        zone_member:
+            select: '선택'

@@ -1,0 +1,24 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        customer:
+            first_name: 'Jméno'
+            group: 'Skupina'
+            last_name: 'Příjmení'
+            email: 'E-mail'
+            phone_number: 'Telefonní číslo'
+            gender: 'Pohlaví'
+            birthday: 'Datum narození'
+            billing_address: 'Fakturační adresa'
+            different_shipping_address: 'Použít jinou adresu pro doručení?'
+            only_customer_registration: 'Vytvořit účet?'
+            subscribed_to_newsletter: 'Přihlásit k odběru novinek'
+        customer_group:
+            name: 'Název'
+            roles: 'Role'
+    gender:
+        unknown: 'Neznámé'
+        male: 'Muž'
+        female: 'Žena'

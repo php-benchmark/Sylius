@@ -1,0 +1,78 @@
+{
+    "name": "sylius/money-bundle",
+    "type": "symfony-bundle",
+    "description": "Currencies and money formatting engine bundle for Symfony.",
+    "keywords": [
+        "cash",
+        "currency",
+        "money",
+        "currencies"
+    ],
+    "homepage": "https://sylius.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paweł Jędrzejewski",
+            "homepage": "https://pjedrzejewski.com"
+        },
+        {
+            "name": "Sylius project",
+            "homepage": "https://sylius.com"
+        },
+        {
+            "name": "Community contributions",
+            "homepage": "https://github.com/Sylius/Sylius/contributors"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "sylius/resource-bundle": "^1.12",
+        "symfony/framework-bundle": "^6.4.1 || ^7.4",
+        "symfony/intl": "^6.4 || ^7.4",
+        "webmozart/assert": "^1.11"
+    },
+    "require-dev": {
+        "doctrine/doctrine-bundle": "^2.13",
+        "doctrine/orm": "^2.18 || ^3.5",
+        "phpunit/phpunit": "^11.5",
+        "sylius/currency-bundle": "^2.0",
+        "symfony/browser-kit": "^6.4 || ^7.4",
+        "symfony/dependency-injection": "^6.4.1 || ^7.4",
+        "symfony/form": "^6.4.1 || ^7.4",
+        "twig/twig": "^3.16"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "2.2-dev"
+        },
+        "symfony": {
+            "require": "^7.4"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Sylius\\Bundle\\MoneyBundle\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Sylius\\Bundle\\MoneyBundle\\": "tests/"
+        },
+        "classmap": [
+            "test/app/AppKernel.php"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../*/*"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

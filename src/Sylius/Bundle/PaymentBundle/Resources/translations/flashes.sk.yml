@@ -1,0 +1,12 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    payment:
+        authorized: 'Platba bola autorizovaná.'
+        cancelled: 'Platba bola zrušená.'
+        completed: 'Platba bola dokončená.'
+        failed: 'Platba zlyhala.'
+        processing: 'Platba sa spracováva.'
+        refunded: 'Platba bola úspešne vrátená.'
+        unknown: 'Pri platbe došlo k neznámej chybe.'

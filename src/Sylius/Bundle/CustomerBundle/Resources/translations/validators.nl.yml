@@ -1,0 +1,34 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    customer:
+        first_name:
+            max: 'Voornaam mag niet langer zijn dan {{ limit }} tekens.'
+            min: 'Voornaam moet minstens {{ limit }} tekens lang zijn.'
+            not_blank: 'Voer je voornaam in.'
+        last_name:
+            max: 'Achternaam mag niet langer zijn dan {{ limit }} tekens.'
+            min: 'Achternaam moet minstens {{ limit }} tekens lang zijn.'
+            not_blank: 'Voer je achternaam in.'
+        gender:
+            not_blank: 'Kies je geslacht.'
+        email:
+            already_used: 'Dit e-mailadres wordt al gebruikt, log in of gebruik vergeten wachtwoord.'
+            max: 'E-mail mag niet langer zijn dan {{ limit }} tekens.'
+            not_blank: 'Voer je e-mail in.'
+            invalid: 'Dit e-mailadres is ongeldig.'
+            unique: 'Dit e-mailadres wordt al gebruikt.'
+            registered: 'Dit e-mailadres is al geregistreerd, log in of gebruik vergeten wachtwoord.'
+        phone_number:
+            max: 'Telefoonnummer mag niet langer zijn dan {{ limit }} tekens.'
+    customer_group:
+        code:
+            max_length: 'De code mag niet langer zijn dan {{ limit }} tekens.'
+            regex: 'De klantgroepcode mag alleen uit letters, cijfers, streepjes en underscores bestaan.'
+            unique: 'De klantgroepcode moet uniek zijn.'
+            not_blank: 'Voer een klantgroepcode in.'
+        name:
+            max: 'Klantgroepnaam mag niet langer zijn dan {{ limit }} tekens.'
+            min: 'Klantgroepnaam moet minstens {{ limit }} tekens lang zijn.'
+            not_blank: 'Voer een klantgroepnaam in.'

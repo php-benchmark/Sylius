@@ -1,0 +1,10 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        currency:
+            base: Valuta baze
+            code: Emri
+            enabled: E aktivizuar
+            exchange_rate: Norma e shkëmbimit

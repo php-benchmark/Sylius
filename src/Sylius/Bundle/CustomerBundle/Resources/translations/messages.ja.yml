@@ -1,0 +1,24 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        customer:
+            first_name: '名'
+            group: 'グループ'
+            last_name: '姓'
+            email: 'メールアドレス'
+            phone_number: '電話番号'
+            gender: '性別'
+            birthday: '生年月日'
+            billing_address: '請求先住所'
+            different_shipping_address: '配送先を別の住所にしますか？'
+            only_customer_registration: 'アカウントを作成しますか？'
+            subscribed_to_newsletter: 'ニュースレターを購読する'
+        customer_group:
+            name: '名前'
+            roles: 'ロール'
+    gender:
+        unknown: '不明'
+        male: '男性'
+        female: '女性'

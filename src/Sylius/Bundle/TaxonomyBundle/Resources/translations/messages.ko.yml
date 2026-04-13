@@ -1,0 +1,13 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        taxon:
+            description: '설명'
+            enabled: '사용'
+            name: '이름'
+            parent: '상위'
+            slug: '슬러그'
+        taxonomy:
+            name: '이름'

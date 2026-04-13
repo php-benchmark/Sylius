@@ -1,0 +1,105 @@
+sylius_grid:
+    grids:
+        sylius_admin_promotion:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%sylius.model.promotion.class%"
+            sorting:
+                priority: desc
+            fields:
+                priority:
+                    type: twig
+                    label: sylius.ui.priority
+                    sortable: ~
+                    options:
+                        template: "@SyliusAdmin/promotion/grid/field/priority.html.twig"
+                        vars:
+                            th_class: "w-1 text-center"
+                            td_class: "text-center"
+                name:
+                    type: twig
+                    label: sylius.ui.name
+                    path: .
+                    sortable: ~
+                    options:
+                        template: "@SyliusUi/grid/field/name_and_description.html.twig"
+                        vars:
+                            th_class: "w-100"
+                code:
+                    type: twig
+                    label: sylius.ui.code
+                    sortable: ~
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/code.html.twig"
+                couponBased:
+                    type: twig
+                    label: sylius.ui.coupons
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/boolean.html.twig"
+                        vars:
+                            th_class: "w-1 text-center"
+                            td_class: "text-center"
+                usage:
+                    type: twig
+                    label: sylius.ui.usage
+                    path: .
+                    sortable: used
+                    options:
+                        template: "@SyliusAdmin/promotion/grid/field/usage.html.twig"
+            filters:
+                search:
+                    type: string
+                    label: sylius.ui.search
+                    options:
+                        fields: [code, name]
+                couponBased:
+                    type: boolean
+                    label: sylius.ui.coupon_based
+                coupon_code:
+                    type: string
+                    label: sylius.ui.coupon
+                    options:
+                        fields: [coupons.code]
+                archival:
+                    type: exists
+                    label: sylius.ui.archival
+                    options:
+                        field: archivedAt
+                    default_value: false
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete
+                    archive:
+                        type: archive
+                subitem:
+                    coupons:
+                        type: list
+                        label: sylius.ui.manage_coupons
+                        options:
+                            visible: resource.couponBased
+                            links:
+                                index:
+                                    label: sylius.ui.list_coupons
+                                    route: sylius_admin_promotion_coupon_index
+                                    parameters:
+                                        promotionId: resource.id
+                                create:
+                                    label: sylius.ui.create
+                                    route: sylius_admin_promotion_coupon_create
+                                    parameters:
+                                        promotionId: resource.id
+                                generate:
+                                    label: sylius.ui.generate
+                                    route: sylius_admin_promotion_coupon_generate
+                                    parameters:
+                                        promotionId: resource.id
+                bulk:
+                    delete:
+                        type: delete

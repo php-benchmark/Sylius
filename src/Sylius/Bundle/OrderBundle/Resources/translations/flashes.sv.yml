@@ -1,0 +1,10 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    cart:
+        add_item: 'Artikeln har lagts i varukorgen'
+        cannot_modify: 'En beställning har redan skickats för den varukorg du försökte ändra.'
+        not_recalculated: 'På grund av ogiltiga värden i din varukorg har den inte räknats om.'
+        remove_item: 'Artikeln har tagits bort från varukorgen'
+        save: 'Varukorgen har uppdaterats'

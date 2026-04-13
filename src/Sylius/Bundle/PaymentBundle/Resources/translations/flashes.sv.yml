@@ -1,0 +1,12 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    payment:
+        authorized: 'Betalningen har godkänts.'
+        cancelled: 'Betalningen har avbrutits.'
+        completed: 'Betalningen har genomförts.'
+        failed: 'Betalningen misslyckades.'
+        processing: 'Betalningen behandlas.'
+        refunded: 'Betalningen har återbetalats.'
+        unknown: 'Det uppstod ett okänt problem med betalningen.'

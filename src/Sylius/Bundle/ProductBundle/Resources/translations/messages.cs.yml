@@ -1,0 +1,31 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        product:
+            name: 'Název'
+            description: 'Popis'
+            attributes: 'Atributy'
+            options: 'Možnosti'
+            meta_keywords: 'Meta klíčová slova'
+            meta_description: 'Meta popis'
+            slug: 'Slug'
+            taxons: 'Taxony'
+        product_variant:
+            name: 'Název'
+        association_type:
+            name: 'Název'
+            translations: 'Překlady'
+        association:
+            type: 'Typ asociace'
+            product: 'Související produkt'
+        variant:
+            name: 'Název'
+        option:
+            name: 'Název'
+            position: 'Pozice'
+            values: 'Možné hodnoty'
+        option_value:
+            add_value: 'Přidat hodnotu'
+            value: 'Hodnota'

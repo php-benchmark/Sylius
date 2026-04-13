@@ -1,0 +1,6 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    customer:
+        register: 'Hvala vam na registraciji, molimo provjerite svoj email pretinac da potvrdite svoj račun.'

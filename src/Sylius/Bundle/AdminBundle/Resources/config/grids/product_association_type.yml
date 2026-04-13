@@ -1,0 +1,49 @@
+sylius_grid:
+    grids:
+        sylius_admin_product_association_type:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%sylius.model.product_association_type.class%"
+                    repository:
+                        method: createListQueryBuilder
+                        arguments: ["%locale%"]
+            sorting:
+                code: asc
+            fields:
+                name:
+                    type: twig
+                    label: sylius.ui.name
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/name.html.twig"
+                        vars:
+                            th_class: "w-75"
+                code:
+                    type: twig
+                    label: sylius.ui.code
+                    sortable: ~
+                    options:
+                        template: "@SyliusAdmin/shared/grid/field/code.html.twig"
+                        vars:
+                            th_class: "w-25"
+            filters:
+                code:
+                    type: string
+                    label: sylius.ui.code
+                name:
+                    type: string
+                    label: sylius.ui.name
+                    options:
+                        fields: [translation.name]
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete
+                bulk:
+                    delete:
+                        type: delete

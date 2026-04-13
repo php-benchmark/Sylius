@@ -1,0 +1,23 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    currency:
+        code:
+            not_blank: 'Per favore scegli il codice della valuta.'
+            unique: 'Il codice della valuta deve essere unico.'
+            currency: 'Questo valore non è un codice di valuta valido.'
+        exchange_rate:
+            not_blank: 'Per favore inserisci il tasso di cambio.'
+    exchange_rate:
+        ratio:
+            greater_than: 'Il rapporto deve essere maggiore di {{ compared_value }}.'
+            less_than: 'Il rapporto deve essere inferiore a {{ compared_value }}.'
+            invalid: 'Il rapporto deve essere un numero.'
+            not_blank: 'Per favore inserisci il rapporto del tasso di cambio.'
+        source_currency:
+            not_blank: 'Per favore inserisci da quale valuta il tasso di cambio deve essere derivato.'
+        target_currency:
+            not_blank: 'Per favore inserisci a quale valuta il tasso di cambio deve essere impostato.'
+        unique_currency_pair: 'La coppia di valute deve essere unica.'
+        different_source_target_currency: 'La valuta di origine e la valuta di destinazione devono differire.'

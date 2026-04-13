@@ -1,0 +1,16 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    user:
+        email:
+            not_blank: من فضلك أدخل بريدك الإلكتروني.
+            invalid: هذا البريد الإلكتروني غير صالح.
+            not_registered: لا يوجد مستخدم بهذا البريد الإلكتروني. من فضلك قم بالتسجيل أولاً.
+        plainPassword:
+            not_blank: من فضلك أدخل كلمة المرور.
+            mismatch: كلمة المرور المدخلة لا تطابق.
+            wrong_current: كلمة المرور المدخلة تختلف عن الحالية.
+        password:
+            min: يجب أن تكون كلمة المرور على الأقل {{ limit }} حرفًا.
+            max: يجب أن لا تكون كلمة المرور أطول من {{ limit }} حرفًا.

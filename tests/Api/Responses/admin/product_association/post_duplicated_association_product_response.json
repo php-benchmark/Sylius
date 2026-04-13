@@ -1,0 +1,17 @@
+{
+    "@context": "\/api\/v2\/contexts\/@string@.startsWith('ConstraintViolation')",
+    "@id": "\/api\/v2\/validation_errors\/@string@",
+    "@type": "@string@.startsWith('ConstraintViolation')",
+    "hydra:title": "An error occurred",
+    "hydra:description": "owner: An association with this owner and type already exists.",
+    "status": 422,
+    "violations": [
+        {
+            "propertyPath": "owner",
+            "message": "An association with this owner and type already exists.",
+            "code": "@string@"
+        }
+    ],
+    "detail": "owner: An association with this owner and type already exists.",
+    "type": "\/validation_errors\/@string@"
+}

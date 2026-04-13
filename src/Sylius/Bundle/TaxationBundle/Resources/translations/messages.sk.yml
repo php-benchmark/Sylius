@@ -1,0 +1,16 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    form:
+        tax_category:
+            description: 'Popis'
+            name: 'Názov'
+        tax_rate:
+            amount: 'Suma'
+            calculator: 'Kalkulačka'
+            category: 'Kategória'
+            end_date: 'Dátum ukončenia'
+            included_in_price: 'Obsiahnuté v cene?'
+            name: 'Názov'
+            start_date: 'Dátum začiatku'

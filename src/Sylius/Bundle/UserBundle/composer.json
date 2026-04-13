@@ -1,0 +1,99 @@
+{
+    "name": "sylius/user-bundle",
+    "type": "symfony-bundle",
+    "description": "Users management for Symfony projects.",
+    "keywords": [
+        "user",
+        "registration",
+        "login",
+        "groups"
+    ],
+    "homepage": "https://sylius.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paweł Jędrzejewski",
+            "homepage": "https://pjedrzejewski.com"
+        },
+        {
+            "name": "Michał Marcinkowski",
+            "email": "michal.marcinkowski@lakion.com"
+        },
+        {
+            "name": "Łukasz Chruściel",
+            "email": "lukasz.chrusciel@lakion.com"
+        },
+        {
+            "name": "Bartosz Siejka",
+            "homepage": "http://bsiejka.com"
+        },
+        {
+            "name": "Sylius project",
+            "homepage": "https://sylius.com"
+        },
+        {
+            "name": "Community contributions",
+            "homepage": "https://github.com/Sylius/Sylius/contributors"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "doctrine/orm": "^2.18 || ^3.5",
+        "egulias/email-validator": "^4.0",
+        "sylius/mailer-bundle": "^2.1",
+        "sylius/resource-bundle": "^1.12",
+        "sylius/user": "^2.0",
+        "symfony/framework-bundle": "^6.4.1 || ^7.4",
+        "symfony/password-hasher": "^6.4 || ^7.4",
+        "webmozart/assert": "^1.11"
+    },
+    "require-dev": {
+        "doctrine/doctrine-bundle": "^2.13",
+        "hwi/oauth-bundle": "^2.2",
+        "matthiasnoback/symfony-dependency-injection-test": "^6.0",
+        "phpunit/phpunit": "^11.5",
+        "symfony/dependency-injection": "^6.4.1 || ^7.4",
+        "symfony/mailer": "^6.4 || ^7.4",
+        "symfony/security-bundle": "^6.4 || ^7.4"
+    },
+    "suggest": {
+        "hwi/oauth-bundle": "For OAuth integration"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "2.2-dev"
+        },
+        "symfony": {
+            "require": "^7.4"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Sylius\\Bundle\\UserBundle\\": ""
+        },
+        "exclude-from-classmap": [
+            "/tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Sylius\\Bundle\\UserBundle\\": "tests/"
+        },
+        "files": [
+            "tests/Functional/app/AppKernel.php"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../*/*"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

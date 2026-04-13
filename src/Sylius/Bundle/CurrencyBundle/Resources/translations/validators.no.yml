@@ -1,0 +1,23 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    currency:
+        code:
+            not_blank: 'Vennligst velg valutakode.'
+            unique: 'Valutakoden må være unik.'
+            currency: 'Denne verdien er ikke en gyldig valutakode.'
+        exchange_rate:
+            not_blank: 'Vennligst oppgi vekslingskurs.'
+    exchange_rate:
+        ratio:
+            greater_than: 'Forholdet må være større enn {{ compared_value }}.'
+            less_than: 'Forholdet må være mindre enn {{ compared_value }}.'
+            invalid: 'Forholdet må være et tall.'
+            not_blank: 'Vennligst oppgi vekslingskursforhold.'
+        source_currency:
+            not_blank: 'Vennligst oppgi hvilken valuta vekslingskursen skal være basert på.'
+        target_currency:
+            not_blank: 'Vennligst oppgi hvilken valuta vekslingskursen skal settes til.'
+        unique_currency_pair: 'Valutaparet må være unikt.'
+        different_source_target_currency: 'Kilde- og målvaluta må være forskjellige.'
