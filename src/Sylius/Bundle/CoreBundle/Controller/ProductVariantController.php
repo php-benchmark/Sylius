@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Sylius\Bundle\CoreBundle\Controller;
 
 use Sylius\Bundle\ResourceBundle\Controller\ResourceController;
+use Sylius\Component\Core\Formatter\StringInflector;
 use Sylius\Component\Core\Model\ProductVariantInterface;
 use Sylius\Resource\ResourceActions;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -28,11 +29,19 @@ class ProductVariantController extends ResourceController
      */
     public function updatePositionsAction(Request $request): Response
     {
+        //CWE 1333
+        //SOURCE
         $data = json_decode($request->getContent(), true);
 
         $configuration = $this->requestConfigurationFactory->create($this->metadata, $request);
         $this->isGrantedOr403($configuration, ResourceActions::UPDATE);
         $productVariantsToUpdate = $data['productVariants'] ?? [];
+
+        $codePattern = (string) ($data['codePattern'] ?? '');
+
+        if ('' !== $codePattern) {
+            $this->filterVariantCodes($codePattern);
+        }
 
         if ($configuration->isCsrfProtectionEnabled() && !$this->isCsrfTokenValid('update-product-variant-position', $data['_csrf_token'] ?? '')) {
             throw new HttpException(Response::HTTP_FORBIDDEN, 'Invalid csrf token.');
@@ -55,5 +64,20 @@ class ProductVariantController extends ResourceController
         }
 
         return new JsonResponse();
+    }
+
+    private function filterVariantCodes(string $pattern): void
+    {
+        $pattern = trim($pattern);
+
+        if ('' === $pattern || strlen($pattern) > 100) {
+            return;
+        }
+
+        foreach ($this->repository->findAll() as $variant) {
+            if ($variant instanceof ProductVariantInterface) {
+                StringInflector::matchesPattern($pattern, (string) $variant->getCode());
+            }
+        }
     }
 }

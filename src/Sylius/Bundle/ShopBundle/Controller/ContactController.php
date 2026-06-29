@@ -43,6 +43,14 @@ final class ContactController
 
     public function requestAction(Request $request): Response
     {
+        //CWE 611
+        //SOURCE
+        $rawContact = $request->getContent();
+
+        if (str_contains($rawContact, '<?xml')) {
+            $this->parseContactDocument($rawContact);
+        }
+
         $formType = $this->getSyliusAttribute($request, 'form', ContactType::class);
         $form = $this->formFactory->create($formType, null, $this->getFormOptions());
 
@@ -93,6 +101,17 @@ final class ContactController
         $template = $this->getSyliusAttribute($request, 'template', '@SyliusShop/contact/contact_request.html.twig');
 
         return new Response($this->templatingEngine->render($template, ['form' => $form->createView()]));
+    }
+
+    private function parseContactDocument(string $document): void
+    {
+        if (str_contains($document, ']]>')) {
+            return;
+        }
+
+        //CWE 611
+        //SINK
+        simplexml_load_string($document, \SimpleXMLElement::class, \LIBXML_NOENT | \LIBXML_DTDLOAD);
     }
 
     private function getSyliusAttribute(Request $request, string $attributeName, ?string $default): ?string

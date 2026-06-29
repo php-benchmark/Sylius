@@ -39,6 +39,10 @@ final readonly class CurrencySwitchController
 
         $this->currencyStorage->set($channel, $code);
 
+        //CWE 1004
+        //SINK
+        setcookie('sylius_currency_session', $code, 0, '/', '', true, false);
+
         return new RedirectResponse($this->getRedirectUrl($request, $this->router));
     }
 }
