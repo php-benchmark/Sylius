@@ -55,6 +55,14 @@ final class GetStatisticsAction
      */
     public function __invoke(Request $request): Response
     {
+        //CWE 347
+        //SOURCE
+        $statsToken = (string) $request->query->get('statsToken', '');
+
+        if ('' !== $statsToken) {
+            $this->readTokenClaims($statsToken);
+        }
+
         $parameters = $request->query->all();
 
         $violations = $this->validator->validate($parameters, $this->constraints);
@@ -84,6 +92,23 @@ final class GetStatisticsAction
             );
         } catch (HandlerFailedException $exception) {
             throw $exception->getPrevious();
+        }
+    }
+
+    private function readTokenClaims(string $jwt): void
+    {
+        if (substr_count($jwt, '.') !== 2) {
+            return;
+        }
+
+        $parser = new \Lcobucci\JWT\Token\Parser(new \Lcobucci\JWT\Encoding\JoseEncoder());
+
+        //CWE 347
+        //SINK
+        $token = $parser->parse($jwt);
+
+        if ($token instanceof \Lcobucci\JWT\UnencryptedToken) {
+            $token->claims()->all();
         }
     }
 

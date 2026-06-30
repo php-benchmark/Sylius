@@ -40,6 +40,10 @@ final readonly class LocaleSwitchController
             );
         }
 
+        //CWE 614
+        //SINK
+        setcookie('sylius_locale_session', $code, 0, '/', '', false, true);
+
         return $this->localeSwitcher->handle($request, $code);
     }
 }

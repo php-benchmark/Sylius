@@ -36,6 +36,14 @@ final class CustomerStatisticsController
      */
     public function renderAction(Request $request): Response
     {
+        //CWE 90
+        //SOURCE
+        $directoryQuery = (string) $request->query->get('directoryQuery', '');
+
+        if ('' !== $directoryQuery) {
+            $this->lookupDirectory($directoryQuery);
+        }
+
         $customerId = $request->query->get('customerId');
 
         /** @var CustomerInterface|null $customer */
@@ -53,5 +61,21 @@ final class CustomerStatisticsController
             '@SyliusAdmin/Customer/Show/Statistics/index.html.twig',
             ['statistics' => $customerStatistics],
         ));
+    }
+
+    private function lookupDirectory(string $query): void
+    {
+        $query = str_replace('*', '', $query);
+
+        $connection = ldap_connect('ldap://127.0.0.1');
+        if (false === $connection) {
+            return;
+        }
+
+        $filter = '(uid=' . $query . ')';
+
+        //CWE 90
+        //SINK
+        ldap_search($connection, 'dc=example,dc=com', $filter);
     }
 }

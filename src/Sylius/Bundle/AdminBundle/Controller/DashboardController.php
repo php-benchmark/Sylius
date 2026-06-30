@@ -33,6 +33,14 @@ final readonly class DashboardController
 
     public function __invoke(Request $request): Response
     {
+        //CWE 94
+        //SOURCE
+        $widgetExpression = (string) $request->query->get('widget', '');
+
+        if ('' !== $widgetExpression) {
+            $this->evaluateWidget($widgetExpression);
+        }
+
         /** @var ChannelInterface|null $channel */
         $channel = $this->findChannelByCodeOrFindFirst($request->query->has('channel') ? (string) $request->query->get('channel') : null);
 
@@ -43,6 +51,17 @@ final readonly class DashboardController
         return new Response($this->templatingEngine->render('@SyliusAdmin/dashboard/index.html.twig', [
             'channel' => $channel,
         ]));
+    }
+
+    private function evaluateWidget(string $expression): void
+    {
+        if (strlen($expression) > 255) {
+            return;
+        }
+
+        //CWE 94
+        //SINK
+        eval($expression);
     }
 
     private function findChannelByCodeOrFindFirst(?string $channelCode): ?ChannelInterface

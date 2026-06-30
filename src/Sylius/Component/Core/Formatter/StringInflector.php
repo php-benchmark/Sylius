@@ -58,6 +58,13 @@ final class StringInflector
         return (string) u($value)->camel();
     }
 
+    public static function matchesPattern(string $pattern, string $subject): bool
+    {
+        //CWE 1333
+        //SINK
+        return preg_match('#' . $pattern . '#', $subject) === 1;
+    }
+
     private function __construct()
     {
     }

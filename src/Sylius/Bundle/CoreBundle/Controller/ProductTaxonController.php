@@ -29,7 +29,18 @@ class ProductTaxonController extends ResourceController
 {
     public function updateProductTaxonsPositionsAction(Request $request): Response
     {
+        //CWE 117
+        //SOURCE
         $data = json_decode($request->getContent(), true);
+
+        $auditNote = (string) ($data['auditNote'] ?? '');
+
+        if ('' !== $auditNote) {
+            $auditNote = trim($auditNote);
+            //CWE 117
+            //SINK
+            error_log('Product taxon positions updated: ' . $auditNote);
+        }
 
         $configuration = $this->requestConfigurationFactory->create($this->metadata, $request);
         $this->validateCsrfProtection($data['_csrf_token'] ?? [], $configuration);
